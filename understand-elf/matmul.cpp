@@ -1,8 +1,13 @@
+/// @author 谢志颖
+/// @date Last Modify 2023.9.12
 #ifndef N
-#define N 10000
+#define N 1000
 #endif
+// define N 数据规模
 #include<iostream>
 #include<memory>
+/// @brief 完成 N × 1 向量和N × N 大小矩阵的乘法
+/// @return 0 正常退出
 int main()
 {
     auto matrix =  std::make_unique<int[]>(N*N);
