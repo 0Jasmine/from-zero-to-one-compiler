@@ -70,14 +70,14 @@ main:
 	str	r3, [r7, #20]
 	mov	r3, #0
 	adds	r3, r7, #4
-	mov	r1, #57600
-	movt	r1, 1525
+	movw	r1, #16960
+	movt	r1, 15
 	mov	r0, r3
 .LEHB0:
 	bl	_ZSt11make_uniqueIA_iENSt9_MakeUniqIT_E7__arrayEj(PLT)
 .LEHE0:
 	add	r3, r7, #8
-	movw	r1, #10000
+	mov	r1, #1000
 	mov	r0, r3
 .LEHB1:
 	bl	_ZSt11make_uniqueIA_iENSt9_MakeUniqIT_E7__arrayEj(PLT)
@@ -142,7 +142,7 @@ main:
 	ldr	r3, [r3]
 	mul	r5, r3, r5
 	ldr	r3, [r7, #12]
-	movw	r2, #10000
+	mov	r2, #1000
 	mul	r2, r3, r2
 	ldr	r3, [r7, #16]
 	add	r3, r3, r2
@@ -154,7 +154,7 @@ main:
 	mov	r3, r0
 	str	r5, [r3]
 	ldr	r3, [r7, #12]
-	movw	r2, #10000
+	mov	r2, #1000
 	mul	r2, r3, r2
 	ldr	r3, [r7, #16]
 	add	r3, r3, r2
@@ -180,9 +180,8 @@ main:
 	str	r3, [r7, #16]
 .L3:
 	ldr	r3, [r7, #16]
-	movw	r2, #9999
-	cmp	r3, r2
-	ble	.L4
+	cmp	r3, #1000
+	blt	.L4
 	ldr	r3, .L13+16
 	ldr	r3, [r4, r3]
 	mov	r1, r3
@@ -196,9 +195,8 @@ main:
 	str	r3, [r7, #12]
 .L2:
 	ldr	r3, [r7, #12]
-	movw	r2, #9999
-	cmp	r3, r2
-	ble	.L5
+	cmp	r3, #1000
+	blt	.L5
 	movs	r4, #0
 	add	r3, r7, #8
 	mov	r0, r3

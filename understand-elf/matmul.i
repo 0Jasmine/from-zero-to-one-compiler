@@ -41616,14 +41616,14 @@ uninitialized_value_construct_n(_ExecutionPolicy&& __exec, _ForwardIterator __fi
 # 11 "./understand-elf/matmul.cpp"
 int main()
 {
-    auto matrix = std::make_unique<int[]>(10000*10000);
-    auto vect = std::make_unique<int[]>(10000);
-    for(int i=0;i<10000;i++){
+    auto matrix = std::make_unique<int[]>(1000*1000);
+    auto vect = std::make_unique<int[]>(1000);
+    for(int i=0;i<1000;i++){
         vect[i] = i % 13;
-        for(int j=0;j<10000;j++){
+        for(int j=0;j<1000;j++){
             matrix[j] = (i+j)%20;
-            matrix[i*10000 +j] = vect[i]*matrix[j];
-            std::cout<< matrix[i*10000 +j] << ' ';
+            matrix[i*1000 +j] = vect[i]*matrix[j];
+            std::cout<< matrix[i*1000 +j] << ' ';
         }
         std::cout<< std::endl;
     }
