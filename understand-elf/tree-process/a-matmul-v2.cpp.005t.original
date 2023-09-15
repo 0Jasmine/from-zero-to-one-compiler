@@ -1,0 +1,85 @@
+
+;; Function int main() (null)
+;; enabled by -tree-original
+
+
+{
+  int * matrix;
+  int * vect;
+
+    int * matrix;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (matrix = TARGET_EXPR <D.6387, operator new (4)>;, try
+    {
+      *(int *) D.6387 = 1000000;
+    }
+  catch
+    {
+      operator delete (D.6387, 4);
+    }, (int *) D.6387;) >>>>>;
+    int * vect;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (vect = TARGET_EXPR <D.6390, operator new (4)>;, try
+    {
+      *(int *) D.6390 = 1000;
+    }
+  catch
+    {
+      operator delete (D.6390, 4);
+    }, (int *) D.6390;) >>>>>;
+  {
+    int i = 0;
+
+    <<cleanup_point     int i = 0;>>;
+    goto <D.6400>;
+    <D.6399>:;
+    {
+      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*(vect + (sizetype) ((unsigned int) i * 4)) = i % 13) >>>>>;
+      {
+        int j = 0;
+
+        <<cleanup_point         int j = 0;>>;
+        goto <D.6398>;
+        <D.6397>:;
+        <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*(matrix + (sizetype) ((unsigned int) j * 4)) = (i + j) % 20) >>>>>;
+        <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*(matrix + (sizetype) ((unsigned int) (i * 1000 + j) * 4)) = *(vect + (sizetype) ((unsigned int) i * 4)) * *(matrix + (sizetype) ((unsigned int) j * 4))) >>>>>;
+        <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) printf ((const char *) "%d ", *(matrix + (sizetype) ((unsigned int) (i * 1000 + j) * 4))) >>>>>;
+        <<cleanup_point (void) j++ >>;
+        <D.6398>:;
+        if (j <= 999) goto <D.6397>; else goto <D.6395>;
+        <D.6395>:;
+      }
+      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) printf ((const char *) "\n") >>>>>;
+    }
+    <<cleanup_point (void) i++ >>;
+    <D.6400>:;
+    if (i <= 999) goto <D.6399>; else goto <D.6393>;
+    <D.6393>:;
+  }
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (if (matrix != 0B)
+    {
+      operator delete [] ((void *) matrix);
+    }
+  else
+    {
+      0
+    }) >>>>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (if (vect != 0B)
+    {
+      operator delete [] ((void *) vect);
+    }
+  else
+    {
+      0
+    }) >>>>>;
+  return <retval> = 0;
+}
+return <retval> = 0;
+
