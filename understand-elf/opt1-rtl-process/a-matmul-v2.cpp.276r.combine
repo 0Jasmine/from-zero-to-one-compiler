@@ -1,0 +1,772 @@
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30) (executed once)
+
+scanning new insn with uid = 132.
+rescanning insn with uid = 13.
+scanning new insn with uid = 133.
+rescanning insn with uid = 27.
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 11 n_edges 14 count 15 (  1.4)
+
+
+main
+
+Dataflow summary:
+def_info->table_size = 2, use_info->table_size = 0
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 0 [r0] 1 [r1] 2 [r2] 12 [ip] 13 [sp] 14 [lr] 100 [cc]
+;;  ref usage 	r0={14d,10u} r1={9d,2u} r2={8d,1u} r3={7d} r7={1d,10u} r12={12d} r13={1d,16u} r14={7d} r15={6d} r16={7d} r17={7d} r18={7d} r19={7d} r20={7d} r21={7d} r22={7d} r23={7d} r24={7d} r25={7d} r26={7d} r27={7d} r28={7d} r29={7d} r30={7d} r31={7d} r48={6d} r49={6d} r50={6d} r51={6d} r52={6d} r53={6d} r54={6d} r55={6d} r56={6d} r57={6d} r58={6d} r59={6d} r60={6d} r61={6d} r62={6d} r63={6d} r64={6d} r65={6d} r66={6d} r67={6d} r68={6d} r69={6d} r70={6d} r71={6d} r72={6d} r73={6d} r74={6d} r75={6d} r76={6d} r77={6d} r78={6d} r79={6d} r80={6d} r81={6d} r82={6d} r83={6d} r84={6d} r85={6d} r86={6d} r87={6d} r88={6d} r89={6d} r90={6d} r91={6d} r92={6d} r93={6d} r94={6d} r95={6d} r96={6d} r97={6d} r98={6d} r99={6d} r100={10d,4u} r101={6d} r102={1d,10u} r103={1d,9u} r104={6d} r105={6d} r106={6d} r113={2d,3u,1e} r115={2d,3u,1e} r116={1d,2u} r117={2d,8u,4e} r118={2d,1u} r119={1d,4u,1e} r120={1d,4u} r121={2d,2u} r122={2d,2u} r123={2d,1u} r126={2d,1u} r128={2d,2u} r129={1d,2u} r131={2d,4u} r134={1d,1u} r135={1d,1u} r136={1d,1u} r138={1d,1u} r139={1d,1u} r141={1d,1u} r142={1d,1u} r143={1d,1u} r144={1d,1u} r145={1d,1u} r146={1d,1u} r147={1d,1u} r148={1d,1u} r149={1d,1u} r150={1d,1u} r151={1d,1u} r152={1d,1u} r153={1d,1u} r155={1d,1u} r157={1d,1u} r161={1d,1u} r162={1d,1u} 
+;;    total ref usage 701{571d,123u,7e} in 71{65 regular + 6 call} insns.
+
+( )->[0]->( 2 )
+;; bb 0 artificial_defs: { d-1(0){ }d-1(1){ }d-1(2){ }d-1(3){ }d-1(7){ }d-1(13){ }d-1(14){ }d-1(16){ }d-1(17){ }d-1(18){ }d-1(19){ }d-1(20){ }d-1(21){ }d-1(22){ }d-1(23){ }d-1(24){ }d-1(25){ }d-1(26){ }d-1(27){ }d-1(28){ }d-1(29){ }d-1(30){ }d-1(31){ }d-1(102){ }d-1(103){ }}
+;; bb 0 artificial_uses: { }
+;; lr  in  	
+;; lr  use 	
+;; lr  def 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+( 0 )->[2]->( 3 )
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0] 119 122 135 138 139 161
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 122 135 139
+
+( 3 2 )->[3]->( 3 4 )
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 122 135 139
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 122 135 139
+;; lr  def 	 100 [cc] 122
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 122 135 139
+
+( 3 )->[4]->( 5 )
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0] 120 121 134 141 162
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120 121 134 141
+
+( 5 4 )->[5]->( 5 6 )
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120 121 134 141
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 121 134 141
+;; lr  def 	 100 [cc] 121
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120 121 134 141
+
+( 5 )->[6]->( 7 )
+;; bb 6 artificial_defs: { }
+;; bb 6 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120
+;; lr  def 	 126 128 129 131 143 149 155
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120 126 128 129 131 143 149 155
+
+( 9 6 )->[7]->( 8 )
+;; bb 7 artificial_defs: { }
+;; bb 7 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120 126 128 129 131 143 149 155
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 126 128 129 131 143
+;; lr  def 	 113 117 118 123 126 142 144 145 146 147 153
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 113 117 118 119 120 123 126 128 129 131 143 149 153 155
+
+( 8 7 )->[8]->( 8 9 )
+;; bb 8 artificial_defs: { }
+;; bb 8 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 113 117 118 119 120 123 126 128 129 131 143 149 153 155
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 113 117 118 123 131 149 153 155
+;; lr  def 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0] 115 116 117 118 123 148 150 151 152
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 113 117 118 119 120 123 126 128 129 131 143 149 153 155
+
+( 8 )->[9]->( 7 10 )
+;; bb 9 artificial_defs: { }
+;; bb 9 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120 126 128 129 131 143 149 155
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 128 131
+;; lr  def 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0] 128 131 157
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120 126 128 129 131 143 149 155
+
+( 9 )->[10]->( 1 )
+;; bb 10 artificial_defs: { }
+;; bb 10 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120
+;; lr  def 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0] 136
+;; lr  out 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+( 10 )->[1]->( )
+;; bb 1 artificial_defs: { }
+;; bb 1 artificial_uses: { u-1(0){ }u-1(7){ }u-1(13){ }u-1(102){ }}
+;; lr  in  	 0 [r0] 7 [r7] 13 [sp] 102 [sfp]
+;; lr  use 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp]
+;; lr  def 	
+;; lr  out 	
+
+Finding needed instructions:
+  Adding insn 12 to worklist
+  Adding insn 23 to worklist
+  Adding insn 19 to worklist
+  Adding insn 26 to worklist
+  Adding insn 36 to worklist
+  Adding insn 32 to worklist
+  Adding insn 52 to worklist
+  Adding insn 77 to worklist
+  Adding insn 73 to worklist
+  Adding insn 67 to worklist
+  Adding insn 64 to worklist
+  Adding insn 88 to worklist
+  Adding insn 83 to worklist
+  Adding insn 99 to worklist
+  Adding insn 93 to worklist
+  Adding insn 91 to worklist
+Finished finding needed instructions:
+processing block 10 lr out =  0 [r0] 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+  Adding insn 98 to worklist
+  Adding insn 94 to worklist
+  Adding insn 92 to worklist
+  Adding insn 90 to worklist
+processing block 9 lr out =  7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120 126 128 129 131 143 149 155
+  Adding insn 87 to worklist
+  Adding insn 85 to worklist
+  Adding insn 84 to worklist
+  Adding insn 82 to worklist
+  Adding insn 81 to worklist
+  Adding insn 79 to worklist
+processing block 8 lr out =  7 [r7] 13 [sp] 102 [sfp] 103 [afp] 113 117 118 119 120 123 126 128 129 131 143 149 153 155
+  Adding insn 76 to worklist
+  Adding insn 74 to worklist
+  Adding insn 72 to worklist
+  Adding insn 71 to worklist
+  Adding insn 70 to worklist
+  Adding insn 65 to worklist
+  Adding insn 62 to worklist
+  Adding insn 61 to worklist
+  Adding insn 59 to worklist
+  Adding insn 58 to worklist
+  Adding insn 57 to worklist
+  Adding insn 56 to worklist
+processing block 7 lr out =  7 [r7] 13 [sp] 102 [sfp] 103 [afp] 113 117 118 119 120 123 126 128 129 131 143 149 153 155
+  Adding insn 60 to worklist
+  Adding insn 8 to worklist
+  Adding insn 7 to worklist
+  Adding insn 50 to worklist
+  Adding insn 49 to worklist
+  Adding insn 48 to worklist
+  Adding insn 47 to worklist
+  Adding insn 46 to worklist
+  Adding insn 45 to worklist
+  Adding insn 44 to worklist
+  Adding insn 41 to worklist
+processing block 6 lr out =  7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120 126 128 129 131 143 149 155
+  Adding insn 68 to worklist
+  Adding insn 55 to worklist
+  Adding insn 43 to worklist
+  Adding insn 6 to worklist
+  Adding insn 5 to worklist
+  Adding insn 39 to worklist
+  Adding insn 38 to worklist
+processing block 5 lr out =  7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120 121 134 141
+  Adding insn 35 to worklist
+processing block 4 lr out =  7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 120 121 134 141
+  Adding insn 31 to worklist
+  Adding insn 4 to worklist
+  Adding insn 29 to worklist
+  Adding insn 27 to worklist
+  Adding insn 133 to worklist
+  Adding insn 25 to worklist
+processing block 3 lr out =  7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 122 135 139
+  Adding insn 22 to worklist
+processing block 2 lr out =  7 [r7] 13 [sp] 102 [sfp] 103 [afp] 119 122 135 139
+  Adding insn 18 to worklist
+  Adding insn 3 to worklist
+  Adding insn 16 to worklist
+  Adding insn 15 to worklist
+  Adding insn 13 to worklist
+  Adding insn 132 to worklist
+  Adding insn 11 to worklist
+insn_cost 4 for    11: r0:SI=0x9c40
+insn_cost 4 for    12: r0:SI=call [`_Znaj'] argc:0
+insn_cost 2 for   132: r161:SI=r0:SI
+      REG_DEAD r0:SI
+insn_cost 2 for    13: r119:SI=r161:SI
+      REG_DEAD r161:SI
+      REG_NOALIAS r137:SI
+insn_cost 4 for    15: r138:SI=0x9c40
+insn_cost 4 for    16: r135:SI=r119:SI+r138:SI
+      REG_DEAD r138:SI
+      REG_EQUAL r119:SI+0x9c40
+insn_cost 2 for     3: r122:SI=r119:SI
+insn_cost 4 for    18: r139:SI=0
+insn_cost 4 for    19: [r122:SI++]=r139:SI
+      REG_INC r122:SI
+insn_cost 4 for    22: cc:CC=cmp(r122:SI,r135:SI)
+insn_cost 16 for    23: pc={(cc:CC!=0)?L21:pc}
+      REG_DEAD cc:CC
+      REG_BR_PROB 1063004412
+insn_cost 4 for    25: r0:SI=0x190
+insn_cost 4 for    26: r0:SI=call [`_Znaj'] argc:0
+insn_cost 2 for   133: r162:SI=r0:SI
+      REG_DEAD r0:SI
+insn_cost 2 for    27: r120:SI=r162:SI
+      REG_DEAD r162:SI
+      REG_NOALIAS r140:SI
+insn_cost 4 for    29: r134:SI=r120:SI+0x190
+insn_cost 2 for     4: r121:SI=r120:SI
+insn_cost 4 for    31: r141:SI=0
+insn_cost 4 for    32: [r121:SI++]=r141:SI
+      REG_INC r121:SI
+insn_cost 4 for    35: cc:CC=cmp(r121:SI,r134:SI)
+insn_cost 16 for    36: pc={(cc:CC!=0)?L34:pc}
+      REG_DEAD cc:CC
+      REG_BR_PROB 1063004412
+insn_cost 4 for    38: r126:SI=r120:SI-0x4
+insn_cost 4 for    39: r129:SI=r119:SI-0x4
+insn_cost 2 for     5: r128:SI=r129:SI
+insn_cost 4 for     6: r131:SI=0x64
+insn_cost 16 for    43: r143:SI=0x4ec4ec4f
+insn_cost 8 for    55: r149:SI=0x66666667
+insn_cost 8 for    68: r155:SI=unspec[const(unspec[`*.LC0',const(unspec[0] 18+0x4)] 23),0] 27
+      REG_EQUAL `*.LC0'
+insn_cost 4 for    41: r117:SI=r131:SI-0x64
+insn_cost 32 for    44: {r142:SI=trunc(sign_extend(r117:SI)*sign_extend(r143:SI) 0>>0x20);clobber scratch;}
+      REG_EQUAL trunc(sign_extend(r117:SI)*0x4ec4ec4f 0>>0x20)
+insn_cost 4 for    45: r144:SI=r142:SI>>0x2
+      REG_DEAD r142:SI
+insn_cost 4 for    46: r145:SI=r117:SI>>0x1f
+insn_cost 4 for    47: r113:SI=r144:SI-r145:SI
+      REG_DEAD r145:SI
+      REG_DEAD r144:SI
+      REG_EQUAL r117:SI/0xd
+insn_cost 4 for    48: r147:SI=0xd
+insn_cost 8 for    49: r146:SI=r147:SI*r113:SI
+      REG_DEAD r147:SI
+      REG_DEAD r113:SI
+      REG_EQUAL r113:SI*0xd
+insn_cost 4 for    50: r113:SI=r117:SI-r146:SI
+      REG_DEAD r146:SI
+insn_cost 4 for    52: [++r126:SI]=r113:SI
+      REG_INC r126:SI
+insn_cost 2 for     7: r123:SI=r128:SI
+insn_cost 2 for     8: r118:SI=r129:SI
+insn_cost 4 for    60: r153:SI=0x14
+insn_cost 32 for    56: {r148:SI=trunc(sign_extend(r117:SI)*sign_extend(r149:SI) 0>>0x20);clobber scratch;}
+      REG_EQUAL trunc(sign_extend(r117:SI)*0x66666667 0>>0x20)
+insn_cost 4 for    57: r150:SI=r148:SI>>0x3
+      REG_DEAD r148:SI
+insn_cost 4 for    58: r151:SI=r117:SI>>0x1f
+insn_cost 4 for    59: r115:SI=r150:SI-r151:SI
+      REG_DEAD r151:SI
+      REG_DEAD r150:SI
+      REG_EQUAL r117:SI/0x14
+insn_cost 8 for    61: r152:SI=r153:SI*r115:SI
+      REG_DEAD r115:SI
+      REG_EQUAL r115:SI*0x14
+insn_cost 4 for    62: r115:SI=r117:SI-r152:SI
+      REG_DEAD r152:SI
+insn_cost 4 for    64: [++r118:SI]=r115:SI
+      REG_INC r118:SI
+insn_cost 8 for    65: r116:SI=r115:SI*r113:SI
+      REG_DEAD r115:SI
+insn_cost 4 for    67: [++r123:SI]=r116:SI
+      REG_INC r123:SI
+insn_cost 2 for    70: r2:SI=r116:SI
+      REG_DEAD r116:SI
+insn_cost 2 for    71: r1:SI=r155:SI
+      REG_EQUAL `*.LC0'
+insn_cost 4 for    72: r0:SI=0x1
+insn_cost 4 for    73: r0:SI=call [`__printf_chk'] argc:0
+      REG_DEAD r2:SI
+      REG_DEAD r1:SI
+      REG_UNUSED r0:SI
+insn_cost 4 for    74: r117:SI=r117:SI+0x1
+insn_cost 4 for    76: cc:CC=cmp(r117:SI,r131:SI)
+insn_cost 16 for    77: pc={(cc:CC!=0)?L75:pc}
+      REG_DEAD cc:CC
+      REG_BR_PROB 1063004412
+insn_cost 8 for    79: r157:SI=unspec[const(unspec[`*.LC1',const(unspec[0x1] 18+0x4)] 23),0x1] 27
+      REG_EQUAL `*.LC1'
+insn_cost 2 for    81: r1:SI=r157:SI
+      REG_DEAD r157:SI
+      REG_EQUAL `*.LC1'
+insn_cost 4 for    82: r0:SI=0x1
+insn_cost 4 for    83: r0:SI=call [`__printf_chk'] argc:0
+      REG_DEAD r1:SI
+      REG_UNUSED r0:SI
+insn_cost 4 for    84: r128:SI=r128:SI+0x190
+insn_cost 4 for    85: r131:SI=r131:SI+0x1
+insn_cost 4 for    87: cc:CC=cmp(r131:SI,0xc8)
+insn_cost 16 for    88: pc={(cc:CC!=0)?L86:pc}
+      REG_DEAD cc:CC
+      REG_BR_PROB 1063004412
+insn_cost 2 for    90: r0:SI=r119:SI
+      REG_DEAD r119:SI
+insn_cost 8 for    91: call [`_ZdaPv'] argc:0
+      REG_DEAD r0:SI
+      REG_EH_REGION 0
+insn_cost 2 for    92: r0:SI=r120:SI
+      REG_DEAD r120:SI
+insn_cost 8 for    93: call [`_ZdaPv'] argc:0
+      REG_DEAD r0:SI
+      REG_EH_REGION 0
+insn_cost 4 for    94: r136:SI=0
+insn_cost 2 for    98: r0:SI=r136:SI
+      REG_DEAD r136:SI
+      REG_EQUAL 0
+insn_cost 8 for    99: use r0:SI
+allowing combination of insns 15 and 16
+original costs 4 + 4 = 8
+replacement cost 8
+deferring deletion of insn with uid = 15.
+modifying insn i3    16: r135:SI=r119:SI+0x9c40
+deferring rescan insn with uid = 16.
+allowing combination of insns 45 and 47
+original costs 4 + 4 = 8
+replacement cost 8
+deferring deletion of insn with uid = 45.
+modifying insn i3    47: r113:SI=r142:SI>>0x2-r145:SI
+      REG_DEAD r142:SI
+      REG_DEAD r145:SI
+deferring rescan insn with uid = 47.
+allowing combination of insns 49 and 50
+original costs 8 + 4 = 12
+replacement cost 8
+deferring deletion of insn with uid = 49.
+modifying insn i3    50: r113:SI=r117:SI-r147:SI*r113:SI
+      REG_DEAD r147:SI
+deferring rescan insn with uid = 50.
+allowing combination of insns 57 and 59
+original costs 4 + 4 = 8
+replacement cost 8
+deferring deletion of insn with uid = 57.
+modifying insn i3    59: r115:SI=r148:SI>>0x3-r151:SI
+      REG_DEAD r148:SI
+      REG_DEAD r151:SI
+deferring rescan insn with uid = 59.
+allowing combination of insns 61 and 62
+original costs 8 + 4 = 12
+replacement cost 8
+deferring deletion of insn with uid = 61.
+modifying insn i3    62: r115:SI=r117:SI-r153:SI*r115:SI
+deferring rescan insn with uid = 62.
+allowing combination of insns 79 and 81
+original costs 8 + 2 = 10
+replacement cost 8
+deferring deletion of insn with uid = 79.
+modifying insn i3    81: r1:SI=unspec[const(unspec[`*.LC1',const(unspec[0x1] 18+0x4)] 23),0x1] 27
+      REG_EQUAL `*.LC1'
+deferring rescan insn with uid = 81.
+allowing combination of insns 94 and 98
+original costs 4 + 2 = 6
+replacement cost 4
+deferring deletion of insn with uid = 94.
+modifying insn i3    98: r0:SI=0
+      REG_EQUAL 0
+deferring rescan insn with uid = 98.
+starting the processing of deferred insns
+rescanning insn with uid = 16.
+rescanning insn with uid = 47.
+rescanning insn with uid = 50.
+rescanning insn with uid = 59.
+rescanning insn with uid = 62.
+rescanning insn with uid = 81.
+rescanning insn with uid = 98.
+ending the processing of deferred insns
+
+
+main
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 0 [r0] 1 [r1] 2 [r2] 12 [ip] 13 [sp] 14 [lr] 100 [cc]
+;;  ref usage 	r0={14d,10u} r1={9d,2u} r2={8d,1u} r3={7d} r7={1d,10u} r12={12d} r13={1d,16u} r14={7d} r15={6d} r16={7d} r17={7d} r18={7d} r19={7d} r20={7d} r21={7d} r22={7d} r23={7d} r24={7d} r25={7d} r26={7d} r27={7d} r28={7d} r29={7d} r30={7d} r31={7d} r48={6d} r49={6d} r50={6d} r51={6d} r52={6d} r53={6d} r54={6d} r55={6d} r56={6d} r57={6d} r58={6d} r59={6d} r60={6d} r61={6d} r62={6d} r63={6d} r64={6d} r65={6d} r66={6d} r67={6d} r68={6d} r69={6d} r70={6d} r71={6d} r72={6d} r73={6d} r74={6d} r75={6d} r76={6d} r77={6d} r78={6d} r79={6d} r80={6d} r81={6d} r82={6d} r83={6d} r84={6d} r85={6d} r86={6d} r87={6d} r88={6d} r89={6d} r90={6d} r91={6d} r92={6d} r93={6d} r94={6d} r95={6d} r96={6d} r97={6d} r98={6d} r99={6d} r100={10d,4u} r101={6d} r102={1d,10u} r103={1d,9u} r104={6d} r105={6d} r106={6d} r113={2d,3u} r115={2d,3u} r116={1d,2u} r117={2d,8u,2e} r118={2d,1u} r119={1d,4u} r120={1d,4u} r121={2d,2u} r122={2d,2u} r123={2d,1u} r126={2d,1u} r128={2d,2u} r129={1d,2u} r131={2d,4u} r134={1d,1u} r135={1d,1u} r139={1d,1u} r141={1d,1u} r142={1d,1u} r143={1d,1u} r145={1d,1u} r147={1d,1u} r148={1d,1u} r149={1d,1u} r151={1d,1u} r153={1d,1u} r155={1d,1u} r161={1d,1u} r162={1d,1u} 
+;;    total ref usage 682{564d,116u,2e} in 64{58 regular + 6 call} insns.
+(note 9 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 9 11 2 NOTE_INSN_FUNCTION_BEG)
+(insn 11 2 12 2 (set (reg:SI 0 r0)
+        (const_int 40000 [0x9c40])) "./understand-elf/matmul-v2.cpp":12:33 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 12 11 132 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("_Znaj") [flags 0x41]  <function_decl 0x7f3dd6fd3200 operator new []>) [0 operator new [] S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "./understand-elf/matmul-v2.cpp":12:33 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 132 12 13 2 (set (reg:SI 161)
+        (reg:SI 0 r0)) "./understand-elf/matmul-v2.cpp":12:33 -1
+     (expr_list:REG_DEAD (reg:SI 0 r0)
+        (nil)))
+(insn 13 132 15 2 (set (reg/f:SI 119 [ _30 ])
+        (reg:SI 161)) "./understand-elf/matmul-v2.cpp":12:33 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 161)
+        (expr_list:REG_NOALIAS (reg/f:SI 137)
+            (nil))))
+(note 15 13 16 2 NOTE_INSN_DELETED)
+(insn 16 15 3 2 (set (reg/f:SI 135 [ _90 ])
+        (plus:SI (reg/f:SI 119 [ _30 ])
+            (const_int 40000 [0x9c40]))) 7 {*arm_addsi3}
+     (nil))
+(insn 3 16 18 2 (set (reg/f:SI 122 [ _44 ])
+        (reg/f:SI 119 [ _30 ])) "./understand-elf/matmul-v2.cpp":12:33 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 3 21 2 (set (reg:SI 139)
+        (const_int 0 [0])) "./understand-elf/matmul-v2.cpp":12:33 740 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 21 18 17 3 2 (nil) [1 uses])
+(note 17 21 19 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 19 17 22 3 (set (mem:SI (post_inc:SI (reg/f:SI 122 [ _44 ])) [0 MEM[(int *)_58]+0 S4 A32])
+        (reg:SI 139)) "./understand-elf/matmul-v2.cpp":12:33 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg/f:SI 122 [ _44 ])
+        (nil)))
+(insn 22 19 23 3 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 122 [ _44 ])
+            (reg/f:SI 135 [ _90 ]))) "./understand-elf/matmul-v2.cpp":12:33 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 23 22 24 3 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 21)
+            (pc))) "./understand-elf/matmul-v2.cpp":12:33 273 {arm_cond_branch}
+     (expr_list:REG_DEAD (reg:CC 100 cc)
+        (int_list:REG_BR_PROB 1063004412 (nil)))
+ -> 21)
+(note 24 23 25 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 4 (set (reg:SI 0 r0)
+        (const_int 400 [0x190])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 26 25 133 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("_Znaj") [flags 0x41]  <function_decl 0x7f3dd6fd3200 operator new []>) [0 operator new [] S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "./understand-elf/matmul-v2.cpp":13:28 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 133 26 27 4 (set (reg:SI 162)
+        (reg:SI 0 r0)) "./understand-elf/matmul-v2.cpp":13:28 -1
+     (expr_list:REG_DEAD (reg:SI 0 r0)
+        (nil)))
+(insn 27 133 29 4 (set (reg/f:SI 120 [ _32 ])
+        (reg:SI 162)) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 162)
+        (expr_list:REG_NOALIAS (reg/f:SI 140)
+            (nil))))
+(insn 29 27 4 4 (set (reg/f:SI 134 [ _89 ])
+        (plus:SI (reg/f:SI 120 [ _32 ])
+            (const_int 400 [0x190]))) 7 {*arm_addsi3}
+     (nil))
+(insn 4 29 31 4 (set (reg/f:SI 121 [ _41 ])
+        (reg/f:SI 120 [ _32 ])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 31 4 34 4 (set (reg:SI 141)
+        (const_int 0 [0])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 34 31 30 5 3 (nil) [1 uses])
+(note 30 34 32 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 32 30 35 5 (set (mem:SI (post_inc:SI (reg/f:SI 121 [ _41 ])) [0 MEM[(int *)_60]+0 S4 A32])
+        (reg:SI 141)) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg/f:SI 121 [ _41 ])
+        (nil)))
+(insn 35 32 36 5 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 121 [ _41 ])
+            (reg/f:SI 134 [ _89 ]))) "./understand-elf/matmul-v2.cpp":13:28 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 36 35 37 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 34)
+            (pc))) "./understand-elf/matmul-v2.cpp":13:28 273 {arm_cond_branch}
+     (expr_list:REG_DEAD (reg:CC 100 cc)
+        (int_list:REG_BR_PROB 1063004412 (nil)))
+ -> 34)
+(note 37 36 38 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 38 37 39 6 (set (reg:SI 126 [ ivtmp.33 ])
+        (plus:SI (reg/f:SI 120 [ _32 ])
+            (const_int -4 [0xfffffffffffffffc]))) 7 {*arm_addsi3}
+     (nil))
+(insn 39 38 5 6 (set (reg/f:SI 129 [ ivtmp.35 ])
+        (plus:SI (reg/f:SI 119 [ _30 ])
+            (const_int -4 [0xfffffffffffffffc]))) 7 {*arm_addsi3}
+     (nil))
+(insn 5 39 6 6 (set (reg:SI 128 [ ivtmp.35 ])
+        (reg/f:SI 129 [ ivtmp.35 ])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 43 6 (set (reg:SI 131 [ ivtmp.38 ])
+        (const_int 100 [0x64])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 43 6 55 6 (set (reg:SI 143)
+        (const_int 1321528399 [0x4ec4ec4f])) "./understand-elf/matmul-v2.cpp":15:21 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 55 43 68 6 (set (reg:SI 149)
+        (const_int 1717986919 [0x66666667])) "./understand-elf/matmul-v2.cpp":17:30 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 68 55 86 6 (set (reg/f:SI 155)
+        (unspec:SI [
+                (const:SI (unspec:SI [
+                            (symbol_ref/v/f:SI ("*.LC0") [flags 0x82]  <var_decl 0x7f3dd6ddc900 *.LC0>)
+                            (const:SI (plus:SI (unspec:SI [
+                                            (const_int 0 [0])
+                                        ] UNSPEC_PIC_LABEL)
+                                    (const_int 4 [0x4])))
+                        ] UNSPEC_SYMBOL_OFFSET))
+                (const_int 0 [0])
+            ] UNSPEC_PIC_UNIFIED)) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 254 {pic_load_addr_unified}
+     (expr_list:REG_EQUAL (symbol_ref/v/f:SI ("*.LC0") [flags 0x82]  <var_decl 0x7f3dd6ddc900 *.LC0>)
+        (nil)))
+(code_label 86 68 40 7 5 (nil) [1 uses])
+(note 40 86 41 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 44 7 (set (reg:SI 117 [ ivtmp.18 ])
+        (plus:SI (reg:SI 131 [ ivtmp.38 ])
+            (const_int -100 [0xffffffffffffff9c]))) 7 {*arm_addsi3}
+     (nil))
+(insn 44 41 45 7 (parallel [
+            (set (reg:SI 142)
+                (truncate:SI (lshiftrt:DI (mult:DI (sign_extend:DI (reg:SI 117 [ ivtmp.18 ]))
+                            (sign_extend:DI (reg:SI 143)))
+                        (const_int 32 [0x20]))))
+            (clobber (scratch:SI))
+        ]) "./understand-elf/matmul-v2.cpp":15:21 71 {*smull_high}
+     (expr_list:REG_EQUAL (truncate:SI (lshiftrt:DI (mult:DI (sign_extend:DI (reg:SI 117 [ ivtmp.18 ]))
+                    (const_int 1321528399 [0x4ec4ec4f]))
+                (const_int 32 [0x20])))
+        (nil)))
+(note 45 44 46 7 NOTE_INSN_DELETED)
+(insn 46 45 47 7 (set (reg:SI 145)
+        (ashiftrt:SI (reg:SI 117 [ ivtmp.18 ])
+            (const_int 31 [0x1f]))) "./understand-elf/matmul-v2.cpp":15:21 147 {*arm_shiftsi3}
+     (nil))
+(insn 47 46 48 7 (set (reg:SI 113 [ _4 ])
+        (minus:SI (ashiftrt:SI (reg:SI 142)
+                (const_int 2 [0x2]))
+            (reg:SI 145))) "./understand-elf/matmul-v2.cpp":15:21 319 {*rsb_shiftsi}
+     (expr_list:REG_DEAD (reg:SI 142)
+        (expr_list:REG_DEAD (reg:SI 145)
+            (nil))))
+(insn 48 47 49 7 (set (reg:SI 147)
+        (const_int 13 [0xd])) "./understand-elf/matmul-v2.cpp":15:21 740 {*thumb2_movsi_vfp}
+     (nil))
+(note 49 48 50 7 NOTE_INSN_DELETED)
+(insn 50 49 52 7 (set (reg:SI 113 [ _4 ])
+        (minus:SI (reg:SI 117 [ ivtmp.18 ])
+            (mult:SI (reg:SI 147)
+                (reg:SI 113 [ _4 ])))) "./understand-elf/matmul-v2.cpp":15:21 58 {*mls}
+     (expr_list:REG_DEAD (reg:SI 147)
+        (nil)))
+(insn 52 50 7 7 (set (mem:SI (pre_inc:SI (reg:SI 126 [ ivtmp.33 ])) [0 MEM[(int *)_84]+0 S4 A32])
+        (reg:SI 113 [ _4 ])) "./understand-elf/matmul-v2.cpp":15:17 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg:SI 126 [ ivtmp.33 ])
+        (nil)))
+(insn 7 52 8 7 (set (reg:SI 123 [ ivtmp.23 ])
+        (reg:SI 128 [ ivtmp.35 ])) "./understand-elf/matmul-v2.cpp":15:17 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 60 7 (set (reg:SI 118 [ ivtmp.20 ])
+        (reg/f:SI 129 [ ivtmp.35 ])) "./understand-elf/matmul-v2.cpp":15:17 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 60 8 75 7 (set (reg:SI 153)
+        (const_int 20 [0x14])) "./understand-elf/matmul-v2.cpp":17:30 740 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 75 60 53 8 4 (nil) [1 uses])
+(note 53 75 56 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 56 53 57 8 (parallel [
+            (set (reg:SI 148)
+                (truncate:SI (lshiftrt:DI (mult:DI (sign_extend:DI (reg:SI 117 [ ivtmp.18 ]))
+                            (sign_extend:DI (reg:SI 149)))
+                        (const_int 32 [0x20]))))
+            (clobber (scratch:SI))
+        ]) "./understand-elf/matmul-v2.cpp":17:30 71 {*smull_high}
+     (expr_list:REG_EQUAL (truncate:SI (lshiftrt:DI (mult:DI (sign_extend:DI (reg:SI 117 [ ivtmp.18 ]))
+                    (const_int 1717986919 [0x66666667]))
+                (const_int 32 [0x20])))
+        (nil)))
+(note 57 56 58 8 NOTE_INSN_DELETED)
+(insn 58 57 59 8 (set (reg:SI 151)
+        (ashiftrt:SI (reg:SI 117 [ ivtmp.18 ])
+            (const_int 31 [0x1f]))) "./understand-elf/matmul-v2.cpp":17:30 147 {*arm_shiftsi3}
+     (nil))
+(insn 59 58 61 8 (set (reg:SI 115 [ _9 ])
+        (minus:SI (ashiftrt:SI (reg:SI 148)
+                (const_int 3 [0x3]))
+            (reg:SI 151))) "./understand-elf/matmul-v2.cpp":17:30 319 {*rsb_shiftsi}
+     (expr_list:REG_DEAD (reg:SI 148)
+        (expr_list:REG_DEAD (reg:SI 151)
+            (nil))))
+(note 61 59 62 8 NOTE_INSN_DELETED)
+(insn 62 61 64 8 (set (reg:SI 115 [ _9 ])
+        (minus:SI (reg:SI 117 [ ivtmp.18 ])
+            (mult:SI (reg:SI 153)
+                (reg:SI 115 [ _9 ])))) "./understand-elf/matmul-v2.cpp":17:30 58 {*mls}
+     (nil))
+(insn 64 62 65 8 (set (mem:SI (pre_inc:SI (reg:SI 118 [ ivtmp.20 ])) [0 MEM[(int *)_56]+0 S4 A32])
+        (reg:SI 115 [ _9 ])) "./understand-elf/matmul-v2.cpp":17:23 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg:SI 118 [ ivtmp.20 ])
+        (nil)))
+(insn 65 64 67 8 (set (reg:SI 116 [ _15 ])
+        (mult:SI (reg:SI 115 [ _9 ])
+            (reg:SI 113 [ _4 ]))) "./understand-elf/matmul-v2.cpp":18:36 56 {*mul}
+     (expr_list:REG_DEAD (reg:SI 115 [ _9 ])
+        (nil)))
+(insn 67 65 70 8 (set (mem:SI (pre_inc:SI (reg:SI 123 [ ivtmp.23 ])) [0 MEM[(int *)_53]+0 S4 A32])
+        (reg:SI 116 [ _15 ])) "./understand-elf/matmul-v2.cpp":18:27 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg:SI 123 [ ivtmp.23 ])
+        (nil)))
+(insn 70 67 71 8 (set (reg:SI 2 r2)
+        (reg:SI 116 [ _15 ])) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 116 [ _15 ])
+        (nil)))
+(insn 71 70 72 8 (set (reg:SI 1 r1)
+        (reg/f:SI 155)) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUAL (symbol_ref/v/f:SI ("*.LC0") [flags 0x82]  <var_decl 0x7f3dd6ddc900 *.LC0>)
+        (nil)))
+(insn 72 71 73 8 (set (reg:SI 0 r0)
+        (const_int 1 [0x1])) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 73 72 74 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__printf_chk") [flags 0x41]  <function_decl 0x7f3dd6d8f100 __printf_chk>) [0 __printf_chk S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 291 {*call_value_symbol}
+     (expr_list:REG_DEAD (reg:SI 2 r2)
+        (expr_list:REG_DEAD (reg:SI 1 r1)
+            (expr_list:REG_UNUSED (reg:SI 0 r0)
+                (nil))))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 74 73 76 8 (set (reg:SI 117 [ ivtmp.18 ])
+        (plus:SI (reg:SI 117 [ ivtmp.18 ])
+            (const_int 1 [0x1]))) "./understand-elf/matmul-v2.cpp":16:22 7 {*arm_addsi3}
+     (nil))
+(insn 76 74 77 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 117 [ ivtmp.18 ])
+            (reg:SI 131 [ ivtmp.38 ]))) "./understand-elf/matmul-v2.cpp":16:22 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 77 76 78 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 75)
+            (pc))) "./understand-elf/matmul-v2.cpp":16:22 273 {arm_cond_branch}
+     (expr_list:REG_DEAD (reg:CC 100 cc)
+        (int_list:REG_BR_PROB 1063004412 (nil)))
+ -> 75)
+(note 78 77 79 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(note 79 78 81 9 NOTE_INSN_DELETED)
+(insn 81 79 82 9 (set (reg:SI 1 r1)
+        (unspec:SI [
+                (const:SI (unspec:SI [
+                            (symbol_ref/v/f:SI ("*.LC1") [flags 0x82]  <var_decl 0x7f3dd6ddc990 *.LC1>)
+                            (const:SI (plus:SI (unspec:SI [
+                                            (const_int 1 [0x1])
+                                        ] UNSPEC_PIC_LABEL)
+                                    (const_int 4 [0x4])))
+                        ] UNSPEC_SYMBOL_OFFSET))
+                (const_int 1 [0x1])
+            ] UNSPEC_PIC_UNIFIED)) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 254 {pic_load_addr_unified}
+     (expr_list:REG_EQUAL (symbol_ref/v/f:SI ("*.LC1") [flags 0x82]  <var_decl 0x7f3dd6ddc990 *.LC1>)
+        (nil)))
+(insn 82 81 83 9 (set (reg:SI 0 r0)
+        (const_int 1 [0x1])) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 83 82 84 9 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__printf_chk") [flags 0x41]  <function_decl 0x7f3dd6d8f100 __printf_chk>) [0 __printf_chk S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 291 {*call_value_symbol}
+     (expr_list:REG_DEAD (reg:SI 1 r1)
+        (expr_list:REG_UNUSED (reg:SI 0 r0)
+            (nil)))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 84 83 85 9 (set (reg:SI 128 [ ivtmp.35 ])
+        (plus:SI (reg:SI 128 [ ivtmp.35 ])
+            (const_int 400 [0x190]))) "./understand-elf/matmul-v2.cpp":14:18 7 {*arm_addsi3}
+     (nil))
+(insn 85 84 87 9 (set (reg:SI 131 [ ivtmp.38 ])
+        (plus:SI (reg:SI 131 [ ivtmp.38 ])
+            (const_int 1 [0x1]))) "./understand-elf/matmul-v2.cpp":14:18 7 {*arm_addsi3}
+     (nil))
+(insn 87 85 88 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 131 [ ivtmp.38 ])
+            (const_int 200 [0xc8]))) "./understand-elf/matmul-v2.cpp":14:18 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 88 87 89 9 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 86)
+            (pc))) "./understand-elf/matmul-v2.cpp":14:18 273 {arm_cond_branch}
+     (expr_list:REG_DEAD (reg:CC 100 cc)
+        (int_list:REG_BR_PROB 1063004412 (nil)))
+ -> 86)
+(note 89 88 90 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 90 89 91 10 (set (reg:SI 0 r0)
+        (reg/f:SI 119 [ _30 ])) "./understand-elf/matmul-v2.cpp":23:13 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 119 [ _30 ])
+        (nil)))
+(call_insn 91 90 92 10 (parallel [
+            (call (mem:SI (symbol_ref:SI ("_ZdaPv") [flags 0x41]  <function_decl 0x7f3dd6fd3400 operator delete []>) [0 operator delete [] S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "./understand-elf/matmul-v2.cpp":23:13 290 {*call_symbol}
+     (expr_list:REG_DEAD (reg:SI 0 r0)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 92 91 93 10 (set (reg:SI 0 r0)
+        (reg/f:SI 120 [ _32 ])) "./understand-elf/matmul-v2.cpp":24:13 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 120 [ _32 ])
+        (nil)))
+(call_insn 93 92 94 10 (parallel [
+            (call (mem:SI (symbol_ref:SI ("_ZdaPv") [flags 0x41]  <function_decl 0x7f3dd6fd3400 operator delete []>) [0 operator delete [] S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "./understand-elf/matmul-v2.cpp":24:13 290 {*call_symbol}
+     (expr_list:REG_DEAD (reg:SI 0 r0)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(note 94 93 98 10 NOTE_INSN_DELETED)
+(insn 98 94 99 10 (set (reg/i:SI 0 r0)
+        (const_int 0 [0])) "./understand-elf/matmul-v2.cpp":26:1 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUAL (const_int 0 [0])
+        (nil)))
+(insn 99 98 0 10 (use (reg/i:SI 0 r0)) "./understand-elf/matmul-v2.cpp":26:1 -1
+     (nil))
+
+;; Combiner totals: 73 attempts, 57 substitutions (18 requiring new space),
+;; 7 successes.

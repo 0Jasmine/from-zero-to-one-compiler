@@ -1,0 +1,140 @@
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30)
+
+int main ()
+{
+  void * D.6693;
+  void * D.6692;
+  int j;
+  int i;
+  int * vect;
+  int * matrix;
+  int D.6690;
+  int D.6660;
+  int * D.6659;
+  int * D.6658;
+  int * retval.1;
+  void * D.6657;
+  int D.6654;
+  int * D.6653;
+  int * D.6652;
+  int * retval.0;
+  void * D.6651;
+
+  D.6692 = operator new [] (40000);
+  D.6651 = D.6692;
+  D.6652 = D.6651;
+  D.6653 = D.6652;
+  D.6654 = 9999;
+  goto <D.6666>;
+  <D.6665>:
+  *D.6653 = 0;
+  D.6653 = D.6653 + 4;
+  D.6654 = D.6654 + -1;
+  <D.6666>:
+  if (D.6654 >= 0) goto <D.6665>; else goto <D.6663>;
+  <D.6663>:
+  retval.0 = D.6652;
+  matrix = D.6651;
+  D.6693 = operator new [] (400);
+  D.6657 = D.6693;
+  D.6658 = D.6657;
+  D.6659 = D.6658;
+  D.6660 = 99;
+  goto <D.6670>;
+  <D.6669>:
+  *D.6659 = 0;
+  D.6659 = D.6659 + 4;
+  D.6660 = D.6660 + -1;
+  <D.6670>:
+  if (D.6660 >= 0) goto <D.6669>; else goto <D.6667>;
+  <D.6667>:
+  retval.1 = D.6658;
+  vect = D.6657;
+  i = 0;
+  goto <D.6678>;
+  <D.6677>:
+  i.2_1 = (unsigned int) i;
+  _2 = i.2_1 * 4;
+  _3 = vect + _2;
+  _4 = i % 13;
+  *_3 = _4;
+  j = 0;
+  goto <D.6676>;
+  <D.6675>:
+  _5 = i + j;
+  j.3_6 = (unsigned int) j;
+  _7 = j.3_6 * 4;
+  _8 = matrix + _7;
+  _9 = _5 % 20;
+  *_8 = _9;
+  i.4_10 = (unsigned int) i;
+  _11 = i.4_10 * 4;
+  _12 = vect + _11;
+  _13 = *_12;
+  j.5_14 = (unsigned int) j;
+  _15 = j.5_14 * 4;
+  _16 = matrix + _15;
+  _17 = *_16;
+  _18 = i * 100;
+  _19 = j + _18;
+  _20 = (unsigned int) _19;
+  _21 = _20 * 4;
+  _22 = matrix + _21;
+  _23 = _13 * _17;
+  *_22 = _23;
+  _24 = i * 100;
+  _25 = j + _24;
+  _26 = (unsigned int) _25;
+  _27 = _26 * 4;
+  _28 = matrix + _27;
+  _29 = *_28;
+  printf ("%d ", _29);
+  j = j + 1;
+  <D.6676>:
+  if (j <= 99) goto <D.6675>; else goto <D.6673>;
+  <D.6673>:
+  printf ("\n");
+  i = i + 1;
+  <D.6678>:
+  if (i <= 99) goto <D.6677>; else goto <D.6671>;
+  <D.6671>:
+  if (matrix != 0B) goto <D.6684>; else goto <D.6685>;
+  <D.6684>:
+  operator delete [] (matrix);
+  goto <D.6686>;
+  <D.6685>:
+  <D.6686>:
+  if (vect != 0B) goto <D.6687>; else goto <D.6688>;
+  <D.6687>:
+  operator delete [] (vect);
+  goto <D.6689>;
+  <D.6688>:
+  <D.6689>:
+  D.6690 = 0;
+  goto <D.6691>;
+  D.6690 = 0;
+  goto <D.6691>;
+  <D.6691>:
+  return D.6690;
+}
+
+
+
+;; Function printf (<unset-asm-name>, funcdef_no=16, decl_uid=1060, cgraph_uid=17, symbol_order=16)
+
+__attribute__((artificial, gnu_inline, always_inline))
+__attribute__((nonnull (1), format (printf, 1, 2)))
+int printf (const char * restrict __fmt)
+{
+  int D.6696;
+  int D.6694;
+
+  D.6696 = __printf_chk (1, __fmt, __builtin_va_arg_pack ());
+  D.6694 = D.6696;
+  goto <D.6695>;
+  <D.6695>:
+  return D.6694;
+}
+
+

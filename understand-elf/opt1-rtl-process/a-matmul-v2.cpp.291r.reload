@@ -1,0 +1,3230 @@
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30) (executed once)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 13
+New elimination table:
+Can eliminate 103 to 13 (offset=40, prev_offset=0)
+Can't eliminate 103 to 102 (offset=40, prev_offset=0)
+Can't eliminate 103 to 11 (offset=40, prev_offset=0)
+Can eliminate 103 to 7 (offset=40, prev_offset=0)
+Can eliminate 102 to 13 (offset=0, prev_offset=0)
+Can't eliminate 102 to 11 (offset=0, prev_offset=0)
+Can eliminate 102 to 7 (offset=0, prev_offset=0)
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+          alt=4,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 4 in insn 11:  (0) r  (1) j {*thumb2_movsi_vfp}
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=619,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=620,losers=2,rld_nregs=1
+            0 Non pseudo reload: reject++
+          alt=7,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 13:  (0) m  (1) l {*thumb2_movsi_vfp}
+            1 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=0,overall=17,losers=2,rld_nregs=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=1,overall=15,losers=2,rld_nregs=2
+            1 Matching alt: reject+=2
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+          alt=4,overall=6,losers=1,rld_nregs=1
+            alt=5: Bad operand -- refuse
+            alt=6: Bad operand -- refuse
+            alt=8: Bad operand -- refuse
+            alt=9: Bad operand -- refuse
+            alt=10: Bad operand -- refuse
+            alt=11: Bad operand -- refuse
+            alt=13: Bad operand -- refuse
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            alt=15,overall=12,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=9,losers=1 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=6,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=8,overall=9,losers=1 -- refuse
+            alt=9: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=10,overall=9,losers=1 -- refuse
+            alt=11: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=13,overall=9,losers=1 -- refuse
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=15,overall=15,losers=1 -- refuse
+	 Choosing alt 4 in insn 141:  (0) r  (1) rk  (2) rI {*arm_addsi3}
+      Creating newreg=180 from oldreg=119, assigning class CORE_REGS to r180
+  141: r135:SI=r180:SI+0x9c00
+    Inserting insn reload before:
+  162: r180:SI=r119:SI
+
+            0 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+          alt=5,overall=5,losers=1,rld_nregs=1
+            0 Super set class reg: reject-=3
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            alt=6,overall=6,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=7,overall=10,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=8,overall=10,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=10,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=13,overall=10,losers=1 -- refuse
+	 Choosing alt 5 in insn 162:  (0) l  (1) mi {*thumb2_movsi_vfp}
+	 Reuse r180 for output r180:SI, change to class LO_REGS for r180
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=1,overall=9,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=9,losers=1 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=6,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=8,overall=9,losers=1 -- refuse
+            alt=9: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=10,overall=9,losers=1 -- refuse
+            alt=11: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=13,overall=9,losers=1 -- refuse
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=15,overall=15,losers=1 -- refuse
+	 Choosing alt 2 in insn 142:  (0) l  (1) 0  (2) Py {*arm_addsi3}
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=606,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+            1 Non pseudo reload: reject++
+          alt=5,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 3:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 18:  (0) r  (1) I {*thumb2_movsi_vfp}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 19:  (0) m  (1) l {*thumb2_movsi_vfp}
+            alt=0: Bad operand -- refuse
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 22:  (0) r  (1) r {*arm_cmpsi_insn}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 25:  (0) r  (1) I {*thumb2_movsi_vfp}
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=619,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=620,losers=2,rld_nregs=1
+            0 Non pseudo reload: reject++
+          alt=7,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 27:  (0) m  (1) l {*thumb2_movsi_vfp}
+            1 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=0,overall=17,losers=2,rld_nregs=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=1,overall=15,losers=2,rld_nregs=2
+            1 Matching alt: reject+=2
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+          alt=4,overall=6,losers=1,rld_nregs=1
+            alt=5: Bad operand -- refuse
+            alt=6: Bad operand -- refuse
+          alt=8,overall=6,losers=1,rld_nregs=1
+            alt=9: Bad operand -- refuse
+            alt=10: Bad operand -- refuse
+            alt=11: Bad operand -- refuse
+            alt=13: Bad operand -- refuse
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            alt=15,overall=12,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=9,losers=1 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=6,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=8,overall=9,losers=1 -- refuse
+            alt=9: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=10,overall=9,losers=1 -- refuse
+            alt=11: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=13,overall=9,losers=1 -- refuse
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=15,overall=15,losers=1 -- refuse
+	 Choosing alt 4 in insn 29:  (0) r  (1) rk  (2) rI {*arm_addsi3}
+      Creating newreg=181 from oldreg=120, assigning class CORE_REGS to r181
+   29: r134:SI=r181:SI+0x190
+    Inserting insn reload before:
+  163: r181:SI=r120:SI
+
+            0 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+          alt=5,overall=5,losers=1,rld_nregs=1
+            0 Super set class reg: reject-=3
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            alt=6,overall=6,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=7,overall=10,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=8,overall=10,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=10,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=13,overall=10,losers=1 -- refuse
+	 Choosing alt 5 in insn 163:  (0) l  (1) mi {*thumb2_movsi_vfp}
+	 Reuse r181 for output r181:SI, change to class LO_REGS for r181
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=606,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+            1 Non pseudo reload: reject++
+          alt=5,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 4:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 31:  (0) r  (1) I {*thumb2_movsi_vfp}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 32:  (0) m  (1) l {*thumb2_movsi_vfp}
+            alt=0: Bad operand -- refuse
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 35:  (0) r  (1) r {*arm_cmpsi_insn}
+            0 Non input pseudo reload: reject++
+            1 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=0,overall=24,losers=3,rld_nregs=3
+            0 Non input pseudo reload: reject++
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=1,overall=22,losers=3,rld_nregs=3
+            0 Non input pseudo reload: reject++
+            1 Matching alt: reject+=2
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=4,overall=22,losers=3,rld_nregs=3
+            alt=5: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=6: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=8: Bad operand -- refuse
+            alt=9: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+          alt=10,overall=13,losers=2,rld_nregs=2
+            alt=11: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+          alt=13,overall=13,losers=2,rld_nregs=2
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non input pseudo reload: reject++
+            alt=15,overall=19,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=18,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=16,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=18,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=16,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=16,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=6,overall=16,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=8,overall=16,losers=2 -- refuse
+            alt=9: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=10,overall=16,losers=2 -- refuse
+            alt=11: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=13,overall=16,losers=2 -- refuse
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=15,overall=22,losers=2 -- refuse
+	 Choosing alt 10 in insn 38:  (0) r  (1) rk  (2) L {*arm_addsi3}
+      Creating newreg=182 from oldreg=126, assigning class GENERAL_REGS to r182
+      Creating newreg=183 from oldreg=120, assigning class CORE_REGS to r183
+   38: r182:SI=r183:SI-0x4
+    Inserting insn reload before:
+  165: r183:SI=r120:SI
+    Inserting insn reload after:
+  164: r126:SI=r182:SI
+
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=608,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=616,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=617,losers=2,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Super set class reg: reject-=3
+          alt=7,overall=4,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Super set class reg: reject-=3
+            1 Costly loser: reject++
+            alt=8,overall=5,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non input pseudo reload: reject++
+            alt=10,overall=7,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=13,overall=8,losers=1 -- refuse
+	 Choosing alt 7 in insn 164:  (0) m  (1) l {*thumb2_movsi_vfp}
+      Creating newreg=184 from oldreg=182, assigning class LO_REGS to r184
+  164: r126:SI=r184:SI
+    Inserting insn reload before:
+  166: r184:SI=r182:SI
+
+            0 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+          alt=5,overall=5,losers=1,rld_nregs=1
+            0 Super set class reg: reject-=3
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            alt=6,overall=6,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=7,overall=10,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=8,overall=10,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=10,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=13,overall=10,losers=1 -- refuse
+	 Choosing alt 5 in insn 165:  (0) l  (1) mi {*thumb2_movsi_vfp}
+	 Reuse r183 for output r183:SI, change to class LO_REGS for r183
+            0 Non input pseudo reload: reject++
+            1 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=0,overall=24,losers=3,rld_nregs=3
+            0 Non input pseudo reload: reject++
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=1,overall=22,losers=3,rld_nregs=3
+            0 Non input pseudo reload: reject++
+            1 Matching alt: reject+=2
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=4,overall=22,losers=3,rld_nregs=3
+            alt=5: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=6: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=8: Bad operand -- refuse
+            alt=9: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+          alt=10,overall=13,losers=2,rld_nregs=2
+            alt=11: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+          alt=13,overall=13,losers=2,rld_nregs=2
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non input pseudo reload: reject++
+            alt=15,overall=19,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=18,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=16,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=18,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=16,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=16,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=6,overall=16,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=8,overall=16,losers=2 -- refuse
+            alt=9: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=10,overall=16,losers=2 -- refuse
+            alt=11: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=13,overall=16,losers=2 -- refuse
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=15,overall=22,losers=2 -- refuse
+	 Choosing alt 10 in insn 39:  (0) r  (1) rk  (2) L {*arm_addsi3}
+      Creating newreg=185 from oldreg=129, assigning class GENERAL_REGS to r185
+      Creating newreg=186 from oldreg=119, assigning class CORE_REGS to r186
+   39: r185:SI=r186:SI-0x4
+    Inserting insn reload before:
+  168: r186:SI=r119:SI
+    Inserting insn reload after:
+  167: r129:SI=r185:SI
+
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=608,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=616,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=617,losers=2,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Super set class reg: reject-=3
+          alt=7,overall=4,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Super set class reg: reject-=3
+            1 Costly loser: reject++
+            alt=8,overall=5,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non input pseudo reload: reject++
+            alt=10,overall=7,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=13,overall=8,losers=1 -- refuse
+	 Choosing alt 7 in insn 167:  (0) m  (1) l {*thumb2_movsi_vfp}
+      Creating newreg=187 from oldreg=185, assigning class LO_REGS to r187
+  167: r129:SI=r187:SI
+    Inserting insn reload before:
+  169: r187:SI=r185:SI
+
+            0 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+          alt=5,overall=5,losers=1,rld_nregs=1
+            0 Super set class reg: reject-=3
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            alt=6,overall=6,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=7,overall=10,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=8,overall=10,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=10,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=13,overall=10,losers=1 -- refuse
+	 Choosing alt 5 in insn 168:  (0) l  (1) mi {*thumb2_movsi_vfp}
+	 Reuse r186 for output r186:SI, change to class LO_REGS for r186
+            0 Non input pseudo reload: reject++
+          alt=0,overall=13,losers=2,rld_nregs=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+          alt=5,overall=8,losers=1,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            alt=6,overall=9,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+          alt=7,overall=7,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=8,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=10,overall=14,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=13,overall=8,losers=1 -- refuse
+	 Choosing alt 7 in insn 5:  (0) m  (1) l {*thumb2_movsi_vfp}
+      Creating newreg=188 from oldreg=129, assigning class LO_REGS to r188
+    5: r128:SI=r188:SI
+    Inserting insn reload before:
+  170: r188:SI=r129:SI
+
+            0 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            1 Non pseudo reload: reject++
+          alt=5,overall=2,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 170:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 6:  (0) r  (1) I {*thumb2_movsi_vfp}
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=16,losers=2,rld_nregs=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+          alt=4,overall=7,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+          alt=5,overall=7,losers=1,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=6,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=7,overall=10,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=8,overall=11,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=10,overall=17,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=13,overall=11,losers=1 -- refuse
+	 Choosing alt 4 in insn 134:  (0) r  (1) j {*thumb2_movsi_vfp}
+      Creating newreg=189 from oldreg=143, assigning class GENERAL_REGS to r189
+  134: r189:SI=0xec4f
+      REG_EQUAL 0xec4f
+    Inserting insn reload after:
+  171: r143:SI=r189:SI
+
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=608,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=616,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=617,losers=2,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Super set class reg: reject-=3
+          alt=7,overall=4,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Super set class reg: reject-=3
+            1 Costly loser: reject++
+            alt=8,overall=5,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non input pseudo reload: reject++
+            alt=10,overall=7,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=13,overall=8,losers=1 -- refuse
+	 Choosing alt 7 in insn 171:  (0) m  (1) l {*thumb2_movsi_vfp}
+      Creating newreg=190 from oldreg=189, assigning class LO_REGS to r190
+  171: r143:SI=r190:SI
+    Inserting insn reload before:
+  172: r190:SI=r189:SI
+
+            0 Non input pseudo reload: reject++
+            0 Input/Output reload: reject+=6
+          alt=0,overall=13,losers=1,rld_nregs=1
+	 Choosing alt 0 in insn 135:  (0) +r {*arm_movtas_ze}
+      Creating newreg=191 from oldreg=143, assigning class GENERAL_REGS to r191
+  135: zero_extract(r191:SI,0x10,0x10)=0x4ec4
+      REG_EQUAL 0x4ec4ec4f
+    Inserting insn reload before:
+  173: r191:SI=r143:SI
+    Inserting insn reload after:
+  174: r143:SI=r191:SI
+
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=608,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=616,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=617,losers=2,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Super set class reg: reject-=3
+          alt=7,overall=4,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Super set class reg: reject-=3
+            1 Costly loser: reject++
+            alt=8,overall=5,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non input pseudo reload: reject++
+            alt=10,overall=7,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=13,overall=8,losers=1 -- refuse
+	 Choosing alt 7 in insn 174:  (0) m  (1) l {*thumb2_movsi_vfp}
+      Creating newreg=192 from oldreg=191, assigning class LO_REGS to r192
+  174: r143:SI=r192:SI
+    Inserting insn reload before:
+  175: r192:SI=r191:SI
+
+            0 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+          alt=5,overall=5,losers=1,rld_nregs=1
+            0 Super set class reg: reject-=3
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            alt=6,overall=6,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=7,overall=10,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=8,overall=10,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=10,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=13,overall=10,losers=1 -- refuse
+	 Choosing alt 5 in insn 173:  (0) l  (1) mi {*thumb2_movsi_vfp}
+	 Reuse r191 for output r191:SI, change to class LO_REGS for r191
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+          alt=4,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 4 in insn 137:  (0) r  (1) j {*thumb2_movsi_vfp}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 138:  (0) +r {*arm_movtas_ze}
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 68:  (0) r  (1) mX {pic_load_addr_unified}
+            1 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=0,overall=17,losers=2,rld_nregs=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=1,overall=15,losers=2,rld_nregs=2
+            1 Matching alt: reject+=2
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=4,overall=9,losers=1,rld_nregs=1
+            alt=5: Bad operand -- refuse
+            alt=6: Bad operand -- refuse
+            alt=8: Bad operand -- refuse
+            alt=9: Bad operand -- refuse
+          alt=10,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=9,losers=1 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=6,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=8,overall=9,losers=1 -- refuse
+            alt=9: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=10,overall=9,losers=1 -- refuse
+            alt=11: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=13,overall=9,losers=1 -- refuse
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=15,overall=15,losers=1 -- refuse
+	 Choosing alt 10 in insn 41:  (0) r  (1) rk  (2) L {*arm_addsi3}
+            3 Scratch win: reject+=2
+          alt=0,overall=8,losers=1,rld_nregs=1
+            3 Scratch win: reject+=2
+          alt=0,overall=8,losers=1,rld_nregs=1
+	 Choosing alt 0 in insn 44:  (0) =r  (1) %r  (2) r  (3) =r {*smull_high}
+      Creating newreg=193 from oldreg=143, assigning class GENERAL_REGS to r193
+   44: {r142:SI=trunc(sign_extend(r117:SI)*sign_extend(r193:SI) 0>>0x20);clobber r163:SI;}
+      REG_UNUSED r163:SI
+      REG_EQUAL trunc(sign_extend(r117:SI)*0x4ec4ec4f 0>>0x20)
+    Inserting insn reload before:
+  176: r193:SI=r143:SI
+
+            0 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+          alt=5,overall=5,losers=1,rld_nregs=1
+            0 Super set class reg: reject-=3
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            alt=6,overall=6,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=7,overall=10,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=8,overall=10,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=10,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=13,overall=10,losers=1 -- refuse
+	 Choosing alt 5 in insn 176:  (0) l  (1) mi {*thumb2_movsi_vfp}
+	 Reuse r193 for output r193:SI, change to class LO_REGS for r193
+            1 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=0,overall=17,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 46:  (0) l  (1) l  (2) M {*arm_shiftsi3}
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 47:  (0) r  (1) r  (3) r  (4) M {*rsb_shiftsi}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 143:  (0) r  (1) I {*thumb2_movsi_vfp}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 50:  (0) =r  (1) r  (2) r  (3) r {*mls}
+      Creating newreg=194 from oldreg=126, assigning class CORE_REGS to address r194
+	   Change to class GENERAL_REGS for r194
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 52:  (0) m  (1) l {*thumb2_movsi_vfp}
+   52: [++r194:SI]=r113:SI
+      REG_INC r126:SI
+    Inserting insn reload before:
+  177: r194:SI=r126:SI
+    Inserting insn reload after:
+  178: r126:SI=r194:SI
+
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=608,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=616,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=617,losers=2,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Super set class reg: reject-=3
+          alt=7,overall=4,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Super set class reg: reject-=3
+            1 Costly loser: reject++
+            alt=8,overall=5,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non input pseudo reload: reject++
+            alt=10,overall=7,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=13,overall=8,losers=1 -- refuse
+	 Choosing alt 7 in insn 178:  (0) m  (1) l {*thumb2_movsi_vfp}
+      Creating newreg=195 from oldreg=194, assigning class LO_REGS to r195
+  178: r126:SI=r195:SI
+    Inserting insn reload before:
+  179: r195:SI=r194:SI
+
+            0 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+          alt=5,overall=5,losers=1,rld_nregs=1
+            0 Super set class reg: reject-=3
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            alt=6,overall=6,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=7,overall=10,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=8,overall=10,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=10,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=13,overall=10,losers=1 -- refuse
+	 Choosing alt 5 in insn 177:  (0) l  (1) mi {*thumb2_movsi_vfp}
+	 Reuse r194 for output r194:SI, change to class LO_REGS for r194
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=606,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+            1 Non pseudo reload: reject++
+          alt=5,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 7:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=606,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+            1 Non pseudo reload: reject++
+          alt=5,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 8:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 60:  (0) r  (1) I {*thumb2_movsi_vfp}
+            3 Scratch win: reject+=2
+          alt=0,overall=2,losers=0,rld_nregs=0
+            3 Scratch win: reject+=2
+          alt=0,overall=2,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 56:  (0) =r  (1) %r  (2) r  (3) =r {*smull_high}
+            1 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=0,overall=17,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 58:  (0) l  (1) l  (2) M {*arm_shiftsi3}
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 59:  (0) r  (1) r  (3) r  (4) M {*rsb_shiftsi}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 62:  (0) =r  (1) r  (2) r  (3) r {*mls}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 64:  (0) m  (1) l {*thumb2_movsi_vfp}
+            1 Matching alt: reject+=2
+          alt=0,overall=8,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 65
+	 Choosing alt 0 in insn 65:  (0) =l  (1) %0  (2) l {*mul}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 67:  (0) m  (1) l {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 72:  (0) r  (1) I {*thumb2_movsi_vfp}
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=1,overall=9,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=9,losers=1 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=6,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=8,overall=9,losers=1 -- refuse
+            alt=9: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=10,overall=9,losers=1 -- refuse
+            alt=11: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=13,overall=9,losers=1 -- refuse
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=15,overall=15,losers=1 -- refuse
+	 Choosing alt 2 in insn 74:  (0) l  (1) 0  (2) Py {*arm_addsi3}
+            alt=0: Bad operand -- refuse
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 76:  (0) r  (1) r {*arm_cmpsi_insn}
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 81:  (0) r  (1) mX {pic_load_addr_unified}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 82:  (0) r  (1) I {*thumb2_movsi_vfp}
+            0 Non input pseudo reload: reject++
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=0,overall=22,losers=3,rld_nregs=3
+            0 Non input pseudo reload: reject++
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=1,overall=22,losers=3,rld_nregs=3
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+          alt=4,overall=13,losers=2,rld_nregs=2
+            alt=5: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=6: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+          alt=8,overall=13,losers=2,rld_nregs=2
+            alt=9: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=10: Bad operand -- refuse
+            alt=11: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=13: Bad operand -- refuse
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non input pseudo reload: reject++
+            alt=15,overall=19,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=18,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=16,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=18,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=16,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=16,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=6,overall=16,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=8,overall=16,losers=2 -- refuse
+            alt=9: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=10,overall=16,losers=2 -- refuse
+            alt=11: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=13,overall=16,losers=2 -- refuse
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=15,overall=22,losers=2 -- refuse
+	 Choosing alt 4 in insn 84:  (0) r  (1) rk  (2) rI {*arm_addsi3}
+      Creating newreg=196 from oldreg=128, assigning class GENERAL_REGS to r196
+      Creating newreg=197 from oldreg=128, assigning class CORE_REGS to r197
+   84: r196:SI=r197:SI+0x190
+    Inserting insn reload before:
+  181: r197:SI=r128:SI
+    Inserting insn reload after:
+  180: r128:SI=r196:SI
+
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=608,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=616,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=617,losers=2,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Super set class reg: reject-=3
+          alt=7,overall=4,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Super set class reg: reject-=3
+            1 Costly loser: reject++
+            alt=8,overall=5,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non input pseudo reload: reject++
+            alt=10,overall=7,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=13,overall=8,losers=1 -- refuse
+	 Choosing alt 7 in insn 180:  (0) m  (1) l {*thumb2_movsi_vfp}
+      Creating newreg=198 from oldreg=196, assigning class LO_REGS to r198
+  180: r128:SI=r198:SI
+    Inserting insn reload before:
+  182: r198:SI=r196:SI
+
+            0 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Super set class reg: reject-=3
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+          alt=5,overall=5,losers=1,rld_nregs=1
+            0 Super set class reg: reject-=3
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            alt=6,overall=6,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=7,overall=10,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=8,overall=10,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=9,overall=8,losers=1 -- refuse
+            0 Non pseudo reload: reject++
+            1 Costly loser: reject++
+            alt=10,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=11,overall=8,losers=1 -- refuse
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            alt=12,overall=8,losers=1 -- refuse
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=13,overall=10,losers=1 -- refuse
+	 Choosing alt 5 in insn 181:  (0) l  (1) mi {*thumb2_movsi_vfp}
+	 Reuse r197 for output r197:SI, change to class LO_REGS for r197
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+            alt=1,overall=13,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2,overall=13,losers=2 -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3,overall=13,losers=2 -- refuse
+          alt=4,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            0 Non input pseudo reload: reject++
+            alt=1,overall=7,losers=1 -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2,overall=7,losers=1 -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3,overall=7,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=9,losers=1 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=6,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=8,overall=9,losers=1 -- refuse
+            alt=9: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=10,overall=9,losers=1 -- refuse
+            alt=11: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=13,overall=9,losers=1 -- refuse
+            alt=14: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=15,overall=15,losers=1 -- refuse
+	 Choosing alt 4 in insn 85:  (0) r  (1) rk  (2) rI {*arm_addsi3}
+          alt=0,overall=6,losers=1,rld_nregs=1
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 3 in insn 87:  (0) r  (1) I {*arm_cmpsi_insn}
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=606,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+            1 Non pseudo reload: reject++
+          alt=5,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 90:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=606,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+            1 Non pseudo reload: reject++
+          alt=5,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 92:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 98:  (0) r  (1) I {*thumb2_movsi_vfp}
+	   Spilling non-eliminable hard regs: 13
+
+********** Inheritance #1: **********
+
+EBB 2
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Use smallest class of LO_REGS and GENERAL_REGS
+      Creating newreg=199 from oldreg=119, assigning class LO_REGS to inheritance r199
+    Original reg change 119->199 (bb2):
+  162: r180:SI=r199:SI
+    Add inheritance<-original before:
+  183: r199:SI=r119:SI
+
+    Inheritance reuse change 119->199 (bb2):
+    3: r122:SI=r199:SI
+	  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+      Creating newreg=200 from oldreg=119, assigning class GENERAL_REGS to inheritance r200
+    Original reg change 119->200 (bb2):
+   13: r200:SI=r161:SI
+      REG_DEAD r161:SI
+      REG_NOALIAS r137:SI
+    Add original<-inheritance after:
+  184: r119:SI=r200:SI
+
+    Inheritance reuse change 119->200 (bb2):
+  183: r199:SI=r200:SI
+	  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+EBB 3
+EBB 4
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Use smallest class of LO_REGS and GENERAL_REGS
+      Creating newreg=201 from oldreg=120, assigning class LO_REGS to inheritance r201
+    Original reg change 120->201 (bb4):
+  163: r181:SI=r201:SI
+    Add inheritance<-original before:
+  185: r201:SI=r120:SI
+
+    Inheritance reuse change 120->201 (bb4):
+    4: r121:SI=r201:SI
+	  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+      Creating newreg=202 from oldreg=120, assigning class GENERAL_REGS to inheritance r202
+    Original reg change 120->202 (bb4):
+   27: r202:SI=r162:SI
+      REG_DEAD r162:SI
+      REG_NOALIAS r140:SI
+    Add original<-inheritance after:
+  186: r120:SI=r202:SI
+
+    Inheritance reuse change 120->202 (bb4):
+  185: r201:SI=r202:SI
+	  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+EBB 5
+EBB 6
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Use smallest class of LO_REGS and GENERAL_REGS
+      Creating newreg=203 from oldreg=143, assigning class LO_REGS to inheritance r203
+    Original reg change 143->203 (bb6):
+  171: r203:SI=r190:SI
+    Add original<-inheritance after:
+  187: r143:SI=r203:SI
+
+    Inheritance reuse change 143->203 (bb6):
+  173: r191:SI=r203:SI
+	  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Use smallest class of LO_REGS and GENERAL_REGS
+      Creating newreg=204 from oldreg=129, assigning class LO_REGS to inheritance r204
+    Original reg change 129->204 (bb6):
+  167: r204:SI=r187:SI
+    Add original<-inheritance after:
+  188: r129:SI=r204:SI
+
+    Inheritance reuse change 129->204 (bb6):
+  170: r188:SI=r204:SI
+	  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	    Removing dead insn:
+   187: r143:SI=r203:SI
+deleting insn with uid = 187.
+EBB 7
+EBB 8
+EBB 9
+EBB 10
+
+********** Pseudo live ranges #1: **********
+
+  BB 10
+   Insn 99: point = 0, n_alt = -1
+   Insn 98: point = 0, n_alt = 1
+   Insn 93: point = 0, n_alt = -1
+   Insn 92: point = 0, n_alt = 5
+   Insn 91: point = 1, n_alt = -1
+   Insn 90: point = 1, n_alt = 5
+  BB 9
+   Insn 88: point = 3, n_alt = -1
+   Insn 87: point = 3, n_alt = 3
+   Insn 85: point = 3, n_alt = 4
+   Insn 180: point = 4, n_alt = 7
+   Insn 182: point = 6, n_alt = -2
+	   Creating copy r196->r198@10
+   Insn 84: point = 8, n_alt = 4
+   Insn 181: point = 10, n_alt = 5
+   Insn 83: point = 12, n_alt = -1
+   Insn 82: point = 12, n_alt = 1
+   Insn 81: point = 12, n_alt = 1
+   Insn 160: point = 12, n_alt = -2
+   Insn 159: point = 14, n_alt = -2
+   Insn 158: point = 16, n_alt = -2
+  BB 8
+   Insn 77: point = 19, n_alt = -1
+   Insn 76: point = 19, n_alt = 1
+   Insn 74: point = 19, n_alt = 2
+   Insn 73: point = 20, n_alt = -1
+   Insn 72: point = 20, n_alt = 1
+   Insn 71: point = 20, n_alt = -2
+   Insn 70: point = 20, n_alt = -2
+   Insn 67: point = 21, n_alt = 7
+   Insn 65: point = 22, n_alt = 0
+   Insn 64: point = 24, n_alt = 7
+   Insn 62: point = 25, n_alt = 0
+   Insn 59: point = 26, n_alt = 1
+   Insn 58: point = 28, n_alt = 1
+   Insn 56: point = 29, n_alt = 0
+  BB 7
+   Insn 157: point = 31, n_alt = -2
+   Insn 156: point = 33, n_alt = -2
+   Insn 155: point = 35, n_alt = -2
+   Insn 154: point = 37, n_alt = -2
+   Insn 153: point = 39, n_alt = -2
+   Insn 152: point = 41, n_alt = -2
+   Insn 151: point = 43, n_alt = -2
+   Insn 60: point = 45, n_alt = 1
+   Insn 8: point = 46, n_alt = 5
+   Insn 7: point = 47, n_alt = 5
+   Insn 178: point = 48, n_alt = 7
+   Insn 179: point = 50, n_alt = -2
+	   Creating copy r194->r195@10
+   Insn 52: point = 52, n_alt = 7
+   Insn 177: point = 53, n_alt = 5
+   Insn 50: point = 55, n_alt = 0
+   Insn 143: point = 57, n_alt = 1
+   Insn 47: point = 58, n_alt = 1
+   Insn 46: point = 60, n_alt = 1
+   Insn 44: point = 61, n_alt = 0
+   Insn 176: point = 63, n_alt = 5
+   Insn 41: point = 64, n_alt = 10
+  BB 6
+   Insn 150: point = 66, n_alt = -2
+   Insn 149: point = 68, n_alt = -2
+   Insn 148: point = 70, n_alt = -2
+   Insn 68: point = 72, n_alt = 1
+   Insn 138: point = 73, n_alt = 0
+   Insn 137: point = 74, n_alt = 4
+   Insn 174: point = 75, n_alt = 7
+   Insn 175: point = 77, n_alt = -2
+	   Creating copy r191->r192@1
+   Insn 135: point = 79, n_alt = 0
+   Insn 173: point = 80, n_alt = 5
+	   Creating copy r191<-r203@1
+   Insn 171: point = 82, n_alt = 7
+	   Creating copy r190->r203@1
+   Insn 172: point = 84, n_alt = -2
+	   Creating copy r189->r190@1
+   Insn 134: point = 86, n_alt = 4
+   Insn 6: point = 87, n_alt = 1
+   Insn 5: point = 88, n_alt = 7
+   Insn 170: point = 90, n_alt = 5
+	   Creating copy r188<-r204@1
+   Insn 188: point = 92, n_alt = -1
+   Insn 167: point = 93, n_alt = 7
+	   Creating copy r187->r204@1
+   Insn 169: point = 95, n_alt = -2
+	   Creating copy r185->r187@1
+   Insn 39: point = 97, n_alt = 10
+   Insn 168: point = 99, n_alt = 5
+   Insn 164: point = 100, n_alt = 7
+   Insn 166: point = 102, n_alt = -2
+	   Creating copy r182->r184@1
+   Insn 38: point = 104, n_alt = 10
+   Insn 165: point = 106, n_alt = 5
+  BB 5
+   Insn 36: point = 108, n_alt = -1
+   Insn 35: point = 108, n_alt = 1
+   Insn 32: point = 108, n_alt = 7
+  BB 4
+   Insn 147: point = 110, n_alt = -2
+   Insn 146: point = 112, n_alt = -2
+   Insn 31: point = 114, n_alt = 1
+   Insn 4: point = 115, n_alt = 5
+	Hard reg 3 is preferable by r201 with profit 1
+   Insn 29: point = 117, n_alt = 4
+   Insn 163: point = 119, n_alt = 5
+	   Creating copy r181<-r201@1
+   Insn 185: point = 120, n_alt = -1
+	   Creating copy r201<-r202@1
+   Insn 186: point = 122, n_alt = -1
+   Insn 27: point = 123, n_alt = 7
+	Hard reg 0 is preferable by r202 with profit 1
+   Insn 133: point = 125, n_alt = -2
+   Insn 26: point = 126, n_alt = -1
+   Insn 25: point = 126, n_alt = 1
+  BB 3
+   Insn 23: point = 127, n_alt = -1
+   Insn 22: point = 127, n_alt = 1
+   Insn 19: point = 127, n_alt = 7
+  BB 2
+   Insn 145: point = 129, n_alt = -2
+   Insn 144: point = 131, n_alt = -2
+   Insn 18: point = 133, n_alt = 1
+   Insn 3: point = 134, n_alt = 5
+	Hard reg 3 is preferable by r199 with profit 1
+   Insn 142: point = 136, n_alt = 2
+   Insn 141: point = 137, n_alt = 4
+   Insn 162: point = 139, n_alt = 5
+	   Creating copy r180<-r199@1
+   Insn 183: point = 140, n_alt = -1
+	   Creating copy r199<-r200@1
+   Insn 184: point = 142, n_alt = -1
+   Insn 13: point = 143, n_alt = 7
+	Hard reg 0 is preferable by r200 with profit 1
+   Insn 132: point = 145, n_alt = -2
+   Insn 12: point = 146, n_alt = -1
+   Insn 11: point = 146, n_alt = 4
+ r113: [44..58]
+ r115: [23..26]
+ r116: [20..22]
+ r117: [42..64]
+ r118: [40..46]
+ r119: [1..142]
+ r120: [0..122]
+ r121: [113..115]
+ r122: [132..134]
+ r123: [38..47]
+ r126: [54..100] [3..48]
+ r128: [11..88] [3..4]
+ r129: [3..92]
+ r131: [71..87]
+ r134: [111..117]
+ r135: [130..137]
+ r139: [127..133]
+ r141: [108..114]
+ r142: [59..61]
+ r143: [3..75]
+ r145: [59..60]
+ r147: [56..57]
+ r148: [27..29]
+ r149: [69..74]
+ r151: [27..28]
+ r153: [19..45]
+ r155: [67..72]
+ r161: [144..145]
+ r162: [124..125]
+ r163: [61..61]
+ r164: [29..29]
+ r165: [36..70] [3..16]
+ r166: [34..68] [3..14]
+ r167: [32..66] [3..12]
+ r168: [19..43]
+ r169: [19..41]
+ r170: [19..39]
+ r171: [19..37]
+ r172: [17..35]
+ r173: [15..33]
+ r174: [13..31]
+ r175: [108..112]
+ r176: [108..110]
+ r177: [127..131]
+ r178: [127..129]
+ r180: [138..139]
+ r181: [118..119]
+ r182: [103..104]
+ r183: [105..106]
+ r184: [101..102]
+ r185: [96..97]
+ r186: [98..99]
+ r187: [94..95]
+ r188: [89..90]
+ r189: [85..86]
+ r190: [83..84]
+ r191: [78..80]
+ r192: [76..77]
+ r193: [62..63]
+ r194: [51..53]
+ r195: [49..50]
+ r196: [7..8]
+ r197: [9..10]
+ r198: [5..6]
+ r199: [135..140]
+ r200: [141..143]
+ r201: [116..120]
+ r202: [121..123]
+ r203: [81..82]
+ r204: [91..93]
+Compressing live ranges: from 146 to 107 - 73%
+Ranges after the compression:
+ r113: [34..41]
+ r115: [16..17]
+ r116: [14..15]
+ r117: [32..46]
+ r118: [30..35]
+ r119: [0..104]
+ r120: [0..90]
+ r121: [83..84]
+ r122: [97..98]
+ r123: [28..35]
+ r126: [40..72] [0..35]
+ r128: [8..62] [0..1]
+ r129: [0..66]
+ r131: [51..62]
+ r134: [81..86]
+ r135: [95..100]
+ r139: [93..98]
+ r141: [79..84]
+ r142: [42..44]
+ r143: [0..52]
+ r145: [42..43]
+ r147: [40..41]
+ r148: [18..20]
+ r149: [49..52]
+ r151: [18..19]
+ r153: [14..35]
+ r155: [47..52]
+ r161: [105..106]
+ r162: [91..92]
+ r163: [44..44]
+ r164: [20..20]
+ r165: [26..50] [0..13]
+ r166: [24..48] [0..11]
+ r167: [22..46] [0..9]
+ r168: [14..33]
+ r169: [14..31]
+ r170: [14..29]
+ r171: [14..27]
+ r172: [14..25]
+ r173: [12..23]
+ r174: [10..21]
+ r175: [79..82]
+ r176: [79..80]
+ r177: [93..96]
+ r178: [93..94]
+ r180: [101..102]
+ r181: [87..88]
+ r182: [75..76]
+ r183: [77..78]
+ r184: [73..74]
+ r185: [69..70]
+ r186: [71..72]
+ r187: [67..68]
+ r188: [63..64]
+ r189: [61..62]
+ r190: [59..60]
+ r191: [55..56]
+ r192: [53..54]
+ r193: [45..46]
+ r194: [38..39]
+ r195: [36..37]
+ r196: [4..5]
+ r197: [6..7]
+ r198: [2..3]
+ r199: [99..102]
+ r200: [103..104]
+ r201: [85..88]
+ r202: [89..90]
+ r203: [57..58]
+ r204: [65..66]
+
+********** Assignment #1: **********
+
+	 Assigning to 194 (cl=LO_REGS, orig=126, freq=30, tfirst=194, tfreq=30)...
+	   Assign 3 to reload r194 (freq=30)
+	Hard reg 3 is preferable by r195 with profit 10
+	 Assigning to 195 (cl=LO_REGS, orig=126, freq=20, tfirst=194, tfreq=30)...
+	   Assign 3 to reload r195 (freq=20)
+	 Assigning to 193 (cl=LO_REGS, orig=143, freq=20, tfirst=193, tfreq=20)...
+	   Assign 3 to reload r193 (freq=20)
+	 Assigning to 197 (cl=LO_REGS, orig=128, freq=20, tfirst=197, tfreq=20)...
+	   Assign 3 to reload r197 (freq=20)
+	 Assigning to 198 (cl=LO_REGS, orig=128, freq=20, tfirst=198, tfreq=20)...
+	   Assign 3 to reload r198 (freq=20)
+	Hard reg 3 is preferable by r196 with profit 10
+	 Assigning to 199 (cl=LO_REGS, orig=119, freq=3, tfirst=180, tfreq=3)...
+	   Assign 3 to inheritance r199 (freq=3)
+	Hard reg 0 is preferable by r200 with profit 1
+	Hard reg 3 is preferable by r200 with profit 1
+	Hard reg 3 is preferable by r180 with profit 1
+	 Assigning to 180 (cl=LO_REGS, orig=119, freq=2, tfirst=180, tfreq=3)...
+	   Assign 3 to reload r180 (freq=2)
+	 Assigning to 201 (cl=LO_REGS, orig=120, freq=3, tfirst=181, tfreq=3)...
+	   Assign 3 to inheritance r201 (freq=3)
+	Hard reg 0 is preferable by r202 with profit 1
+	Hard reg 3 is preferable by r202 with profit 1
+	Hard reg 3 is preferable by r181 with profit 1
+	 Assigning to 181 (cl=LO_REGS, orig=120, freq=2, tfirst=181, tfreq=3)...
+	   Assign 3 to reload r181 (freq=2)
+	 Assigning to 187 (cl=LO_REGS, orig=129, freq=2, tfirst=187, tfreq=3)...
+	   Assign 3 to reload r187 (freq=2)
+	Hard reg 3 is preferable by r185 with profit 1
+	Hard reg 3 is preferable by r204 with profit 1
+	Hard reg 3 is preferable by r188 with profit 1
+	 Assigning to 188 (cl=LO_REGS, orig=129, freq=2, tfirst=187, tfreq=3)...
+	   Assign 3 to reload r188 (freq=2)
+	Hard reg 3 is preferable by r204 with profit 2
+	 Assigning to 204 (cl=LO_REGS, orig=129, freq=3, tfirst=187, tfreq=3)...
+	   Assign 3 to inheritance r204 (freq=3)
+	 Assigning to 190 (cl=LO_REGS, orig=143, freq=2, tfirst=190, tfreq=3)...
+	   Assign 3 to reload r190 (freq=2)
+	Hard reg 3 is preferable by r189 with profit 1
+	Hard reg 3 is preferable by r203 with profit 1
+	Hard reg 3 is preferable by r191 with profit 1
+	Hard reg 3 is preferable by r192 with profit 1
+	 Assigning to 191 (cl=LO_REGS, orig=143, freq=3, tfirst=190, tfreq=3)...
+	   Assign 3 to reload r191 (freq=3)
+	Hard reg 3 is preferable by r203 with profit 2
+	Hard reg 3 is preferable by r192 with profit 2
+	 Assigning to 192 (cl=LO_REGS, orig=143, freq=2, tfirst=190, tfreq=3)...
+	   Assign 3 to reload r192 (freq=2)
+	 Assigning to 203 (cl=LO_REGS, orig=143, freq=2, tfirst=190, tfreq=3)...
+	   Assign 3 to inheritance r203 (freq=2)
+	 Assigning to 183 (cl=LO_REGS, orig=120, freq=2, tfirst=183, tfreq=2)...
+	   Assign 3 to reload r183 (freq=2)
+	 Assigning to 184 (cl=LO_REGS, orig=126, freq=2, tfirst=184, tfreq=2)...
+	   Assign 3 to reload r184 (freq=2)
+	Hard reg 3 is preferable by r182 with profit 1
+	 Assigning to 186 (cl=LO_REGS, orig=119, freq=2, tfirst=186, tfreq=2)...
+	   Assign 3 to reload r186 (freq=2)
+	 Assigning to 196 (cl=GENERAL_REGS, orig=128, freq=20, tfirst=196, tfreq=20)...
+	   Assign 3 to reload r196 (freq=20)
+	 Assigning to 200 (cl=GENERAL_REGS, orig=119, freq=3, tfirst=200, tfreq=3)...
+	   Assign 3 to inheritance r200 (freq=3)
+	 Assigning to 202 (cl=GENERAL_REGS, orig=120, freq=3, tfirst=202, tfreq=3)...
+	   Assign 3 to inheritance r202 (freq=3)
+	 Assigning to 182 (cl=GENERAL_REGS, orig=126, freq=2, tfirst=182, tfreq=2)...
+	   Assign 3 to reload r182 (freq=2)
+	 Assigning to 185 (cl=GENERAL_REGS, orig=129, freq=2, tfirst=185, tfreq=2)...
+	   Assign 3 to reload r185 (freq=2)
+	 Assigning to 189 (cl=GENERAL_REGS, orig=143, freq=2, tfirst=189, tfreq=2)...
+	   Assign 3 to reload r189 (freq=2)
+  Reassigning non-reload pseudos
+
+********** Undoing inheritance #1: **********
+
+Inherit 6 out of 6 (100.00%)
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 13
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=619,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=620,losers=2,rld_nregs=1
+            0 Non pseudo reload: reject++
+          alt=7,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 188:  (0) m  (1) l {*thumb2_movsi_vfp}
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=619,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=620,losers=2,rld_nregs=1
+            0 Non pseudo reload: reject++
+          alt=7,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 186:  (0) m  (1) l {*thumb2_movsi_vfp}
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=607,losers=1,rld_nregs=1
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=619,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=620,losers=2,rld_nregs=1
+            0 Non pseudo reload: reject++
+          alt=7,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 184:  (0) m  (1) l {*thumb2_movsi_vfp}
+	   Spilling non-eliminable hard regs: 13
+  Slot 0 regnos (width = 0):	 128
+  Slot 1 regnos (width = 0):	 126
+  Slot 2 regnos (width = 0):	 129
+  Slot 3 regnos (width = 0):	 143
+  Slot 4 regnos (width = 0):	 119
+  Slot 5 regnos (width = 0):	 120
+Changing spilled pseudos to memory in insn #184
+Changing spilled pseudos to memory in insn #186
+Changing spilled pseudos to memory in insn #165
+Changing spilled pseudos to memory in insn #164
+Changing spilled pseudos to memory in insn #168
+Changing spilled pseudos to memory in insn #188
+Changing spilled pseudos to memory in insn #5
+Changing spilled pseudos to memory in insn #174
+Changing spilled pseudos to memory in insn #176
+Changing spilled pseudos to memory in insn #177
+Changing spilled pseudos to memory in insn #178
+Changing spilled pseudos to memory in insn #7
+Changing spilled pseudos to memory in insn #8
+Changing spilled pseudos to memory in insn #181
+Changing spilled pseudos to memory in insn #180
+Changing spilled pseudos to memory in insn #90
+Changing spilled pseudos to memory in insn #92
+	   Spilling non-eliminable hard regs: 13
+New elimination table:
+Can eliminate 103 to 13 (offset=64, prev_offset=40)
+Can't eliminate 103 to 102 (offset=40, prev_offset=0)
+Can't eliminate 103 to 11 (offset=36, prev_offset=0)
+Can eliminate 103 to 7 (offset=64, prev_offset=0)
+Can eliminate 102 to 13 (offset=24, prev_offset=0)
+Can't eliminate 102 to 11 (offset=-4, prev_offset=0)
+Can eliminate 102 to 7 (offset=24, prev_offset=0)
+
+********** Local #3: **********
+
+	   Spilling non-eliminable hard regs: 13
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 92:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 90:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 180:  (0) m  (1) l {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 181:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 8:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 7:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 178:  (0) m  (1) l {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 177:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 176:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 174:  (0) m  (1) l {*thumb2_movsi_vfp}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 5:  (0) m  (1) l {*thumb2_movsi_vfp}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 188:  (0) m  (1) l {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 168:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 164:  (0) m  (1) l {*thumb2_movsi_vfp}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=1: Bad operand -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 165:  (0) l  (1) mi {*thumb2_movsi_vfp}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 186:  (0) m  (1) l {*thumb2_movsi_vfp}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=5,overall=21,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=6,overall=22,losers=2 -- refuse
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 184:  (0) m  (1) l {*thumb2_movsi_vfp}
+	   Spilling non-eliminable hard regs: 13
+New elimination table:
+Can eliminate 103 to 13 (offset=64, prev_offset=64)
+Can't eliminate 103 to 102 (offset=40, prev_offset=0)
+Can't eliminate 103 to 11 (offset=36, prev_offset=0)
+Can eliminate 103 to 7 (offset=64, prev_offset=0)
+Can eliminate 102 to 13 (offset=24, prev_offset=24)
+Can't eliminate 102 to 11 (offset=-4, prev_offset=0)
+Can eliminate 102 to 7 (offset=24, prev_offset=0)
+changing reg in insn 50
+changing reg in insn 47
+changing reg in insn 151
+changing reg in insn 50
+changing reg in insn 52
+changing reg in insn 62
+changing reg in insn 59
+changing reg in insn 64
+changing reg in insn 62
+changing reg in insn 65
+changing reg in insn 67
+changing reg in insn 70
+changing reg in insn 41
+changing reg in insn 152
+changing reg in insn 44
+changing reg in insn 50
+changing reg in insn 46
+changing reg in insn 44
+changing reg in insn 8
+changing reg in insn 153
+changing reg in insn 4
+changing reg in insn 146
+changing reg in insn 3
+changing reg in insn 144
+changing reg in insn 7
+changing reg in insn 154
+changing reg in insn 6
+changing reg in insn 148
+changing reg in insn 29
+changing reg in insn 147
+changing reg in insn 142
+changing reg in insn 141
+changing reg in insn 145
+changing reg in insn 142
+changing reg in insn 18
+changing reg in insn 19
+changing reg in insn 31
+changing reg in insn 32
+changing reg in insn 44
+changing reg in insn 47
+changing reg in insn 46
+changing reg in insn 47
+changing reg in insn 143
+changing reg in insn 50
+changing reg in insn 56
+changing reg in insn 59
+changing reg in insn 138
+changing reg in insn 137
+changing reg in insn 149
+changing reg in insn 138
+changing reg in insn 58
+changing reg in insn 59
+changing reg in insn 60
+changing reg in insn 62
+changing reg in insn 68
+changing reg in insn 150
+changing reg in insn 132
+changing reg in insn 13
+changing reg in insn 133
+changing reg in insn 27
+changing reg in insn 44
+changing reg in insn 56
+changing reg in insn 158
+changing reg in insn 148
+changing reg in insn 85
+changing reg in insn 155
+changing reg in insn 41
+changing reg in insn 87
+changing reg in insn 85
+changing reg in insn 159
+changing reg in insn 149
+changing reg in insn 156
+changing reg in insn 160
+changing reg in insn 150
+changing reg in insn 157
+changing reg in insn 151
+changing reg in insn 152
+changing reg in insn 74
+changing reg in insn 76
+changing reg in insn 74
+changing reg in insn 62
+changing reg in insn 58
+changing reg in insn 56
+changing reg in insn 56
+changing reg in insn 153
+changing reg in insn 64
+changing reg in insn 64
+changing reg in insn 154
+changing reg in insn 67
+changing reg in insn 67
+changing reg in insn 155
+changing reg in insn 158
+changing reg in insn 76
+changing reg in insn 156
+changing reg in insn 159
+changing reg in insn 56
+changing reg in insn 157
+changing reg in insn 160
+changing reg in insn 71
+changing reg in insn 146
+changing reg in insn 32
+changing reg in insn 35
+changing reg in insn 32
+changing reg in insn 147
+changing reg in insn 35
+changing reg in insn 144
+changing reg in insn 19
+changing reg in insn 22
+changing reg in insn 19
+changing reg in insn 145
+changing reg in insn 22
+deleting insn with uid = 132.
+deleting insn with uid = 183.
+deleting insn with uid = 162.
+deleting insn with uid = 3.
+deleting insn with uid = 144.
+deleting insn with uid = 145.
+deleting insn with uid = 133.
+deleting insn with uid = 185.
+deleting insn with uid = 163.
+deleting insn with uid = 4.
+deleting insn with uid = 146.
+deleting insn with uid = 147.
+deleting insn with uid = 166.
+deleting insn with uid = 169.
+deleting insn with uid = 167.
+deleting insn with uid = 170.
+deleting insn with uid = 172.
+deleting insn with uid = 171.
+deleting insn with uid = 173.
+deleting insn with uid = 175.
+deleting insn with uid = 148.
+deleting insn with uid = 149.
+deleting insn with uid = 150.
+deleting insn with uid = 179.
+deleting insn with uid = 151.
+deleting insn with uid = 152.
+deleting insn with uid = 153.
+deleting insn with uid = 154.
+deleting insn with uid = 155.
+deleting insn with uid = 156.
+deleting insn with uid = 157.
+deleting insn with uid = 70.
+deleting insn with uid = 158.
+deleting insn with uid = 159.
+deleting insn with uid = 160.
+deleting insn with uid = 182.
+
+
+try_optimize_cfg iteration 1
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+verify found no changes in insn with uid = 12.
+verify found no changes in insn with uid = 26.
+verify found no changes in insn with uid = 73.
+verify found no changes in insn with uid = 83.
+verify found no changes in insn with uid = 91.
+verify found no changes in insn with uid = 93.
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 11 n_edges 14 count 13 (  1.2)
+
+
+main
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 13 [sp]
+;;  eh block artificial uses 	 13 [sp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15]
+;;  exit block uses 	 0 [r0] 13 [sp]
+;;  regs ever live 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 4 [r4] 5 [r5] 6 [r6] 7 [r7] 8 [r8] 9 [r9] 10 [r10] 11 [fp] 12 [ip] 13 [sp] 14 [lr] 100 [cc]
+;;  ref usage 	r0={14d,10u} r1={11d,4u} r2={16d,9u} r3={25d,23u} r4={2d,8u,2e} r5={2d,1u} r6={2d,1u} r7={3d,4u} r8={2d,4u} r9={1d,1u} r10={2d,2u} r11={1d,1u} r12={12d} r13={1d,33u} r14={7d} r15={6d} r16={7d} r17={7d} r18={7d} r19={7d} r20={7d} r21={7d} r22={7d} r23={7d} r24={7d} r25={7d} r26={7d} r27={7d} r28={7d} r29={7d} r30={7d} r31={7d} r48={6d} r49={6d} r50={6d} r51={6d} r52={6d} r53={6d} r54={6d} r55={6d} r56={6d} r57={6d} r58={6d} r59={6d} r60={6d} r61={6d} r62={6d} r63={6d} r64={6d} r65={6d} r66={6d} r67={6d} r68={6d} r69={6d} r70={6d} r71={6d} r72={6d} r73={6d} r74={6d} r75={6d} r76={6d} r77={6d} r78={6d} r79={6d} r80={6d} r81={6d} r82={6d} r83={6d} r84={6d} r85={6d} r86={6d} r87={6d} r88={6d} r89={6d} r90={6d} r91={6d} r92={6d} r93={6d} r94={6d} r95={6d} r96={6d} r97={6d} r98={6d} r99={6d} r100={10d,4u} r101={6d} r104={6d} r105={6d} r106={6d} 
+;;    total ref usage 672{565d,105u,2e} in 74{68 regular + 6 call} insns.
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 9 11 2 NOTE_INSN_FUNCTION_BEG)
+(insn 11 2 12 2 (set (reg:SI 0 r0)
+        (const_int 40000 [0x9c40])) "./understand-elf/matmul-v2.cpp":12:33 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 12 11 13 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("_Znaj") [flags 0x41]  <function_decl 0x7f3dd6fd3200 operator new []>) [0 operator new [] S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "./understand-elf/matmul-v2.cpp":12:33 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 13 12 184 2 (set (reg/f:SI 3 r3 [orig:119 _30 ] [119])
+        (reg:SI 0 r0 [161])) "./understand-elf/matmul-v2.cpp":12:33 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_NOALIAS (reg/f:SI 137)
+        (nil)))
+(insn 184 13 15 2 (set (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 16 [0x10])) [2 %sfp+-8 S4 A32])
+        (reg/f:SI 3 r3 [orig:119 _30 ] [119])) "./understand-elf/matmul-v2.cpp":12:33 740 {*thumb2_movsi_vfp}
+     (nil))
+(note 15 184 141 2 NOTE_INSN_DELETED)
+(insn 141 15 142 2 (set (reg/f:SI 2 r2 [orig:135 _90 ] [135])
+        (plus:SI (reg/f:SI 3 r3 [orig:119 _30 ] [119])
+            (const_int 39936 [0x9c00]))) 7 {*arm_addsi3}
+     (nil))
+(insn 142 141 18 2 (set (reg/f:SI 2 r2 [orig:135 _90 ] [135])
+        (plus:SI (reg/f:SI 2 r2 [orig:135 _90 ] [135])
+            (const_int 64 [0x40]))) 7 {*arm_addsi3}
+     (nil))
+(insn 18 142 21 2 (set (reg:SI 1 r1 [139])
+        (const_int 0 [0])) "./understand-elf/matmul-v2.cpp":12:33 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUIV (const_int 0 [0])
+        (nil)))
+(code_label 21 18 17 3 2 (nil) [1 uses])
+(note 17 21 19 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 19 17 22 3 (set (mem:SI (post_inc:SI (reg/f:SI 3 r3 [orig:122 _44 ] [122])) [0 MEM[(int *)_58]+0 S4 A32])
+        (reg:SI 1 r1 [139])) "./understand-elf/matmul-v2.cpp":12:33 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg/f:SI 3 r3 [orig:122 _44 ] [122])
+        (nil)))
+(insn 22 19 23 3 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 3 r3 [orig:122 _44 ] [122])
+            (reg/f:SI 2 r2 [orig:135 _90 ] [135]))) "./understand-elf/matmul-v2.cpp":12:33 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 23 22 24 3 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 21)
+            (pc))) "./understand-elf/matmul-v2.cpp":12:33 273 {arm_cond_branch}
+     (int_list:REG_BR_PROB 1063004412 (nil))
+ -> 21)
+(note 24 23 25 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 4 (set (reg:SI 0 r0)
+        (const_int 400 [0x190])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 26 25 27 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("_Znaj") [flags 0x41]  <function_decl 0x7f3dd6fd3200 operator new []>) [0 operator new [] S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "./understand-elf/matmul-v2.cpp":13:28 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 27 26 186 4 (set (reg/f:SI 3 r3 [orig:120 _32 ] [120])
+        (reg:SI 0 r0 [162])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_NOALIAS (reg/f:SI 140)
+        (nil)))
+(insn 186 27 29 4 (set (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 20 [0x14])) [2 %sfp+-4 S4 A32])
+        (reg/f:SI 3 r3 [orig:120 _32 ] [120])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 29 186 31 4 (set (reg/f:SI 1 r1 [orig:134 _89 ] [134])
+        (plus:SI (reg/f:SI 3 r3 [orig:120 _32 ] [120])
+            (const_int 400 [0x190]))) 7 {*arm_addsi3}
+     (nil))
+(insn 31 29 34 4 (set (reg:SI 2 r2 [141])
+        (const_int 0 [0])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUIV (const_int 0 [0])
+        (nil)))
+(code_label 34 31 30 5 3 (nil) [1 uses])
+(note 30 34 32 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 32 30 35 5 (set (mem:SI (post_inc:SI (reg/f:SI 3 r3 [orig:121 _41 ] [121])) [0 MEM[(int *)_60]+0 S4 A32])
+        (reg:SI 2 r2 [141])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg/f:SI 3 r3 [orig:121 _41 ] [121])
+        (nil)))
+(insn 35 32 36 5 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 3 r3 [orig:121 _41 ] [121])
+            (reg/f:SI 1 r1 [orig:134 _89 ] [134]))) "./understand-elf/matmul-v2.cpp":13:28 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 36 35 37 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 34)
+            (pc))) "./understand-elf/matmul-v2.cpp":13:28 273 {arm_cond_branch}
+     (int_list:REG_BR_PROB 1063004412 (nil))
+ -> 34)
+(note 37 36 165 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 165 37 38 6 (set (reg/f:SI 3 r3 [orig:120 _32 ] [120])
+        (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 20 [0x14])) [2 %sfp+-4 S4 A32])) 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 38 165 164 6 (set (reg:SI 3 r3 [orig:126 ivtmp.33 ] [126])
+        (plus:SI (reg/f:SI 3 r3 [orig:120 _32 ] [120])
+            (const_int -4 [0xfffffffffffffffc]))) 7 {*arm_addsi3}
+     (nil))
+(insn 164 38 168 6 (set (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])) [2 %sfp+-20 S4 A32])
+        (reg:SI 3 r3 [orig:126 ivtmp.33 ] [126])) 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 168 164 39 6 (set (reg/f:SI 3 r3 [orig:119 _30 ] [119])
+        (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 16 [0x10])) [2 %sfp+-8 S4 A32])) 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 39 168 188 6 (set (reg/f:SI 3 r3 [orig:129 ivtmp.35 ] [129])
+        (plus:SI (reg/f:SI 3 r3 [orig:119 _30 ] [119])
+            (const_int -4 [0xfffffffffffffffc]))) 7 {*arm_addsi3}
+     (nil))
+(insn 188 39 5 6 (set (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 8 [0x8])) [2 %sfp+-16 S4 A32])
+        (reg/f:SI 3 r3 [orig:129 ivtmp.35 ] [129])) 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 5 188 6 6 (set (mem/c:SI (reg/f:SI 13 sp) [2 %sfp+-24 S4 A32])
+        (reg/f:SI 3 r3 [orig:129 ivtmp.35 ] [129])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 134 6 (set (reg:SI 8 r8 [orig:131 ivtmp.38 ] [131])
+        (const_int 100 [0x64])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUAL (const_int 100 [0x64])
+        (nil)))
+(insn 134 6 187 6 (set (reg:SI 3 r3 [143])
+        (const_int 60495 [0xec4f])) "./understand-elf/matmul-v2.cpp":15:21 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUAL (const_int 60495 [0xec4f])
+        (nil)))
+(note 187 134 135 6 NOTE_INSN_DELETED)
+(insn 135 187 174 6 (set (zero_extract:SI (reg:SI 3 r3 [143])
+            (const_int 16 [0x10])
+            (const_int 16 [0x10]))
+        (const_int 20164 [0x4ec4])) "./understand-elf/matmul-v2.cpp":15:21 403 {*arm_movtas_ze}
+     (expr_list:REG_EQUAL (const_int 1321528399 [0x4ec4ec4f])
+        (nil)))
+(insn 174 135 137 6 (set (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 12 [0xc])) [2 %sfp+-12 S4 A32])
+        (reg:SI 3 r3 [143])) "./understand-elf/matmul-v2.cpp":15:21 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 137 174 138 6 (set (reg:SI 10 r10 [149])
+        (const_int 26215 [0x6667])) "./understand-elf/matmul-v2.cpp":17:30 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUAL (const_int 26215 [0x6667])
+        (nil)))
+(insn 138 137 68 6 (set (zero_extract:SI (reg:SI 10 r10 [149])
+            (const_int 16 [0x10])
+            (const_int 16 [0x10]))
+        (const_int 26214 [0x6666])) "./understand-elf/matmul-v2.cpp":17:30 403 {*arm_movtas_ze}
+     (expr_list:REG_EQUAL (const_int 1717986919 [0x66666667])
+        (nil)))
+(insn 68 138 86 6 (set (reg/f:SI 11 fp [155])
+        (unspec:SI [
+                (const:SI (unspec:SI [
+                            (symbol_ref/v/f:SI ("*.LC0") [flags 0x82]  <var_decl 0x7f3dd6ddc900 *.LC0>)
+                            (const:SI (plus:SI (unspec:SI [
+                                            (const_int 0 [0])
+                                        ] UNSPEC_PIC_LABEL)
+                                    (const_int 4 [0x4])))
+                        ] UNSPEC_SYMBOL_OFFSET))
+                (const_int 0 [0])
+            ] UNSPEC_PIC_UNIFIED)) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 254 {pic_load_addr_unified}
+     (expr_list:REG_EQUIV (symbol_ref/v/f:SI ("*.LC0") [flags 0x82]  <var_decl 0x7f3dd6ddc900 *.LC0>)
+        (nil)))
+(code_label 86 68 40 7 5 (nil) [1 uses])
+(note 40 86 41 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 176 7 (set (reg:SI 4 r4 [orig:117 ivtmp.18 ] [117])
+        (plus:SI (reg:SI 8 r8 [orig:131 ivtmp.38 ] [131])
+            (const_int -100 [0xffffffffffffff9c]))) 7 {*arm_addsi3}
+     (nil))
+(insn 176 41 44 7 (set (reg:SI 3 r3 [143])
+        (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 12 [0xc])) [2 %sfp+-12 S4 A32])) "./understand-elf/matmul-v2.cpp":15:21 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 44 176 45 7 (parallel [
+            (set (reg:SI 3 r3 [142])
+                (truncate:SI (lshiftrt:DI (mult:DI (sign_extend:DI (reg:SI 4 r4 [orig:117 ivtmp.18 ] [117]))
+                            (sign_extend:DI (reg:SI 3 r3 [143])))
+                        (const_int 32 [0x20]))))
+            (clobber (reg:SI 2 r2 [163]))
+        ]) "./understand-elf/matmul-v2.cpp":15:21 71 {*smull_high}
+     (expr_list:REG_EQUAL (truncate:SI (lshiftrt:DI (mult:DI (sign_extend:DI (reg:SI 4 r4 [orig:117 ivtmp.18 ] [117]))
+                    (const_int 1321528399 [0x4ec4ec4f]))
+                (const_int 32 [0x20])))
+        (nil)))
+(note 45 44 46 7 NOTE_INSN_DELETED)
+(insn 46 45 47 7 (set (reg:SI 7 r7 [145])
+        (ashiftrt:SI (reg:SI 4 r4 [orig:117 ivtmp.18 ] [117])
+            (const_int 31 [0x1f]))) "./understand-elf/matmul-v2.cpp":15:21 147 {*arm_shiftsi3}
+     (nil))
+(insn 47 46 49 7 (set (reg:SI 7 r7 [orig:113 _4 ] [113])
+        (minus:SI (ashiftrt:SI (reg:SI 3 r3 [142])
+                (const_int 2 [0x2]))
+            (reg:SI 7 r7 [145]))) "./understand-elf/matmul-v2.cpp":15:21 319 {*rsb_shiftsi}
+     (nil))
+(note 49 47 143 7 NOTE_INSN_DELETED)
+(insn 143 49 50 7 (set (reg:SI 3 r3 [147])
+        (const_int 13 [0xd])) "./understand-elf/matmul-v2.cpp":15:21 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUIV (const_int 13 [0xd])
+        (nil)))
+(insn 50 143 177 7 (set (reg:SI 7 r7 [orig:113 _4 ] [113])
+        (minus:SI (reg:SI 4 r4 [orig:117 ivtmp.18 ] [117])
+            (mult:SI (reg:SI 3 r3 [147])
+                (reg:SI 7 r7 [orig:113 _4 ] [113])))) "./understand-elf/matmul-v2.cpp":15:21 58 {*mls}
+     (nil))
+(insn 177 50 52 7 (set (reg:SI 3 r3 [orig:126 ivtmp.33 ] [126])
+        (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])) [2 %sfp+-20 S4 A32])) "./understand-elf/matmul-v2.cpp":15:17 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 52 177 178 7 (set (mem:SI (pre_inc:SI (reg:SI 3 r3 [orig:126 ivtmp.33 ] [126])) [0 MEM[(int *)_84]+0 S4 A32])
+        (reg:SI 7 r7 [orig:113 _4 ] [113])) "./understand-elf/matmul-v2.cpp":15:17 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg:SI 3 r3 [orig:126 ivtmp.33 ] [126])
+        (nil)))
+(insn 178 52 7 7 (set (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])) [2 %sfp+-20 S4 A32])
+        (reg:SI 3 r3 [orig:126 ivtmp.33 ] [126])) "./understand-elf/matmul-v2.cpp":15:17 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 7 178 8 7 (set (reg:SI 6 r6 [orig:123 ivtmp.23 ] [123])
+        (mem/c:SI (reg/f:SI 13 sp) [2 %sfp+-24 S4 A32])) "./understand-elf/matmul-v2.cpp":15:17 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 60 7 (set (reg:SI 5 r5 [orig:118 ivtmp.20 ] [118])
+        (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 8 [0x8])) [2 %sfp+-16 S4 A32])) "./understand-elf/matmul-v2.cpp":15:17 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 60 8 75 7 (set (reg:SI 9 r9 [153])
+        (const_int 20 [0x14])) "./understand-elf/matmul-v2.cpp":17:30 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUIV (const_int 20 [0x14])
+        (nil)))
+(code_label 75 60 53 8 4 (nil) [1 uses])
+(note 53 75 56 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 56 53 57 8 (parallel [
+            (set (reg:SI 3 r3 [148])
+                (truncate:SI (lshiftrt:DI (mult:DI (sign_extend:DI (reg:SI 4 r4 [orig:117 ivtmp.18 ] [117]))
+                            (sign_extend:DI (reg:SI 10 r10 [149])))
+                        (const_int 32 [0x20]))))
+            (clobber (reg:SI 2 r2 [164]))
+        ]) "./understand-elf/matmul-v2.cpp":17:30 71 {*smull_high}
+     (expr_list:REG_EQUAL (truncate:SI (lshiftrt:DI (mult:DI (sign_extend:DI (reg:SI 4 r4 [orig:117 ivtmp.18 ] [117]))
+                    (const_int 1717986919 [0x66666667]))
+                (const_int 32 [0x20])))
+        (nil)))
+(note 57 56 58 8 NOTE_INSN_DELETED)
+(insn 58 57 59 8 (set (reg:SI 2 r2 [151])
+        (ashiftrt:SI (reg:SI 4 r4 [orig:117 ivtmp.18 ] [117])
+            (const_int 31 [0x1f]))) "./understand-elf/matmul-v2.cpp":17:30 147 {*arm_shiftsi3}
+     (nil))
+(insn 59 58 61 8 (set (reg:SI 2 r2 [orig:115 _9 ] [115])
+        (minus:SI (ashiftrt:SI (reg:SI 3 r3 [148])
+                (const_int 3 [0x3]))
+            (reg:SI 2 r2 [151]))) "./understand-elf/matmul-v2.cpp":17:30 319 {*rsb_shiftsi}
+     (nil))
+(note 61 59 62 8 NOTE_INSN_DELETED)
+(insn 62 61 64 8 (set (reg:SI 2 r2 [orig:115 _9 ] [115])
+        (minus:SI (reg:SI 4 r4 [orig:117 ivtmp.18 ] [117])
+            (mult:SI (reg:SI 9 r9 [153])
+                (reg:SI 2 r2 [orig:115 _9 ] [115])))) "./understand-elf/matmul-v2.cpp":17:30 58 {*mls}
+     (nil))
+(insn 64 62 65 8 (set (mem:SI (pre_inc:SI (reg:SI 5 r5 [orig:118 ivtmp.20 ] [118])) [0 MEM[(int *)_56]+0 S4 A32])
+        (reg:SI 2 r2 [orig:115 _9 ] [115])) "./understand-elf/matmul-v2.cpp":17:23 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg:SI 5 r5 [orig:118 ivtmp.20 ] [118])
+        (nil)))
+(insn 65 64 67 8 (set (reg:SI 2 r2 [orig:116 _15 ] [116])
+        (mult:SI (reg:SI 7 r7 [orig:113 _4 ] [113])
+            (reg:SI 2 r2 [orig:115 _9 ] [115]))) "./understand-elf/matmul-v2.cpp":18:36 56 {*mul}
+     (nil))
+(insn 67 65 71 8 (set (mem:SI (pre_inc:SI (reg:SI 6 r6 [orig:123 ivtmp.23 ] [123])) [0 MEM[(int *)_53]+0 S4 A32])
+        (reg:SI 2 r2 [orig:116 _15 ] [116])) "./understand-elf/matmul-v2.cpp":18:27 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg:SI 6 r6 [orig:123 ivtmp.23 ] [123])
+        (nil)))
+(insn 71 67 72 8 (set (reg:SI 1 r1)
+        (reg/f:SI 11 fp [155])) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUAL (symbol_ref/v/f:SI ("*.LC0") [flags 0x82]  <var_decl 0x7f3dd6ddc900 *.LC0>)
+        (nil)))
+(insn 72 71 73 8 (set (reg:SI 0 r0)
+        (const_int 1 [0x1])) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 73 72 74 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__printf_chk") [flags 0x41]  <function_decl 0x7f3dd6d8f100 __printf_chk>) [0 __printf_chk S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 74 73 76 8 (set (reg:SI 4 r4 [orig:117 ivtmp.18 ] [117])
+        (plus:SI (reg:SI 4 r4 [orig:117 ivtmp.18 ] [117])
+            (const_int 1 [0x1]))) "./understand-elf/matmul-v2.cpp":16:22 7 {*arm_addsi3}
+     (nil))
+(insn 76 74 77 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 4 r4 [orig:117 ivtmp.18 ] [117])
+            (reg:SI 8 r8 [orig:131 ivtmp.38 ] [131]))) "./understand-elf/matmul-v2.cpp":16:22 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 77 76 78 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 75)
+            (pc))) "./understand-elf/matmul-v2.cpp":16:22 273 {arm_cond_branch}
+     (int_list:REG_BR_PROB 1063004412 (nil))
+ -> 75)
+(note 78 77 79 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(note 79 78 81 9 NOTE_INSN_DELETED)
+(insn 81 79 82 9 (set (reg:SI 1 r1)
+        (unspec:SI [
+                (const:SI (unspec:SI [
+                            (symbol_ref/v/f:SI ("*.LC1") [flags 0x82]  <var_decl 0x7f3dd6ddc990 *.LC1>)
+                            (const:SI (plus:SI (unspec:SI [
+                                            (const_int 1 [0x1])
+                                        ] UNSPEC_PIC_LABEL)
+                                    (const_int 4 [0x4])))
+                        ] UNSPEC_SYMBOL_OFFSET))
+                (const_int 1 [0x1])
+            ] UNSPEC_PIC_UNIFIED)) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 254 {pic_load_addr_unified}
+     (expr_list:REG_EQUAL (symbol_ref/v/f:SI ("*.LC1") [flags 0x82]  <var_decl 0x7f3dd6ddc990 *.LC1>)
+        (nil)))
+(insn 82 81 83 9 (set (reg:SI 0 r0)
+        (const_int 1 [0x1])) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 83 82 181 9 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__printf_chk") [flags 0x41]  <function_decl 0x7f3dd6d8f100 __printf_chk>) [0 __printf_chk S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 181 83 84 9 (set (reg:SI 3 r3 [orig:128 ivtmp.35 ] [128])
+        (mem/c:SI (reg/f:SI 13 sp) [2 %sfp+-24 S4 A32])) "./understand-elf/matmul-v2.cpp":14:18 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 84 181 180 9 (set (reg:SI 3 r3 [orig:128 ivtmp.35 ] [128])
+        (plus:SI (reg:SI 3 r3 [orig:128 ivtmp.35 ] [128])
+            (const_int 400 [0x190]))) "./understand-elf/matmul-v2.cpp":14:18 7 {*arm_addsi3}
+     (nil))
+(insn 180 84 85 9 (set (mem/c:SI (reg/f:SI 13 sp) [2 %sfp+-24 S4 A32])
+        (reg:SI 3 r3 [orig:128 ivtmp.35 ] [128])) "./understand-elf/matmul-v2.cpp":14:18 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 85 180 87 9 (set (reg:SI 8 r8 [orig:131 ivtmp.38 ] [131])
+        (plus:SI (reg:SI 8 r8 [orig:131 ivtmp.38 ] [131])
+            (const_int 1 [0x1]))) "./understand-elf/matmul-v2.cpp":14:18 7 {*arm_addsi3}
+     (nil))
+(insn 87 85 88 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 8 r8 [orig:131 ivtmp.38 ] [131])
+            (const_int 200 [0xc8]))) "./understand-elf/matmul-v2.cpp":14:18 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 88 87 89 9 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 86)
+            (pc))) "./understand-elf/matmul-v2.cpp":14:18 273 {arm_cond_branch}
+     (int_list:REG_BR_PROB 1063004412 (nil))
+ -> 86)
+(note 89 88 90 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 90 89 91 10 (set (reg:SI 0 r0)
+        (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 16 [0x10])) [2 %sfp+-8 S4 A32])) "./understand-elf/matmul-v2.cpp":23:13 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 91 90 92 10 (parallel [
+            (call (mem:SI (symbol_ref:SI ("_ZdaPv") [flags 0x41]  <function_decl 0x7f3dd6fd3400 operator delete []>) [0 operator delete [] S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "./understand-elf/matmul-v2.cpp":23:13 290 {*call_symbol}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 92 91 93 10 (set (reg:SI 0 r0)
+        (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 20 [0x14])) [2 %sfp+-4 S4 A32])) "./understand-elf/matmul-v2.cpp":24:13 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 93 92 94 10 (parallel [
+            (call (mem:SI (symbol_ref:SI ("_ZdaPv") [flags 0x41]  <function_decl 0x7f3dd6fd3400 operator delete []>) [0 operator delete [] S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "./understand-elf/matmul-v2.cpp":24:13 290 {*call_symbol}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(note 94 93 98 10 NOTE_INSN_DELETED)
+(insn 98 94 99 10 (set (reg/i:SI 0 r0)
+        (const_int 0 [0])) "./understand-elf/matmul-v2.cpp":26:1 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUAL (const_int 0 [0])
+        (nil)))
+(insn 99 98 161 10 (use (reg/i:SI 0 r0)) "./understand-elf/matmul-v2.cpp":26:1 -1
+     (nil))
+(note 161 99 0 NOTE_INSN_DELETED)

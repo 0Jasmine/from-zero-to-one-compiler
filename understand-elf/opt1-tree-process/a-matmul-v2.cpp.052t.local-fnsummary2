@@ -1,0 +1,204 @@
+
+;; Function printf (printf, funcdef_no=16, decl_uid=1060, cgraph_uid=17, symbol_order=16)
+
+
+Analyzing function body size: int printf(const char*, ...)/16
+
+IPA function summary for int printf(const char*, ...)/16 always_inline inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    int __printf_chk(int, const char*, ...)/33 function body not available
+      freq:1.00 loop depth: 0 size: 4 time: 13
+       op0 is compile time invariant
+
+__attribute__((artificial, gnu_inline, always_inline))
+__attribute__((nonnull (1), format (printf, 1, 2)))
+int printf (const char * restrict __fmt)
+{
+  int _4;
+
+  <bb 2> [local count: 1073741824]:
+  _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  return _4;
+
+}
+
+
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30) (executed once)
+
+
+Analyzing function body size: int main()/30
+
+IPA function summary for int main()/30 inlinable
+  global time:     267753.425293
+  self size:       55
+  global size:     68
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:35.000000, time:139104.705078
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    void operator delete [](void*)/32 function body not available
+      freq:1.00 loop depth: 0 size: 2 time: 11
+       op0 points to local or readonly memory
+    void operator delete [](void*)/32 function body not available
+      freq:1.00 loop depth: 0 size: 2 time: 11
+       op0 points to local or readonly memory
+    int __printf_chk(int, const char*, ...)/33 function body not available
+      freq:99.00 loop depth: 1 size: 3 time: 12
+       op0 is compile time invariant
+       op1 is compile time invariant
+    int __printf_chk(int, const char*, ...)/33 function body not available
+      freq:9800.98 loop depth: 2 size: 4 time: 13
+       op0 is compile time invariant
+       op1 is compile time invariant
+    void* operator new [](unsigned int)/31 function body not available
+      freq:1.00 loop depth: 0 size: 3 time: 12
+       op0 is compile time invariant
+    void* operator new [](unsigned int)/31 function body not available
+      freq:1.00 loop depth: 0 size: 3 time: 12
+       op0 is compile time invariant
+
+int main ()
+{
+  int j;
+  int i;
+  unsigned int i.2_1;
+  unsigned int _2;
+  int * _3;
+  int _4;
+  int _5;
+  unsigned int j.3_6;
+  unsigned int _7;
+  int * _8;
+  int _9;
+  int _10;
+  int _11;
+  unsigned int _12;
+  unsigned int _13;
+  int * _14;
+  int _15;
+  int * _16;
+  int _17;
+  int * _18;
+  int _19;
+  void * _30;
+  void * _32;
+  int * _41;
+  int _42;
+  int * _44;
+  int _45;
+
+  <bb 2> [local count: 108459]:
+  _30 = operator new [] (40000);
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 10737416]:
+  *_16 = 0;
+  _44 = _16 + 4;
+  _45 = _17 + -1;
+
+  <bb 4> [local count: 10845875]:
+  # _16 = PHI <_30(2), _44(3)>
+  # _17 = PHI <9999(2), _45(3)>
+  if (_17 >= 0)
+    goto <bb 3>; [99.00%]
+  else
+    goto <bb 5>; [1.00%]
+
+  <bb 5> [local count: 108459]:
+  _32 = operator new [] (400);
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 10737416]:
+  *_18 = 0;
+  _41 = _18 + 4;
+  _42 = _19 + -1;
+
+  <bb 7> [local count: 10845875]:
+  # _18 = PHI <_32(5), _41(6)>
+  # _19 = PHI <99(5), _42(6)>
+  if (_19 >= 0)
+    goto <bb 6>; [99.00%]
+  else
+    goto <bb 18>; [1.00%]
+
+  <bb 18> [local count: 108459]:
+  goto <bb 12>; [100.00%]
+
+  <bb 8> [local count: 10737416]:
+  i.2_1 = (unsigned int) i_20;
+  _2 = i.2_1 * 4;
+  _3 = _32 + _2;
+  _4 = i_20 % 13;
+  *_3 = _4;
+  goto <bb 10>; [100.00%]
+
+  <bb 9> [local count: 1063004409]:
+  _5 = i_20 + j_21;
+  j.3_6 = (unsigned int) j_21;
+  _7 = j.3_6 * 4;
+  _8 = _30 + _7;
+  _9 = _5 % 20;
+  *_8 = _9;
+  _10 = i_20 * 100;
+  _11 = _10 + j_21;
+  _12 = (unsigned int) _11;
+  _13 = _12 * 4;
+  _14 = _30 + _13;
+  _15 = _4 * _9;
+  *_14 = _15;
+  __printf_chk (1, "%d ", _15);
+  j_39 = j_21 + 1;
+
+  <bb 10> [local count: 1073741824]:
+  # j_21 = PHI <0(8), j_39(9)>
+  if (j_21 <= 99)
+    goto <bb 9>; [99.00%]
+  else
+    goto <bb 11>; [1.00%]
+
+  <bb 11> [local count: 10737416]:
+  __printf_chk (1, "\n");
+  i_36 = i_20 + 1;
+
+  <bb 12> [local count: 10845875]:
+  # i_20 = PHI <0(18), i_36(11)>
+  if (i_20 <= 99)
+    goto <bb 8>; [99.00%]
+  else
+    goto <bb 13>; [1.00%]
+
+  <bb 13> [local count: 108459]:
+  if (_30 != 0B)
+    goto <bb 14>; [99.96%]
+  else
+    goto <bb 15>; [0.04%]
+
+  <bb 14> [local count: 108415]:
+  operator delete [] (_30);
+
+  <bb 15> [local count: 108459]:
+  if (_32 != 0B)
+    goto <bb 16>; [99.96%]
+  else
+    goto <bb 17>; [0.04%]
+
+  <bb 16> [local count: 108415]:
+  operator delete [] (_32);
+
+  <bb 17> [local count: 108459]:
+  return 0;
+
+}
+
+

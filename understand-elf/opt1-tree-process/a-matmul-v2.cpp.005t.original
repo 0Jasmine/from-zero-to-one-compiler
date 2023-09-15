@@ -1,0 +1,457 @@
+
+;; Function int getchar() (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = getc (stdin)>>;
+
+
+;; Function int fgetc_unlocked(FILE*) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __builtin_expect (__fp->_IO_read_ptr >= __fp->_IO_read_end, 0) != 0 ? __uflow (__fp) : (int) *(unsigned char *) __fp->_IO_read_ptr++ >>;
+
+
+;; Function int getc_unlocked(FILE*) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __builtin_expect (__fp->_IO_read_ptr >= __fp->_IO_read_end, 0) != 0 ? __uflow (__fp) : (int) *(unsigned char *) __fp->_IO_read_ptr++ >>;
+
+
+;; Function int getchar_unlocked() (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __builtin_expect (stdin->_IO_read_ptr >= stdin->_IO_read_end, 0) != 0 ? __uflow (stdin) : (int) *(unsigned char *) stdin->_IO_read_ptr++ >>;
+
+
+;; Function int putchar(int) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = putc (__c, stdout)>>;
+
+
+;; Function int fputc_unlocked(int, FILE*) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __builtin_expect (__stream->_IO_write_ptr >= __stream->_IO_write_end, 0) != 0 ? __overflow (__stream, (int) (unsigned char) __c) : (int) (*__stream->_IO_write_ptr++  = (char) __c)>>;
+
+
+;; Function int putc_unlocked(int, FILE*) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __builtin_expect (__stream->_IO_write_ptr >= __stream->_IO_write_end, 0) != 0 ? __overflow (__stream, (int) (unsigned char) __c) : (int) (*__stream->_IO_write_ptr++  = (char) __c)>>;
+
+
+;; Function int putchar_unlocked(int) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __builtin_expect (stdout->_IO_write_ptr >= stdout->_IO_write_end, 0) != 0 ? __overflow (stdout, (int) (unsigned char) __c) : (int) (*stdout->_IO_write_ptr++  = (char) __c)>>;
+
+
+;; Function __ssize_t getline(char**, size_t*, FILE*) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __getdelim (__lineptr, __n, 10, __stream)>>;
+
+
+;; Function int feof_unlocked(FILE*) (null)
+;; enabled by -tree-original
+
+
+<<< Unknown tree: must_not_throw_expr
+  return <retval> = (__stream->_flags & 16) != 0
+   >>>;
+__builtin_unreachable ();
+
+
+;; Function int ferror_unlocked(FILE*) (null)
+;; enabled by -tree-original
+
+
+<<< Unknown tree: must_not_throw_expr
+  return <retval> = (__stream->_flags & 32) != 0
+   >>>;
+__builtin_unreachable ();
+
+
+;; Function int sprintf(char*, const char*, ...) (null)
+;; enabled by -tree-original
+
+
+<<< Unknown tree: must_not_throw_expr
+  <<cleanup_point return <retval> = __builtin___sprintf_chk (__s, 1, __builtin_object_size ((const void *) __s, 1), __fmt, __builtin_va_arg_pack ())>>
+   >>>;
+__builtin_unreachable ();
+
+
+;; Function int vsprintf(char*, const char*, __gnuc_va_list) (null)
+;; enabled by -tree-original
+
+
+<<< Unknown tree: must_not_throw_expr
+  <<cleanup_point return <retval> = __builtin___vsprintf_chk (__s, 1, __builtin_object_size ((const void *) __s, 1), __fmt, __ap)>>
+   >>>;
+__builtin_unreachable ();
+
+
+;; Function int snprintf(char*, size_t, const char*, ...) (null)
+;; enabled by -tree-original
+
+
+<<< Unknown tree: must_not_throw_expr
+  <<cleanup_point return <retval> = __builtin___snprintf_chk (__s, __n, 1, __builtin_object_size ((const void *) __s, 1), __fmt, __builtin_va_arg_pack ())>>
+   >>>;
+__builtin_unreachable ();
+
+
+;; Function int vsnprintf(char*, size_t, const char*, __gnuc_va_list) (null)
+;; enabled by -tree-original
+
+
+<<< Unknown tree: must_not_throw_expr
+  <<cleanup_point return <retval> = __builtin___vsnprintf_chk (__s, __n, 1, __builtin_object_size ((const void *) __s, 1), __fmt, __ap)>>
+   >>>;
+__builtin_unreachable ();
+
+
+;; Function int fprintf(FILE*, const char*, ...) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __fprintf_chk (__stream, 1, __fmt, __builtin_va_arg_pack ())>>;
+
+
+;; Function int printf(const char*, ...) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __printf_chk (1, __fmt, __builtin_va_arg_pack ())>>;
+
+
+;; Function int vprintf(const char*, __gnuc_va_list) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __vfprintf_chk (stdout, 1, __fmt, __ap)>>;
+
+
+;; Function int vfprintf(FILE*, const char*, __gnuc_va_list) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __vfprintf_chk (__stream, 1, __fmt, __ap)>>;
+
+
+;; Function int dprintf(int, const char*, ...) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __dprintf_chk (__fd, 1, __fmt, __builtin_va_arg_pack ())>>;
+
+
+;; Function int vdprintf(int, const char*, __gnuc_va_list) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point return <retval> = __vdprintf_chk (__fd, 1, __fmt, __ap)>>;
+
+
+;; Function int asprintf(char**, const char*, ...) (null)
+;; enabled by -tree-original
+
+
+<<< Unknown tree: must_not_throw_expr
+  <<cleanup_point return <retval> = __asprintf_chk (__ptr, 1, __fmt, __builtin_va_arg_pack ())>>
+   >>>;
+__builtin_unreachable ();
+
+
+;; Function int __asprintf(char**, const char*, ...) (null)
+;; enabled by -tree-original
+
+
+<<< Unknown tree: must_not_throw_expr
+  <<cleanup_point return <retval> = __asprintf_chk (__ptr, 1, __fmt, __builtin_va_arg_pack ())>>
+   >>>;
+__builtin_unreachable ();
+
+
+;; Function int obstack_printf(obstack*, const char*, ...) (null)
+;; enabled by -tree-original
+
+
+<<< Unknown tree: must_not_throw_expr
+  <<cleanup_point return <retval> = __obstack_printf_chk (__obstack, 1, __fmt, __builtin_va_arg_pack ())>>
+   >>>;
+__builtin_unreachable ();
+
+
+;; Function int vasprintf(char**, const char*, __gnuc_va_list) (null)
+;; enabled by -tree-original
+
+
+<<< Unknown tree: must_not_throw_expr
+  <<cleanup_point return <retval> = __vasprintf_chk (__ptr, 1, __fmt, __ap)>>
+   >>>;
+__builtin_unreachable ();
+
+
+;; Function int obstack_vprintf(obstack*, const char*, __gnuc_va_list) (null)
+;; enabled by -tree-original
+
+
+<<< Unknown tree: must_not_throw_expr
+  <<cleanup_point return <retval> = __obstack_vprintf_chk (__obstack, 1, __fmt, __ap)>>
+   >>>;
+__builtin_unreachable ();
+
+
+;; Function char* fgets(char*, int, FILE*) (null)
+;; enabled by -tree-original
+
+
+{
+  size_t sz = __builtin_object_size ((const void *) __s, 1);
+
+    size_t sz = __builtin_object_size ((const void *) __s, 1);
+  if (((__builtin_constant_p (__n) != 0 && __n > 0) && __builtin_constant_p ((unsigned int) __n <= NON_LVALUE_EXPR <sz>) != 0) && (unsigned int) __n <= NON_LVALUE_EXPR <sz>)
+    {
+      <<cleanup_point return <retval> = __fgets_alias (__s, __n, __stream)>>;
+    }
+  if (((__builtin_constant_p (__n) != 0 && __n > 0) && __builtin_constant_p ((unsigned int) __n <= NON_LVALUE_EXPR <sz>) != 0) && (unsigned int) __n > NON_LVALUE_EXPR <sz>)
+    {
+      <<cleanup_point return <retval> = __fgets_chk_warn (__s, sz, __n, __stream)>>;
+    }
+  <<cleanup_point return <retval> = __fgets_chk (__s, sz, __n, __stream)>>;
+}
+
+
+;; Function size_t fread(void*, size_t, size_t, FILE*) (null)
+;; enabled by -tree-original
+
+
+{
+  size_t sz = __builtin_object_size ((const void *) __ptr, 0);
+
+    size_t sz = __builtin_object_size ((const void *) __ptr, 0);
+  if (__builtin_constant_p (sz / __size >= __n) != 0 && sz / __size >= __n)
+    {
+      <<cleanup_point return <retval> = __fread_alias (__ptr, __size, __n, __stream)>>;
+    }
+  if (__builtin_constant_p (sz / __size >= __n) != 0 && sz / __size < __n)
+    {
+      <<cleanup_point return <retval> = __fread_chk_warn (__ptr, sz, __size, __n, __stream)>>;
+    }
+  <<cleanup_point return <retval> = __fread_chk (__ptr, sz, __size, __n, __stream)>>;
+}
+
+
+;; Function char* fgets_unlocked(char*, int, FILE*) (null)
+;; enabled by -tree-original
+
+
+{
+  size_t sz = __builtin_object_size ((const void *) __s, 1);
+
+    size_t sz = __builtin_object_size ((const void *) __s, 1);
+  if (((__builtin_constant_p (__n) != 0 && __n > 0) && __builtin_constant_p ((unsigned int) __n <= NON_LVALUE_EXPR <sz>) != 0) && (unsigned int) __n <= NON_LVALUE_EXPR <sz>)
+    {
+      <<cleanup_point return <retval> = __fgets_unlocked_alias (__s, __n, __stream)>>;
+    }
+  if (((__builtin_constant_p (__n) != 0 && __n > 0) && __builtin_constant_p ((unsigned int) __n <= NON_LVALUE_EXPR <sz>) != 0) && (unsigned int) __n > NON_LVALUE_EXPR <sz>)
+    {
+      <<cleanup_point return <retval> = __fgets_unlocked_chk_warn (__s, sz, __n, __stream)>>;
+    }
+  <<cleanup_point return <retval> = __fgets_unlocked_chk (__s, sz, __n, __stream)>>;
+}
+
+
+;; Function size_t fread_unlocked(void*, size_t, size_t, FILE*) (null)
+;; enabled by -tree-original
+
+
+{
+  size_t sz = __builtin_object_size ((const void *) __ptr, 0);
+
+    size_t sz = __builtin_object_size ((const void *) __ptr, 0);
+  {
+    if (__builtin_constant_p (sz / __size >= __n) != 0 && sz / __size >= __n)
+      {
+        {
+          {
+            if (((__builtin_constant_p (__size) != 0 && __builtin_constant_p (__n) != 0) && (__size | __n) <= 65535) && __size * __n <= 8)
+              {
+                {
+                  size_t __cnt = __size * __n;
+                  char * __cptr = (char *) __ptr;
+
+                                    size_t __cnt = __size * __n;
+                                    char * __cptr = (char *) __ptr;
+                  if (__cnt == 0)
+                    {
+                      return <retval> = 0;
+                    }
+                  {
+                    goto <D.6594>;
+                    <D.6593>:;
+                    {
+                      int __c;
+
+                                            int __c;
+                      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (__c = getc_unlocked (__stream)) >>>>>;
+                      if (__c == -1) goto <D.6591>;
+                      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*__cptr++  = (char) __c) >>>>>;
+                    }
+                    <<cleanup_point (void)  --__cnt>>;
+                    <D.6594>:;
+                    if (__cnt != 0) goto <D.6593>; else goto <D.6591>;
+                    <D.6591>:;
+                  }
+                  return <retval> = (size_t) (__cptr - (char *) __ptr) / __size;
+                }
+              }
+          }
+          <<cleanup_point return <retval> = __fread_unlocked_alias (__ptr, __size, __n, __stream)>>;
+        }
+      }
+  }
+  if (__builtin_constant_p (sz / __size >= __n) != 0 && sz / __size < __n)
+    {
+      <<cleanup_point return <retval> = __fread_unlocked_chk_warn (__ptr, sz, __size, __n, __stream)>>;
+    }
+  <<cleanup_point return <retval> = __fread_unlocked_chk (__ptr, sz, __size, __n, __stream)>>;
+}
+
+
+;; Function int main() (null)
+;; enabled by -tree-original
+
+
+{
+  int * matrix;
+  int * vect;
+
+    int * matrix;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (matrix = TARGET_EXPR <D.6651, operator new [] (40000)>;, try
+    {
+            int * D.6652;
+      <<< Unknown tree: expr_stmt
+  (void) (D.6652 = (int *) D.6651) >>>;
+            int * D.6653;
+      <<< Unknown tree: expr_stmt
+  (void) (D.6653 = D.6652) >>>;
+            int D.6654;
+      <<< Unknown tree: expr_stmt
+  (void) (D.6654 = 9999) >>>;
+      goto <D.6666>;
+      <D.6665>:;
+      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*D.6653 = 0) >>>>>;
+      <<< Unknown tree: expr_stmt
+  (void)  ++D.6653 >>>;
+      (void)  --D.6654;
+      <D.6666>:;
+      if (D.6654 >= 0) goto <D.6665>; else goto <D.6663>;
+      <D.6663>:;
+      D.6652
+    }
+  catch
+    {
+      operator delete [] (D.6651);
+    }, (int *) D.6651;) >>>>>;
+    int * vect;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (vect = TARGET_EXPR <D.6657, operator new [] (400)>;, try
+    {
+            int * D.6658;
+      <<< Unknown tree: expr_stmt
+  (void) (D.6658 = (int *) D.6657) >>>;
+            int * D.6659;
+      <<< Unknown tree: expr_stmt
+  (void) (D.6659 = D.6658) >>>;
+            int D.6660;
+      <<< Unknown tree: expr_stmt
+  (void) (D.6660 = 99) >>>;
+      goto <D.6670>;
+      <D.6669>:;
+      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*D.6659 = 0) >>>>>;
+      <<< Unknown tree: expr_stmt
+  (void)  ++D.6659 >>>;
+      (void)  --D.6660;
+      <D.6670>:;
+      if (D.6660 >= 0) goto <D.6669>; else goto <D.6667>;
+      <D.6667>:;
+      D.6658
+    }
+  catch
+    {
+      operator delete [] (D.6657);
+    }, (int *) D.6657;) >>>>>;
+  {
+    int i = 0;
+
+    <<cleanup_point     int i = 0;>>;
+    goto <D.6678>;
+    <D.6677>:;
+    {
+      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*(vect + (sizetype) ((unsigned int) i * 4)) = i % 13) >>>>>;
+      {
+        int j = 0;
+
+        <<cleanup_point         int j = 0;>>;
+        goto <D.6676>;
+        <D.6675>:;
+        <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*(matrix + (sizetype) ((unsigned int) j * 4)) = (i + j) % 20) >>>>>;
+        <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*(matrix + (sizetype) ((unsigned int) (i * 100 + j) * 4)) = *(vect + (sizetype) ((unsigned int) i * 4)) * *(matrix + (sizetype) ((unsigned int) j * 4))) >>>>>;
+        <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) printf ((const char *) "%d ", *(matrix + (sizetype) ((unsigned int) (i * 100 + j) * 4))) >>>>>;
+        <<cleanup_point (void) j++ >>;
+        <D.6676>:;
+        if (j <= 99) goto <D.6675>; else goto <D.6673>;
+        <D.6673>:;
+      }
+      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) printf ((const char *) "\n") >>>>>;
+    }
+    <<cleanup_point (void) i++ >>;
+    <D.6678>:;
+    if (i <= 99) goto <D.6677>; else goto <D.6671>;
+    <D.6671>:;
+  }
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (if (matrix != 0B)
+    {
+      operator delete [] ((void *) matrix);
+    }
+  else
+    {
+      0
+    }) >>>>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (if (vect != 0B)
+    {
+      operator delete [] ((void *) vect);
+    }
+  else
+    {
+      0
+    }) >>>>>;
+  return <retval> = 0;
+}
+return <retval> = 0;
+

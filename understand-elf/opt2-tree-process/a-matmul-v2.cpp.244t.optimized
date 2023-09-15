@@ -1,0 +1,83 @@
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30) (executed once)
+
+Removing basic block 7
+Removing basic block 8
+int main ()
+{
+  unsigned int ivtmp.35;
+  unsigned int ivtmp.32;
+  unsigned int ivtmp.30;
+  unsigned int ivtmp.20;
+  unsigned int ivtmp.17;
+  unsigned int ivtmp.15;
+  int _4;
+  int _5;
+  int _9;
+  int _15;
+  int * _17;
+  void * _25;
+  void * _28;
+  void * _30;
+  void * _43;
+  void * _46;
+  unsigned int _48;
+  int _49;
+  int * _59;
+
+  <bb 2> [local count: 108459]:
+  _28 = operator new [] (40000);
+  _30 = operator new [] (400);
+  _17 = _30 + 4294967292;
+  ivtmp.30_18 = (unsigned int) _17;
+  _59 = _28 + 4294967292;
+  ivtmp.32_60 = (unsigned int) _59;
+
+  <bb 3> [local count: 10737416]:
+  # ivtmp.30_20 = PHI <ivtmp.30_19(5), ivtmp.30_18(2)>
+  # ivtmp.32_16 = PHI <ivtmp.32_61(5), ivtmp.32_60(2)>
+  # ivtmp.35_51 = PHI <ivtmp.35_50(5), 100(2)>
+  _48 = ivtmp.35_51 + 4294967196;
+  _49 = (int) _48;
+  _4 = _49 % 13;
+  ivtmp.30_19 = ivtmp.30_20 + 4;
+  _46 = (void *) ivtmp.30_19;
+  MEM[(int *)_46] = _4;
+
+  <bb 4> [local count: 1063004409]:
+  # ivtmp.15_54 = PHI <ivtmp.15_69(4), _48(3)>
+  # ivtmp.17_64 = PHI <ivtmp.17_38(4), ivtmp.32_60(3)>
+  # ivtmp.20_53 = PHI <ivtmp.20_52(4), ivtmp.32_16(3)>
+  _5 = (int) ivtmp.15_54;
+  _9 = _5 % 20;
+  ivtmp.17_38 = ivtmp.17_64 + 4;
+  _43 = (void *) ivtmp.17_38;
+  MEM[(int *)_43] = _9;
+  _15 = _4 * _9;
+  ivtmp.20_52 = ivtmp.20_53 + 4;
+  _25 = (void *) ivtmp.20_52;
+  MEM[(int *)_25] = _15;
+  __printf_chk (1, "%d ", _15);
+  ivtmp.15_69 = ivtmp.15_54 + 1;
+  if (ivtmp.35_51 != ivtmp.15_69)
+    goto <bb 4>; [98.99%]
+  else
+    goto <bb 5>; [1.01%]
+
+  <bb 5> [local count: 10737416]:
+  __printf_chk (1, "\n");
+  ivtmp.32_61 = ivtmp.32_16 + 400;
+  ivtmp.35_50 = ivtmp.35_51 + 1;
+  if (ivtmp.35_50 != 200)
+    goto <bb 3>; [98.99%]
+  else
+    goto <bb 6>; [1.01%]
+
+  <bb 6> [local count: 108459]:
+  operator delete [] (_28);
+  operator delete [] (_30);
+  return 0;
+
+}
+
+

@@ -1,0 +1,54 @@
+31 ssa "unused VAR_DECLs removed" "main" 2
+40 ccp "Copies propagated" "printf" 1
+40 ccp "Statements deleted" "printf" 1
+45 fre "RPO num values == 2" "printf" 1
+45 fre "RPO blocks" "printf" 1
+45 fre "RPO iterations == 10" "printf" 1
+45 fre "RPO blocks visited" "printf" 1
+45 fre "RPO blocks executable" "printf" 1
+45 fre "RPO block visited times == 1" "printf" 1
+45 fre "RPO num avail == 1" "printf" 1
+45 fre "RPO num lattice == 2" "printf" 1
+59 release_ssa "SSA names released" "printf" 1
+59 release_ssa "SSA name holes removed" "printf" 1
+40 ccp "Copies propagated" "main" 12
+40 ccp "Statements deleted" "main" 15
+40 ccp "Constants propagated" "main" 1
+45 fre "RPO blocks" "main" 16
+45 fre "RPO iterations == 10" "main" 1
+45 fre "RPO num lattice == 62" "main" 1
+45 fre "RPO blocks visited" "main" 16
+45 fre "RPO blocks executable" "main" 16
+45 fre "RPO block visited times == 1" "main" 16
+45 fre "RPO num avail == 31" "main" 1
+45 fre "Eliminated" "main" 14
+45 fre "RPO num values == 62" "main" 1
+59 release_ssa "unused VAR_DECLs removed" "main" 2
+59 release_ssa "SSA names released" "main" 33
+59 release_ssa "SSA name holes removed" "main" 33
+115 fre "RPO blocks" "main" 17
+115 fre "RPO iterations == 10" "main" 1
+115 fre "RPO num lattice == 46" "main" 1
+115 fre "RPO blocks visited" "main" 17
+115 fre "RPO num values == 46" "main" 1
+115 fre "RPO blocks executable" "main" 17
+115 fre "RPO block visited times == 1" "main" 17
+115 fre "RPO num avail == 29" "main" 1
+128 ch "RPO num values == 2" "main" 2
+128 ch "RPO blocks" "main" 8
+128 ch "RPO num values == 4" "main" 2
+128 ch "RPO iterations == 10" "main" 4
+128 ch "Incremental SSA update" "main" 1
+128 ch "RPO blocks visited" "main" 8
+128 ch "RPO blocks executable" "main" 8
+128 ch "RPO block visited times == 1" "main" 8
+128 ch "RPO num avail == 0" "main" 2
+128 ch "RPO num avail == 1" "main" 2
+128 ch "RPO num lattice == 2" "main" 2
+128 ch "RPO num lattice == 4" "main" 2
+128 ch "Eliminated" "main" 4
+197 dom "Copies propagated" "main" 3
+197 dom "Redundant expressions eliminated" "main" 3
+201 copyprop "Statements deleted" "main" 7
+204 cddce "Statements deleted" "main" 3
+284 combine "two-insn combine" "main" 7

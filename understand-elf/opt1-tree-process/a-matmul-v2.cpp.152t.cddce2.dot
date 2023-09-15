@@ -1,0 +1,161 @@
+digraph "a-matmul-v2.cpp.152t.cddce2" {
+overlap=false;
+subgraph "cluster_main" {
+	style="dashed";
+	color="black";
+	label="main ()";
+	subgraph cluster_30_3 {
+	style="filled";
+	color="darkgreen";
+	fillcolor="grey88";
+	label="loop 3";
+	labeljust=l;
+	penwidth=2;
+	subgraph cluster_30_4 {
+	style="filled";
+	color="darkgreen";
+	fillcolor="grey77";
+	label="loop 4";
+	labeljust=l;
+	penwidth=2;
+	fn_30_basic_block_7 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1063004409\<bb\ 7\>:\l\
+|#\ j_63\ =\ PHI\ \<j_39(12),\ 0(6)\>\l\
+|_5\ =\ i_62\ +\ j_63;\l\
+|j.3_6\ =\ (unsigned\ int)\ j_63;\l\
+|_7\ =\ j.3_6\ *\ 4;\l\
+|_8\ =\ _30\ +\ _7;\l\
+|_9\ =\ _5\ %\ 20;\l\
+|*_8\ =\ _9;\l\
+|_11\ =\ _10\ +\ j_63;\l\
+|_12\ =\ (unsigned\ int)\ _11;\l\
+|_13\ =\ _12\ *\ 4;\l\
+|_14\ =\ _30\ +\ _13;\l\
+|_15\ =\ _4\ *\ _9;\l\
+|*_14\ =\ _15;\l\
+|__printf_chk\ (1,\ \"%d\ \",\ _15);\l\
+|j_39\ =\ j_63\ +\ 1;\l\
+|if\ (j_39\ \<=\ 99)\l\
+\ \ goto\ \<bb\ 12\>;\ [99.00%]\l\
+else\l\
+\ \ goto\ \<bb\ 8\>;\ [1.00%]\l\
+}"];
+
+	fn_30_basic_block_12 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1052374367\<bb\ 12\>:\l\
+goto\ \<bb\ 7\>;\ [100.00%]\l\
+}"];
+
+	}
+	fn_30_basic_block_6 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:10737416\<bb\ 6\>:\l\
+|#\ i_62\ =\ PHI\ \<i_36(11),\ 0(10)\>\l\
+|i.2_1\ =\ (unsigned\ int)\ i_62;\l\
+|_2\ =\ i.2_1\ *\ 4;\l\
+|_3\ =\ _32\ +\ _2;\l\
+|_4\ =\ i_62\ %\ 13;\l\
+|*_3\ =\ _4;\l\
+|_10\ =\ i_62\ *\ 100;\l\
+}"];
+
+	fn_30_basic_block_8 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:10737416\<bb\ 8\>:\l\
+|__printf_chk\ (1,\ \"\\n\");\l\
+|i_36\ =\ i_62\ +\ 1;\l\
+|if\ (i_36\ \<=\ 99)\l\
+\ \ goto\ \<bb\ 11\>;\ [99.00%]\l\
+else\l\
+\ \ goto\ \<bb\ 9\>;\ [1.00%]\l\
+}"];
+
+	fn_30_basic_block_11 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:10630042\<bb\ 11\>:\l\
+goto\ \<bb\ 6\>;\ [100.00%]\l\
+}"];
+
+	}
+	subgraph cluster_30_2 {
+	style="filled";
+	color="darkgreen";
+	fillcolor="grey88";
+	label="loop 2";
+	labeljust=l;
+	penwidth=2;
+	fn_30_basic_block_5 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:10737416\<bb\ 5\>:\l\
+|#\ _60\ =\ PHI\ \<_41(13),\ _32(4)\>\l\
+|#\ _61\ =\ PHI\ \<_42(13),\ 99(4)\>\l\
+|*_60\ =\ 0;\l\
+|_41\ =\ _60\ +\ 4;\l\
+|_42\ =\ _61\ +\ -1;\l\
+|if\ (_42\ \>=\ 0)\l\
+\ \ goto\ \<bb\ 13\>;\ [99.00%]\l\
+else\l\
+\ \ goto\ \<bb\ 10\>;\ [1.00%]\l\
+}"];
+
+	fn_30_basic_block_13 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:10630042\<bb\ 13\>:\l\
+goto\ \<bb\ 5\>;\ [100.00%]\l\
+}"];
+
+	}
+	subgraph cluster_30_1 {
+	style="filled";
+	color="darkgreen";
+	fillcolor="grey88";
+	label="loop 1";
+	labeljust=l;
+	penwidth=2;
+	fn_30_basic_block_3 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:10737416\<bb\ 3\>:\l\
+|#\ _58\ =\ PHI\ \<_44(14),\ _30(2)\>\l\
+|#\ _59\ =\ PHI\ \<_45(14),\ 9999(2)\>\l\
+|*_58\ =\ 0;\l\
+|_44\ =\ _58\ +\ 4;\l\
+|_45\ =\ _59\ +\ -1;\l\
+|if\ (_45\ \>=\ 0)\l\
+\ \ goto\ \<bb\ 14\>;\ [99.00%]\l\
+else\l\
+\ \ goto\ \<bb\ 4\>;\ [1.00%]\l\
+}"];
+
+	fn_30_basic_block_14 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:10630042\<bb\ 14\>:\l\
+goto\ \<bb\ 3\>;\ [100.00%]\l\
+}"];
+
+	}
+	fn_30_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_30_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_30_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:108459\<bb\ 2\>:\l\
+|_30\ =\ operator\ new\ []\ (40000);\l\
+}"];
+
+	fn_30_basic_block_4 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:108459\<bb\ 4\>:\l\
+|_32\ =\ operator\ new\ []\ (400);\l\
+}"];
+
+	fn_30_basic_block_10 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:107374\<bb\ 10\>:\l\
+}"];
+
+	fn_30_basic_block_9 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:108459\<bb\ 9\>:\l\
+|operator\ delete\ []\ (_30);\l\
+|operator\ delete\ []\ (_32);\l\
+|return\ 0;\l\
+}"];
+
+	fn_30_basic_block_0:s -> fn_30_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_30_basic_block_2:s -> fn_30_basic_block_3:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_30_basic_block_3:s -> fn_30_basic_block_14:n [style="solid,bold",color=black,weight=10,constraint=true,label="[99%]"];
+	fn_30_basic_block_3:s -> fn_30_basic_block_4:n [style="solid,bold",color=black,weight=10,constraint=true,label="[1%]"];
+	fn_30_basic_block_14:s -> fn_30_basic_block_3:n [style="dotted,bold",color=blue,weight=10,constraint=false,label="[100%]"];
+	fn_30_basic_block_4:s -> fn_30_basic_block_5:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_30_basic_block_5:s -> fn_30_basic_block_13:n [style="solid,bold",color=black,weight=10,constraint=true,label="[99%]"];
+	fn_30_basic_block_5:s -> fn_30_basic_block_10:n [style="solid,bold",color=black,weight=10,constraint=true,label="[1%]"];
+	fn_30_basic_block_13:s -> fn_30_basic_block_5:n [style="dotted,bold",color=blue,weight=10,constraint=false,label="[100%]"];
+	fn_30_basic_block_10:s -> fn_30_basic_block_6:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_30_basic_block_6:s -> fn_30_basic_block_7:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_30_basic_block_7:s -> fn_30_basic_block_12:n [style="solid,bold",color=black,weight=10,constraint=true,label="[99%]"];
+	fn_30_basic_block_7:s -> fn_30_basic_block_8:n [style="solid,bold",color=black,weight=10,constraint=true,label="[1%]"];
+	fn_30_basic_block_12:s -> fn_30_basic_block_7:n [style="dotted,bold",color=blue,weight=10,constraint=false,label="[100%]"];
+	fn_30_basic_block_8:s -> fn_30_basic_block_11:n [style="solid,bold",color=black,weight=10,constraint=true,label="[99%]"];
+	fn_30_basic_block_8:s -> fn_30_basic_block_9:n [style="solid,bold",color=black,weight=10,constraint=true,label="[1%]"];
+	fn_30_basic_block_11:s -> fn_30_basic_block_6:n [style="dotted,bold",color=blue,weight=10,constraint=false,label="[100%]"];
+	fn_30_basic_block_9:s -> fn_30_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_30_basic_block_0:s -> fn_30_basic_block_1:n [style="invis",constraint=true];
+}
+}

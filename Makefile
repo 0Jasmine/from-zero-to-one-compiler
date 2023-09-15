@@ -29,7 +29,7 @@ def-all: def-preprocess def-compile def-assemble
 	$(ARMCPL) -std=c++17 -fdump-rtl-all-graph -O0 $(MALMAT).cpp -D N=100
 	@mv ./a* ./understand-elf/defN-rtl-process/
 
-opt-all: preprocess-optimize compile-optimize assemble-optimize
+opt3-all: preprocess-optimize compile-optimize assemble-optimize
 	@if [ ! -d ./understand-elf/opt-tree-process ];then \
 		mkdir ./understand-elf/opt-tree-process; \
 	fi;
@@ -40,6 +40,30 @@ opt-all: preprocess-optimize compile-optimize assemble-optimize
 	@mv ./a* ./understand-elf/opt-tree-process/
 	$(ARMCPL) -std=c++17 -fdump-rtl-all-graph -O3 $(MALMAT).cpp -D N=100
 	@mv ./a* ./understand-elf/opt-rtl-process/
+
+opt1-all:
+	@if [ ! -d ./understand-elf/opt1-tree-process ];then \
+		mkdir ./understand-elf/opt1-tree-process; \
+	fi;
+	@if [ ! -d ./understand-elf/opt1-rtl-process ];then \
+		mkdir ./understand-elf/opt1-rtl-process; \
+	fi;
+	$(ARMCPL) -std=c++17 -fdump-tree-all-graph -O1 $(MALMAT).cpp -D N=100
+	@mv ./a* ./understand-elf/opt1-tree-process/
+	$(ARMCPL) -std=c++17 -fdump-rtl-all-graph -O1 $(MALMAT).cpp -D N=100
+	@mv ./a* ./understand-elf/opt1-rtl-process/
+
+opt2-all:
+	@if [ ! -d ./understand-elf/opt2-tree-process ];then \
+		mkdir ./understand-elf/opt2-tree-process; \
+	fi;
+	@if [ ! -d ./understand-elf/opt2-rtl-process ];then \
+		mkdir ./understand-elf/opt2-rtl-process; \
+	fi;
+	$(ARMCPL) -std=c++17 -fdump-tree-all-graph -O2 $(MALMAT).cpp -D N=100
+	@mv ./a* ./understand-elf/opt2-tree-process/
+	$(ARMCPL) -std=c++17 -fdump-rtl-all-graph -O2 $(MALMAT).cpp -D N=100
+	@mv ./a* ./understand-elf/opt2-rtl-process/
 
 preprocess:
 	@$(LLVMCPL) -std=c++17 -O0 -E $(MALMAT).cpp -o $(MALMAT).i

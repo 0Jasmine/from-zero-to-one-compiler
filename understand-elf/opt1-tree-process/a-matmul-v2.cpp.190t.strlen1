@@ -1,0 +1,180 @@
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30) (executed once)
+
+;; 5 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 14 4 5 13 6 7 8 12 9 11 10
+;;
+;; Loop 3
+;;  header 7, latch 11
+;;  depth 1, outer 0
+;;  nodes: 7 11 9 8 12
+;;
+;; Loop 4
+;;  header 8, latch 12
+;;  depth 2, outer 3
+;;  nodes: 8 12
+;;
+;; Loop 2
+;;  header 5, latch 13
+;;  depth 1, outer 0
+;;  nodes: 5 13
+;;
+;; Loop 1
+;;  header 3, latch 14
+;;  depth 1, outer 0
+;;  nodes: 3 14
+;; 2 succs { 3 }
+;; 3 succs { 14 4 }
+;; 14 succs { 3 }
+;; 4 succs { 5 }
+;; 5 succs { 13 6 }
+;; 13 succs { 5 }
+;; 6 succs { 7 }
+;; 7 succs { 8 }
+;; 8 succs { 12 9 }
+;; 12 succs { 8 }
+;; 9 succs { 11 10 }
+;; 11 succs { 7 }
+;; 10 succs { 1 }
+int main ()
+{
+  unsigned int ivtmp.38;
+  unsigned int ivtmp.35;
+  unsigned int ivtmp.33;
+  unsigned int ivtmp.23;
+  unsigned int ivtmp.20;
+  unsigned int ivtmp.18;
+  int j;
+  int i;
+  int _4;
+  int _5;
+  int _9;
+  int _10;
+  int _15;
+  int * _18;
+  void * _30;
+  void * _32;
+  int * _41;
+  int * _44;
+  void * _53;
+  void * _56;
+  int * _58;
+  int * _60;
+  int * _75;
+  int * _79;
+  unsigned int _82;
+  int _83;
+  void * _84;
+  unsigned int _85;
+  unsigned int _86;
+  unsigned int _87;
+  int _88;
+  void * _89;
+  void * _90;
+
+  <bb 2> [local count: 108459]:
+  _30 = operator new [] (40000);
+  _90 = _30 + 40000;
+
+  <bb 3> [local count: 10737416]:
+  # _58 = PHI <_44(14), _30(2)>
+  MEM[(int *)_58] = 0;
+  _44 = _58 + 4;
+  if (_44 != _90)
+    goto <bb 14>; [99.00%]
+  else
+    goto <bb 4>; [1.00%]
+
+  <bb 14> [local count: 10630042]:
+  goto <bb 3>; [100.00%]
+
+  <bb 4> [local count: 108459]:
+  _32 = operator new [] (400);
+  _89 = _32 + 400;
+
+  <bb 5> [local count: 10737416]:
+  # _60 = PHI <_41(13), _32(4)>
+  MEM[(int *)_60] = 0;
+  _41 = _60 + 4;
+  if (_41 != _89)
+    goto <bb 13>; [99.00%]
+  else
+    goto <bb 6>; [1.00%]
+
+  <bb 13> [local count: 10630042]:
+  goto <bb 5>; [100.00%]
+
+  <bb 6> [local count: 107374]:
+  _75 = _32 + 4294967292;
+  ivtmp.33_74 = (unsigned int) _75;
+  _79 = _30 + 4294967292;
+  ivtmp.35_78 = (unsigned int) _79;
+
+  <bb 7> [local count: 10737416]:
+  # ivtmp.33_72 = PHI <ivtmp.33_73(11), ivtmp.33_74(6)>
+  # ivtmp.35_76 = PHI <ivtmp.35_77(11), ivtmp.35_78(6)>
+  # ivtmp.38_80 = PHI <ivtmp.38_81(11), 100(6)>
+  _82 = ivtmp.38_80 + 4294967196;
+  _83 = (int) _82;
+  i_62 = _83;
+  _4 = _83 % 13;
+  ivtmp.33_73 = ivtmp.33_72 + 4;
+  _84 = (void *) ivtmp.33_73;
+  MEM[(int *)_84] = _4;
+  _86 = ivtmp.38_80 * 100;
+  _87 = _86 + 4294957296;
+  _88 = (int) _87;
+  _10 = _88;
+  _85 = _82;
+  ivtmp.18_21 = _82;
+  _18 = _79;
+  ivtmp.20_19 = ivtmp.35_78;
+  ivtmp.23_22 = ivtmp.35_76;
+
+  <bb 8> [local count: 1063004409]:
+  # ivtmp.18_20 = PHI <ivtmp.18_24(12), _82(7)>
+  # ivtmp.20_51 = PHI <ivtmp.20_23(12), ivtmp.35_78(7)>
+  # ivtmp.23_54 = PHI <ivtmp.23_52(12), ivtmp.35_76(7)>
+  _5 = (int) ivtmp.18_20;
+  _9 = _5 % 20;
+  ivtmp.20_23 = ivtmp.20_51 + 4;
+  _56 = (void *) ivtmp.20_23;
+  MEM[(int *)_56] = _9;
+  _15 = _4 * _9;
+  ivtmp.23_52 = ivtmp.23_54 + 4;
+  _53 = (void *) ivtmp.23_52;
+  MEM[(int *)_53] = _15;
+  __printf_chk (1, "%d ", _15);
+  ivtmp.18_24 = ivtmp.18_20 + 1;
+  if (ivtmp.18_24 != ivtmp.38_80)
+    goto <bb 12>; [99.00%]
+  else
+    goto <bb 9>; [1.00%]
+
+  <bb 12> [local count: 1052374367]:
+  goto <bb 8>; [100.00%]
+
+  <bb 9> [local count: 10737416]:
+  __printf_chk (1, "\n");
+  ivtmp.35_77 = ivtmp.35_76 + 400;
+  ivtmp.38_81 = ivtmp.38_80 + 1;
+  if (ivtmp.38_81 != 200)
+    goto <bb 11>; [99.00%]
+  else
+    goto <bb 10>; [1.00%]
+
+  <bb 11> [local count: 10630042]:
+  goto <bb 7>; [100.00%]
+
+  <bb 10> [local count: 108459]:
+  operator delete [] (_30);
+  operator delete [] (_32);
+  return 0;
+
+}
+
+

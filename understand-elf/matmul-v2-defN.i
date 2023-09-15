@@ -1029,7 +1029,7 @@ int main()
             printf("%d ",matrix[i*100 +j]);
         }
         printf("\n");
-    }
+    } 
     delete[]matrix;
     delete[]vect;
     return 0;

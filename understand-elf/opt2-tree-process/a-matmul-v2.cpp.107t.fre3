@@ -1,0 +1,158 @@
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30) (executed once)
+
+;; 5 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 14 8 9 10 11 12 13
+;;
+;; Loop 3
+;;  header 12, latch 11
+;;  depth 1, outer 0
+;;  nodes: 12 11 10 8 9
+;;
+;; Loop 4
+;;  header 10, latch 9
+;;  depth 2, outer 3
+;;  nodes: 10 9
+;;
+;; Loop 2
+;;  header 7, latch 6
+;;  depth 1, outer 0
+;;  nodes: 7 6
+;;
+;; Loop 1
+;;  header 4, latch 3
+;;  depth 1, outer 0
+;;  nodes: 4 3
+;; 2 succs { 4 }
+;; 3 succs { 4 }
+;; 4 succs { 3 5 }
+;; 5 succs { 7 }
+;; 6 succs { 7 }
+;; 7 succs { 6 14 }
+;; 14 succs { 12 }
+;; 8 succs { 10 }
+;; 9 succs { 10 }
+;; 10 succs { 9 11 }
+;; 11 succs { 12 }
+;; 12 succs { 8 13 }
+;; 13 succs { 1 }
+Removing basic block 14
+int main ()
+{
+  int j;
+  int i;
+  unsigned int i.2_1;
+  unsigned int _2;
+  int * _3;
+  int _4;
+  int _5;
+  unsigned int j.3_6;
+  unsigned int _7;
+  int * _8;
+  int _9;
+  int _10;
+  int _11;
+  unsigned int _12;
+  unsigned int _13;
+  int * _14;
+  int _15;
+  int * _16;
+  int _17;
+  int * _18;
+  int _19;
+  void * _28;
+  void * _30;
+  int * _39;
+  int _40;
+  int * _42;
+  int _43;
+
+  <bb 2> [local count: 108459]:
+  _28 = operator new [] (40000);
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 10737416]:
+  *_16 = 0;
+  _42 = _16 + 4;
+  _43 = _17 + -1;
+
+  <bb 4> [local count: 10845875]:
+  # _16 = PHI <_28(2), _42(3)>
+  # _17 = PHI <9999(2), _43(3)>
+  if (_17 != -1)
+    goto <bb 3>; [99.00%]
+  else
+    goto <bb 5>; [1.00%]
+
+  <bb 5> [local count: 108459]:
+  _30 = operator new [] (400);
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 10737416]:
+  *_18 = 0;
+  _39 = _18 + 4;
+  _40 = _19 + -1;
+
+  <bb 7> [local count: 10845875]:
+  # _18 = PHI <_30(5), _39(6)>
+  # _19 = PHI <99(5), _40(6)>
+  if (_19 != -1)
+    goto <bb 6>; [99.00%]
+  else
+    goto <bb 12>; [1.00%]
+
+  <bb 8> [local count: 10737416]:
+  i.2_1 = (unsigned int) i_20;
+  _2 = i.2_1 * 4;
+  _3 = _30 + _2;
+  _4 = i_20 % 13;
+  *_3 = _4;
+  goto <bb 10>; [100.00%]
+
+  <bb 9> [local count: 1063004409]:
+  _5 = i_20 + j_21;
+  j.3_6 = (unsigned int) j_21;
+  _7 = j.3_6 * 4;
+  _8 = _28 + _7;
+  _9 = _5 % 20;
+  *_8 = _9;
+  _10 = i_20 * 100;
+  _11 = _10 + j_21;
+  _12 = (unsigned int) _11;
+  _13 = _12 * 4;
+  _14 = _28 + _13;
+  _15 = _4 * _9;
+  *_14 = _15;
+  __printf_chk (1, "%d ", _15);
+  j_37 = j_21 + 1;
+
+  <bb 10> [local count: 1073741824]:
+  # j_21 = PHI <0(8), j_37(9)>
+  if (j_21 != 100)
+    goto <bb 9>; [99.00%]
+  else
+    goto <bb 11>; [1.00%]
+
+  <bb 11> [local count: 10737416]:
+  __printf_chk (1, "\n");
+  i_34 = i_20 + 1;
+
+  <bb 12> [local count: 10845875]:
+  # i_20 = PHI <0(7), i_34(11)>
+  if (i_20 != 100)
+    goto <bb 8>; [99.00%]
+  else
+    goto <bb 13>; [1.00%]
+
+  <bb 13> [local count: 108459]:
+  operator delete [] (_28);
+  operator delete [] (_30);
+  return 0;
+
+}
+
+

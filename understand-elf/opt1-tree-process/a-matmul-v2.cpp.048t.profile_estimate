@@ -1,0 +1,266 @@
+
+;; Function printf (printf, funcdef_no=16, decl_uid=1060, cgraph_uid=17, symbol_order=16)
+
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+Predictions for bb 2
+1 edges in bb 2 predicted to even probabilities
+__attribute__((artificial, gnu_inline, always_inline))
+__attribute__((nonnull (1), format (printf, 1, 2)))
+int printf (const char * restrict __fmt)
+{
+  int _4;
+
+  <bb 2> [local count: 1073741824]:
+  _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  return _4;
+
+}
+
+
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30)
+
+Created preheader block for loop 3
+;; 5 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 18 8 9 10 11 12 13 14 15 16 17
+;;
+;; Loop 3
+;;  header 12, latch 11
+;;  depth 1, outer 0
+;;  nodes: 12 11 10 8 9
+;;
+;; Loop 4
+;;  header 10, latch 9
+;;  depth 2, outer 3
+;;  nodes: 10 9
+;;
+;; Loop 2
+;;  header 7, latch 6
+;;  depth 1, outer 0
+;;  nodes: 7 6
+;;
+;; Loop 1
+;;  header 4, latch 3
+;;  depth 1, outer 0
+;;  nodes: 4 3
+;; 2 succs { 4 }
+;; 3 succs { 4 }
+;; 4 succs { 3 5 }
+;; 5 succs { 7 }
+;; 6 succs { 7 }
+;; 7 succs { 6 18 }
+;; 18 succs { 12 }
+;; 8 succs { 10 }
+;; 9 succs { 10 }
+;; 10 succs { 9 11 }
+;; 11 succs { 12 }
+;; 12 succs { 8 13 }
+;; 13 succs { 14 15 }
+;; 14 succs { 15 }
+;; 15 succs { 16 17 }
+;; 16 succs { 17 }
+;; 17 succs { 1 }
+Predictions for bb 2
+1 edges in bb 2 predicted to even probabilities
+Predictions for bb 3
+1 edges in bb 3 predicted to even probabilities
+Predictions for bb 4
+  first match heuristics: 99.00%
+  combined heuristics: 99.00%
+  opcode values positive (on trees) heuristics of edge 4->3 (ignored): 59.00%
+  loop iterations heuristics of edge 4->5: 1.00%
+Predictions for bb 5
+1 edges in bb 5 predicted to even probabilities
+Predictions for bb 6
+1 edges in bb 6 predicted to even probabilities
+Predictions for bb 7
+  first match heuristics: 99.00%
+  combined heuristics: 99.00%
+  opcode values positive (on trees) heuristics of edge 7->6 (ignored): 59.00%
+  loop iterations heuristics of edge 7->18: 1.00%
+Predictions for bb 18
+1 edges in bb 18 predicted to even probabilities
+Predictions for bb 8
+1 edges in bb 8 predicted to even probabilities
+Predictions for bb 9
+1 edges in bb 9 predicted to even probabilities
+Predictions for bb 10
+  first match heuristics: 99.00%
+  combined heuristics: 99.00%
+  call heuristics of edge 10->9 (ignored): 33.00%
+  loop iterations heuristics of edge 10->11: 1.00%
+Predictions for bb 11
+1 edges in bb 11 predicted to even probabilities
+Predictions for bb 12
+  first match heuristics: 99.00%
+  combined heuristics: 99.00%
+  loop iterations heuristics of edge 12->13: 1.00%
+Predictions for bb 13
+  first match heuristics: 99.96%
+  combined heuristics: 99.96%
+  pointer (on trees) heuristics of edge 13->14 (ignored): 70.00%
+  malloc returned non-NULL heuristics of edge 13->14: 99.96%
+  call heuristics of edge 13->14 (ignored): 33.00%
+Predictions for bb 14
+1 edges in bb 14 predicted to even probabilities
+Predictions for bb 15
+  first match heuristics: 99.96%
+  combined heuristics: 99.96%
+  pointer (on trees) heuristics of edge 15->16 (ignored): 70.00%
+  malloc returned non-NULL heuristics of edge 15->16: 99.96%
+  call heuristics of edge 15->16 (ignored): 33.00%
+Predictions for bb 16
+1 edges in bb 16 predicted to even probabilities
+Predictions for bb 17
+1 edges in bb 17 predicted to even probabilities
+cyclic probability of bb 10 is 0.990000; turning freq 0.990000 to 99.000021
+cyclic probability of bb 4 is 0.990000; turning freq 1.000000 to 100.000021
+cyclic probability of bb 7 is 0.990000; turning freq 1.000000 to 100.000021
+cyclic probability of bb 12 is 0.990000; turning freq 1.000000 to 100.000021
+cyclic probability of bb 10 is 0.990000; turning freq 99.000021 to 9900.004150
+int main ()
+{
+  int j;
+  int i;
+  int * vect;
+  int * matrix;
+  unsigned int i.2_1;
+  unsigned int _2;
+  int * _3;
+  int _4;
+  int _5;
+  unsigned int j.3_6;
+  unsigned int _7;
+  int * _8;
+  int _9;
+  int _18;
+  int _19;
+  unsigned int _20;
+  unsigned int _21;
+  int * _22;
+  int _23;
+  int * _30;
+  int _31;
+  int * _32;
+  int _33;
+  void * _44;
+  void * _52;
+  int * _72;
+  int _73;
+  int * _75;
+  int _76;
+
+  <bb 2> [local count: 108459]:
+  _44 = operator new [] (40000);
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 10737416]:
+  *_30 = 0;
+  _75 = _30 + 4;
+  _76 = _31 + -1;
+
+  <bb 4> [local count: 10845875]:
+  # _30 = PHI <_44(2), _75(3)>
+  # _31 = PHI <9999(2), _76(3)>
+  if (_31 >= 0)
+    goto <bb 3>; [99.00%]
+  else
+    goto <bb 5>; [1.00%]
+
+  <bb 5> [local count: 108459]:
+  _52 = operator new [] (400);
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 10737416]:
+  *_32 = 0;
+  _72 = _32 + 4;
+  _73 = _33 + -1;
+
+  <bb 7> [local count: 10845875]:
+  # _32 = PHI <_52(5), _72(6)>
+  # _33 = PHI <99(5), _73(6)>
+  if (_33 >= 0)
+    goto <bb 6>; [99.00%]
+  else
+    goto <bb 18>; [1.00%]
+
+  <bb 18> [local count: 108459]:
+  goto <bb 12>; [100.00%]
+
+  <bb 8> [local count: 10737416]:
+  i.2_1 = (unsigned int) i_34;
+  _2 = i.2_1 * 4;
+  _3 = _52 + _2;
+  _4 = i_34 % 13;
+  *_3 = _4;
+  goto <bb 10>; [100.00%]
+
+  <bb 9> [local count: 1063004409]:
+  _5 = i_34 + j_35;
+  j.3_6 = (unsigned int) j_35;
+  _7 = j.3_6 * 4;
+  _8 = _44 + _7;
+  _9 = _5 % 20;
+  *_8 = _9;
+  _18 = i_34 * 100;
+  _19 = _18 + j_35;
+  _20 = (unsigned int) _19;
+  _21 = _20 * 4;
+  _22 = _44 + _21;
+  _23 = _4 * _9;
+  *_22 = _23;
+  __printf_chk (1, "%d ", _23);
+  j_70 = j_35 + 1;
+
+  <bb 10> [local count: 1073741824]:
+  # j_35 = PHI <0(8), j_70(9)>
+  if (j_35 <= 99)
+    goto <bb 9>; [99.00%]
+  else
+    goto <bb 11>; [1.00%]
+
+  <bb 11> [local count: 10737416]:
+  __printf_chk (1, "\n");
+  i_66 = i_34 + 1;
+
+  <bb 12> [local count: 10845875]:
+  # i_34 = PHI <0(18), i_66(11)>
+  if (i_34 <= 99)
+    goto <bb 8>; [99.00%]
+  else
+    goto <bb 13>; [1.00%]
+
+  <bb 13> [local count: 108459]:
+  if (_44 != 0B)
+    goto <bb 14>; [99.96%]
+  else
+    goto <bb 15>; [0.04%]
+
+  <bb 14> [local count: 108415]:
+  operator delete [] (_44);
+
+  <bb 15> [local count: 108459]:
+  if (_52 != 0B)
+    goto <bb 16>; [99.96%]
+  else
+    goto <bb 17>; [0.04%]
+
+  <bb 16> [local count: 108415]:
+  operator delete [] (_52);
+
+  <bb 17> [local count: 108459]:
+  return 0;
+
+}
+
+
