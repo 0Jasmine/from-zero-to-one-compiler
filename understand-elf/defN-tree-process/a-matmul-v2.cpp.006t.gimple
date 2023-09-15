@@ -1,0 +1,108 @@
+int main ()
+{
+  void * D.6387;
+  void * D.6390;
+  int D.6410;
+
+  {
+    int * matrix;
+    int * vect;
+
+    D.6387 = operator new (4);
+    try
+      {
+        MEM[(int *)D.6387] = 10000;
+      }
+    catch
+      {
+        operator delete (D.6387, 4);
+      }
+    matrix = D.6387;
+    D.6390 = operator new (4);
+    try
+      {
+        MEM[(int *)D.6390] = 100;
+      }
+    catch
+      {
+        operator delete (D.6390, 4);
+      }
+    vect = D.6390;
+    {
+      int i;
+
+      i = 0;
+      goto <D.6400>;
+      <D.6399>:
+      {
+        i.0_1 = (unsigned int) i;
+        _2 = i.0_1 * 4;
+        _3 = vect + _2;
+        _4 = i % 13;
+        *_3 = _4;
+        {
+          int j;
+
+          j = 0;
+          goto <D.6398>;
+          <D.6397>:
+          _5 = i + j;
+          j.1_6 = (unsigned int) j;
+          _7 = j.1_6 * 4;
+          _8 = matrix + _7;
+          _9 = _5 % 20;
+          *_8 = _9;
+          i.2_10 = (unsigned int) i;
+          _11 = i.2_10 * 4;
+          _12 = vect + _11;
+          _13 = *_12;
+          j.3_14 = (unsigned int) j;
+          _15 = j.3_14 * 4;
+          _16 = matrix + _15;
+          _17 = *_16;
+          _18 = i * 100;
+          _19 = j + _18;
+          _20 = (unsigned int) _19;
+          _21 = _20 * 4;
+          _22 = matrix + _21;
+          _23 = _13 * _17;
+          *_22 = _23;
+          _24 = i * 100;
+          _25 = j + _24;
+          _26 = (unsigned int) _25;
+          _27 = _26 * 4;
+          _28 = matrix + _27;
+          _29 = *_28;
+          printf ("%d ", _29);
+          j = j + 1;
+          <D.6398>:
+          if (j <= 99) goto <D.6397>; else goto <D.6395>;
+          <D.6395>:
+        }
+        printf ("\n");
+      }
+      i = i + 1;
+      <D.6400>:
+      if (i <= 99) goto <D.6399>; else goto <D.6393>;
+      <D.6393>:
+    }
+    if (matrix != 0B) goto <D.6404>; else goto <D.6405>;
+    <D.6404>:
+    operator delete [] (matrix);
+    goto <D.6406>;
+    <D.6405>:
+    <D.6406>:
+    if (vect != 0B) goto <D.6407>; else goto <D.6408>;
+    <D.6407>:
+    operator delete [] (vect);
+    goto <D.6409>;
+    <D.6408>:
+    <D.6409>:
+    D.6410 = 0;
+    return D.6410;
+  }
+  D.6410 = 0;
+  return D.6410;
+}
+
+
