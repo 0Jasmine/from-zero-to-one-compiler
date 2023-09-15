@@ -9,30 +9,68 @@
 
     int * matrix;
   <<cleanup_point <<< Unknown tree: expr_stmt
-  (void) (matrix = TARGET_EXPR <D.6387, operator new (4)>;, try
+  (void) (matrix = TARGET_EXPR <D.6387, operator new [] (40000)>;, try
     {
-      *(int *) D.6387 = 10000;
+            int * D.6388;
+      <<< Unknown tree: expr_stmt
+  (void) (D.6388 = (int *) D.6387) >>>;
+            int * D.6389;
+      <<< Unknown tree: expr_stmt
+  (void) (D.6389 = D.6388) >>>;
+            int D.6390;
+      <<< Unknown tree: expr_stmt
+  (void) (D.6390 = 9999) >>>;
+      goto <D.6402>;
+      <D.6401>:;
+      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*D.6389 = 0) >>>>>;
+      <<< Unknown tree: expr_stmt
+  (void)  ++D.6389 >>>;
+      (void)  --D.6390;
+      <D.6402>:;
+      if (D.6390 >= 0) goto <D.6401>; else goto <D.6399>;
+      <D.6399>:;
+      D.6388
     }
   catch
     {
-      operator delete (D.6387, 4);
+      operator delete [] (D.6387);
     }, (int *) D.6387;) >>>>>;
     int * vect;
   <<cleanup_point <<< Unknown tree: expr_stmt
-  (void) (vect = TARGET_EXPR <D.6390, operator new (4)>;, try
+  (void) (vect = TARGET_EXPR <D.6393, operator new [] (400)>;, try
     {
-      *(int *) D.6390 = 100;
+            int * D.6394;
+      <<< Unknown tree: expr_stmt
+  (void) (D.6394 = (int *) D.6393) >>>;
+            int * D.6395;
+      <<< Unknown tree: expr_stmt
+  (void) (D.6395 = D.6394) >>>;
+            int D.6396;
+      <<< Unknown tree: expr_stmt
+  (void) (D.6396 = 99) >>>;
+      goto <D.6406>;
+      <D.6405>:;
+      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*D.6395 = 0) >>>>>;
+      <<< Unknown tree: expr_stmt
+  (void)  ++D.6395 >>>;
+      (void)  --D.6396;
+      <D.6406>:;
+      if (D.6396 >= 0) goto <D.6405>; else goto <D.6403>;
+      <D.6403>:;
+      D.6394
     }
   catch
     {
-      operator delete (D.6390, 4);
-    }, (int *) D.6390;) >>>>>;
+      operator delete [] (D.6393);
+    }, (int *) D.6393;) >>>>>;
   {
     int i = 0;
 
     <<cleanup_point     int i = 0;>>;
-    goto <D.6400>;
-    <D.6399>:;
+    goto <D.6414>;
+    <D.6413>:;
     {
       <<cleanup_point <<< Unknown tree: expr_stmt
   (void) (*(vect + (sizetype) ((unsigned int) i * 4)) = i % 13) >>>>>;
@@ -40,8 +78,8 @@
         int j = 0;
 
         <<cleanup_point         int j = 0;>>;
-        goto <D.6398>;
-        <D.6397>:;
+        goto <D.6412>;
+        <D.6411>:;
         <<cleanup_point <<< Unknown tree: expr_stmt
   (void) (*(matrix + (sizetype) ((unsigned int) j * 4)) = (i + j) % 20) >>>>>;
         <<cleanup_point <<< Unknown tree: expr_stmt
@@ -49,17 +87,17 @@
         <<cleanup_point <<< Unknown tree: expr_stmt
   (void) printf ((const char *) "%d ", *(matrix + (sizetype) ((unsigned int) (i * 100 + j) * 4))) >>>>>;
         <<cleanup_point (void) j++ >>;
-        <D.6398>:;
-        if (j <= 99) goto <D.6397>; else goto <D.6395>;
-        <D.6395>:;
+        <D.6412>:;
+        if (j <= 99) goto <D.6411>; else goto <D.6409>;
+        <D.6409>:;
       }
       <<cleanup_point <<< Unknown tree: expr_stmt
   (void) printf ((const char *) "\n") >>>>>;
     }
     <<cleanup_point (void) i++ >>;
-    <D.6400>:;
-    if (i <= 99) goto <D.6399>; else goto <D.6393>;
-    <D.6393>:;
+    <D.6414>:;
+    if (i <= 99) goto <D.6413>; else goto <D.6407>;
+    <D.6407>:;
   }
   <<cleanup_point <<< Unknown tree: expr_stmt
   (if (matrix != 0B)

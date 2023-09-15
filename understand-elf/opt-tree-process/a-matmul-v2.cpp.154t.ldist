@@ -1,0 +1,105 @@
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30) (executed once)
+
+Removing basic block 14
+Removing basic block 3
+Removing basic block 13
+Removing basic block 5
+
+Symbols to be put in SSA form
+{ D.6698 }
+Incremental SSA update started at block: 0
+Number of blocks in CFG: 15
+Number of blocks to update: 10 ( 67%)
+
+
+Merging blocks 2 and 4
+Merging blocks 2 and 10
+int main ()
+{
+  int j;
+  int i;
+  unsigned int i.2_1;
+  unsigned int _2;
+  int * _3;
+  int _4;
+  int _5;
+  unsigned int j.3_6;
+  unsigned int _7;
+  int * _8;
+  int _9;
+  int _10;
+  int _11;
+  unsigned int _12;
+  unsigned int _13;
+  int * _14;
+  int _15;
+  void * _28;
+  void * _30;
+  unsigned int ivtmp_61;
+  unsigned int ivtmp_72;
+  unsigned int ivtmp_73;
+  unsigned int ivtmp_74;
+
+  <bb 2> [local count: 108459]:
+  _28 = operator new [] (40000);
+  __builtin_memset (_28, 0, 40000);
+  _30 = operator new [] (400);
+  __builtin_memset (_30, 0, 400);
+
+  <bb 6> [local count: 10737416]:
+  # i_66 = PHI <i_34(11), 0(2)>
+  # ivtmp_72 = PHI <ivtmp_61(11), 100(2)>
+  i.2_1 = (unsigned int) i_66;
+  _2 = i.2_1 * 4;
+  _3 = _30 + _2;
+  _4 = i_66 % 13;
+  *_3 = _4;
+  _10 = i_66 * 100;
+
+  <bb 7> [local count: 1063004409]:
+  # j_67 = PHI <j_37(12), 0(6)>
+  # ivtmp_74 = PHI <ivtmp_73(12), 100(6)>
+  _5 = i_66 + j_67;
+  j.3_6 = (unsigned int) j_67;
+  _7 = j.3_6 * 4;
+  _8 = _28 + _7;
+  _9 = _5 % 20;
+  *_8 = _9;
+  _11 = _10 + j_67;
+  _12 = (unsigned int) _11;
+  _13 = _12 * 4;
+  _14 = _28 + _13;
+  _15 = _4 * _9;
+  *_14 = _15;
+  __printf_chk (1, "%d ", _15);
+  j_37 = j_67 + 1;
+  ivtmp_73 = ivtmp_74 - 1;
+  if (ivtmp_73 != 0)
+    goto <bb 12>; [98.99%]
+  else
+    goto <bb 8>; [1.01%]
+
+  <bb 12> [local count: 1052266996]:
+  goto <bb 7>; [100.00%]
+
+  <bb 8> [local count: 10737416]:
+  __printf_chk (1, "\n");
+  i_34 = i_66 + 1;
+  ivtmp_61 = ivtmp_72 - 1;
+  if (ivtmp_61 != 0)
+    goto <bb 11>; [98.99%]
+  else
+    goto <bb 9>; [1.01%]
+
+  <bb 11> [local count: 10628957]:
+  goto <bb 6>; [100.00%]
+
+  <bb 9> [local count: 108459]:
+  operator delete [] (_28);
+  operator delete [] (_30);
+  return 0;
+
+}
+
+

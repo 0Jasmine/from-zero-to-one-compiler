@@ -1,0 +1,336 @@
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30) (executed once)
+
+
+
+main
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 0 [r0] 1 [r1] 2 [r2] 12 [ip] 13 [sp] 14 [lr] 100 [cc]
+;;  ref usage 	r0={14d,10u} r1={9d,2u} r2={8d,1u} r3={7d} r7={1d,6u} r12={12d} r13={1d,12u} r14={7d} r15={6d} r16={7d} r17={7d} r18={7d} r19={7d} r20={7d} r21={7d} r22={7d} r23={7d} r24={7d} r25={7d} r26={7d} r27={7d} r28={7d} r29={7d} r30={7d} r31={7d} r48={6d} r49={6d} r50={6d} r51={6d} r52={6d} r53={6d} r54={6d} r55={6d} r56={6d} r57={6d} r58={6d} r59={6d} r60={6d} r61={6d} r62={6d} r63={6d} r64={6d} r65={6d} r66={6d} r67={6d} r68={6d} r69={6d} r70={6d} r71={6d} r72={6d} r73={6d} r74={6d} r75={6d} r76={6d} r77={6d} r78={6d} r79={6d} r80={6d} r81={6d} r82={6d} r83={6d} r84={6d} r85={6d} r86={6d} r87={6d} r88={6d} r89={6d} r90={6d} r91={6d} r92={6d} r93={6d} r94={6d} r95={6d} r96={6d} r97={6d} r98={6d} r99={6d} r100={8d,2u} r101={6d} r102={1d,6u} r103={1d,5u} r104={6d} r105={6d} r106={6d} r113={2d,3u} r115={2d,3u} r116={1d,2u} r119={2d,4u} r121={1d,2u} r122={1d,2u} r123={2d,1u} r125={1d,2u} r126={2d,2u} r128={2d,1u} r130={2d,1u} r131={2d,6u,4e} r135={1d,1u} r136={2d,2u} r138={1d,1u} r145={1d,1u} r146={2d,2u} r148={1d,1u} r156={1d,1u} r160={1d,1u} r161={1d,1u} 
+;;    total ref usage 642{554d,84u,4e} in 52{46 regular + 6 call} insns.
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 7 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 2 10 2 (set (reg:SI 0 r0)
+        (const_int 40000 [0x9c40])) "./understand-elf/matmul-v2.cpp":12:33 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 10 9 118 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("_Znaj") [flags 0x41]  <function_decl 0x7f11833d3200 operator new []>) [0 operator new [] S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "./understand-elf/matmul-v2.cpp":12:33 291 {*call_value_symbol}
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("_Znaj") [flags 0x41]  <function_decl 0x7f11833d3200 operator new []>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 118 10 11 2 (set (reg:SI 160)
+        (reg:SI 0 r0)) "./understand-elf/matmul-v2.cpp":12:33 -1
+     (expr_list:REG_DEAD (reg:SI 0 r0)
+        (nil)))
+(insn 11 118 13 2 (set (reg/f:SI 121 [ _28 ])
+        (reg:SI 160)) "./understand-elf/matmul-v2.cpp":12:33 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 160)
+        (expr_list:REG_NOALIAS (reg/f:SI 133)
+            (nil))))
+(insn 13 11 14 2 (set (reg:SI 0 r0)
+        (const_int 400 [0x190])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 14 13 119 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("_Znaj") [flags 0x41]  <function_decl 0x7f11833d3200 operator new []>) [0 operator new [] S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "./understand-elf/matmul-v2.cpp":13:28 291 {*call_value_symbol}
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("_Znaj") [flags 0x41]  <function_decl 0x7f11833d3200 operator new []>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 119 14 15 2 (set (reg:SI 161)
+        (reg:SI 0 r0)) "./understand-elf/matmul-v2.cpp":13:28 -1
+     (expr_list:REG_DEAD (reg:SI 0 r0)
+        (nil)))
+(insn 15 119 17 2 (set (reg/f:SI 122 [ _30 ])
+        (reg:SI 161)) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 161)
+        (expr_list:REG_NOALIAS (reg/f:SI 134)
+            (nil))))
+(insn 17 15 18 2 (set (reg:SI 128 [ ivtmp.30 ])
+        (plus:SI (reg/f:SI 122 [ _30 ])
+            (const_int -4 [0xfffffffffffffffc]))) 7 {*arm_addsi3}
+     (nil))
+(insn 18 17 3 2 (set (reg/f:SI 125 [ ivtmp.32 ])
+        (plus:SI (reg/f:SI 121 [ _28 ])
+            (const_int -4 [0xfffffffffffffffc]))) 7 {*arm_addsi3}
+     (nil))
+(insn 3 18 4 2 (set (reg:SI 126 [ ivtmp.32 ])
+        (reg/f:SI 125 [ ivtmp.32 ])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 4 3 121 2 (set (reg:SI 119 [ ivtmp.35 ])
+        (const_int 100 [0x64])) "./understand-elf/matmul-v2.cpp":13:28 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 121 4 122 2 (set (reg:SI 136)
+        (const_int 60495 [0xec4f])) "./understand-elf/matmul-v2.cpp":15:21 -1
+     (nil))
+(insn 122 121 124 2 (set (zero_extract:SI (reg:SI 136)
+            (const_int 16 [0x10])
+            (const_int 16 [0x10]))
+        (const_int 20164 [0x4ec4])) "./understand-elf/matmul-v2.cpp":15:21 -1
+     (expr_list:REG_EQUAL (const_int 1321528399 [0x4ec4ec4f])
+        (nil)))
+(insn 124 122 125 2 (set (reg:SI 146)
+        (const_int 52429 [0xcccd])) "./understand-elf/matmul-v2.cpp":17:30 -1
+     (nil))
+(insn 125 124 57 2 (set (zero_extract:SI (reg:SI 146)
+            (const_int 16 [0x10])
+            (const_int 16 [0x10]))
+        (const_int 52428 [0xcccc])) "./understand-elf/matmul-v2.cpp":17:30 -1
+     (expr_list:REG_EQUAL (const_int -858993459 [0xffffffffcccccccd])
+        (nil)))
+(insn 57 125 75 2 (set (reg/f:SI 156)
+        (unspec:SI [
+                (const:SI (unspec:SI [
+                            (symbol_ref/v/f:SI ("*.LC0") [flags 0x82]  <var_decl 0x7f11831dbc60 *.LC0>)
+                            (const:SI (plus:SI (unspec:SI [
+                                            (const_int 0 [0])
+                                        ] UNSPEC_PIC_LABEL)
+                                    (const_int 4 [0x4])))
+                        ] UNSPEC_SYMBOL_OFFSET))
+                (const_int 0 [0])
+            ] UNSPEC_PIC_UNIFIED)) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 254 {pic_load_addr_unified}
+     (expr_list:REG_EQUAL (symbol_ref/v/f:SI ("*.LC0") [flags 0x82]  <var_decl 0x7f11831dbc60 *.LC0>)
+        (nil)))
+(code_label 75 57 19 3 3 (nil) [1 uses])
+(note 19 75 20 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 22 3 (set (reg:SI 131 [ ivtmp.15 ])
+        (plus:SI (reg:SI 119 [ ivtmp.35 ])
+            (const_int -100 [0xffffffffffffff9c]))) 7 {*arm_addsi3}
+     (nil))
+(insn 22 20 23 3 (parallel [
+            (set (reg:SI 135)
+                (truncate:SI (lshiftrt:DI (mult:DI (zero_extend:DI (reg:SI 131 [ ivtmp.15 ]))
+                            (zero_extend:DI (reg:SI 136)))
+                        (const_int 32 [0x20]))))
+            (clobber (scratch:SI))
+        ]) "./understand-elf/matmul-v2.cpp":15:21 72 {*umull_high}
+     (expr_list:REG_EQUAL (truncate:SI (lshiftrt:DI (mult:DI (zero_extend:DI (reg:SI 131 [ ivtmp.15 ]))
+                    (const_int 1321528399 [0x4ec4ec4f]))
+                (const_int 32 [0x20])))
+        (nil)))
+(insn 23 22 24 3 (set (reg:SI 113 [ _4 ])
+        (lshiftrt:SI (reg:SI 135)
+            (const_int 2 [0x2]))) "./understand-elf/matmul-v2.cpp":15:21 147 {*arm_shiftsi3}
+     (expr_list:REG_DEAD (reg:SI 135)
+        (expr_list:REG_EQUAL (udiv:SI (reg:SI 131 [ ivtmp.15 ])
+                (const_int 13 [0xd]))
+            (nil))))
+(insn 24 23 25 3 (set (reg:SI 138)
+        (const_int 13 [0xd])) "./understand-elf/matmul-v2.cpp":15:21 740 {*thumb2_movsi_vfp}
+     (nil))
+(note 25 24 26 3 NOTE_INSN_DELETED)
+(insn 26 25 36 3 (set (reg:SI 113 [ _4 ])
+        (minus:SI (reg:SI 131 [ ivtmp.15 ])
+            (mult:SI (reg:SI 138)
+                (reg:SI 113 [ _4 ])))) "./understand-elf/matmul-v2.cpp":15:21 58 {*mls}
+     (expr_list:REG_DEAD (reg:SI 138)
+        (nil)))
+(insn 36 26 5 3 (set (mem:SI (pre_inc:SI (reg:SI 128 [ ivtmp.30 ])) [1 MEM[(int *)_20]+0 S4 A32])
+        (reg:SI 113 [ _4 ])) "./understand-elf/matmul-v2.cpp":15:17 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg:SI 128 [ ivtmp.30 ])
+        (nil)))
+(insn 5 36 6 3 (set (reg:SI 130 [ ivtmp.20 ])
+        (reg:SI 126 [ ivtmp.32 ])) "./understand-elf/matmul-v2.cpp":15:17 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 41 3 (set (reg:SI 123 [ ivtmp.17 ])
+        (reg/f:SI 125 [ ivtmp.32 ])) "./understand-elf/matmul-v2.cpp":15:17 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 41 6 64 3 (set (reg:SI 148)
+        (const_int 20 [0x14])) "./understand-elf/matmul-v2.cpp":17:30 740 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 64 41 37 4 2 (nil) [1 uses])
+(note 37 64 39 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 39 37 40 4 (parallel [
+            (set (reg:SI 145)
+                (truncate:SI (lshiftrt:DI (mult:DI (zero_extend:DI (reg:SI 131 [ ivtmp.15 ]))
+                            (zero_extend:DI (reg:SI 146)))
+                        (const_int 32 [0x20]))))
+            (clobber (scratch:SI))
+        ]) "./understand-elf/matmul-v2.cpp":17:30 72 {*umull_high}
+     (expr_list:REG_EQUAL (truncate:SI (lshiftrt:DI (mult:DI (zero_extend:DI (reg:SI 131 [ ivtmp.15 ]))
+                    (const_int 3435973837 [0xcccccccd]))
+                (const_int 32 [0x20])))
+        (nil)))
+(insn 40 39 42 4 (set (reg:SI 115 [ _9 ])
+        (lshiftrt:SI (reg:SI 145)
+            (const_int 4 [0x4]))) "./understand-elf/matmul-v2.cpp":17:30 147 {*arm_shiftsi3}
+     (expr_list:REG_DEAD (reg:SI 145)
+        (expr_list:REG_EQUAL (udiv:SI (reg:SI 131 [ ivtmp.15 ])
+                (const_int 20 [0x14]))
+            (nil))))
+(note 42 40 43 4 NOTE_INSN_DELETED)
+(insn 43 42 53 4 (set (reg:SI 115 [ _9 ])
+        (minus:SI (reg:SI 131 [ ivtmp.15 ])
+            (mult:SI (reg:SI 148)
+                (reg:SI 115 [ _9 ])))) "./understand-elf/matmul-v2.cpp":17:30 58 {*mls}
+     (nil))
+(insn 53 43 54 4 (set (mem:SI (pre_inc:SI (reg:SI 123 [ ivtmp.17 ])) [1 MEM[(int *)_43]+0 S4 A32])
+        (reg:SI 115 [ _9 ])) "./understand-elf/matmul-v2.cpp":17:23 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg:SI 123 [ ivtmp.17 ])
+        (nil)))
+(insn 54 53 56 4 (set (reg:SI 116 [ _15 ])
+        (mult:SI (reg:SI 115 [ _9 ])
+            (reg:SI 113 [ _4 ]))) "./understand-elf/matmul-v2.cpp":18:36 56 {*mul}
+     (expr_list:REG_DEAD (reg:SI 115 [ _9 ])
+        (nil)))
+(insn 56 54 59 4 (set (mem:SI (pre_inc:SI (reg:SI 130 [ ivtmp.20 ])) [1 MEM[(int *)_57]+0 S4 A32])
+        (reg:SI 116 [ _15 ])) "./understand-elf/matmul-v2.cpp":18:27 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_INC (reg:SI 130 [ ivtmp.20 ])
+        (nil)))
+(insn 59 56 60 4 (set (reg:SI 2 r2)
+        (reg:SI 116 [ _15 ])) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 116 [ _15 ])
+        (nil)))
+(insn 60 59 61 4 (set (reg:SI 1 r1)
+        (reg/f:SI 156)) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUAL (symbol_ref/v/f:SI ("*.LC0") [flags 0x82]  <var_decl 0x7f11831dbc60 *.LC0>)
+        (nil)))
+(insn 61 60 62 4 (set (reg:SI 0 r0)
+        (const_int 1 [0x1])) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 62 61 63 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__printf_chk") [flags 0x41]  <function_decl 0x7f118318f100 __printf_chk>) [0 __printf_chk S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 291 {*call_value_symbol}
+     (expr_list:REG_DEAD (reg:SI 2 r2)
+        (expr_list:REG_DEAD (reg:SI 1 r1)
+            (expr_list:REG_UNUSED (reg:SI 0 r0)
+                (expr_list:REG_CALL_DECL (symbol_ref:SI ("__printf_chk") [flags 0x41]  <function_decl 0x7f118318f100 __printf_chk>)
+                    (nil)))))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 63 62 65 4 (set (reg:SI 131 [ ivtmp.15 ])
+        (plus:SI (reg:SI 131 [ ivtmp.15 ])
+            (const_int 1 [0x1]))) "./understand-elf/matmul-v2.cpp":16:22 7 {*arm_addsi3}
+     (nil))
+(insn 65 63 66 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 119 [ ivtmp.35 ])
+            (reg:SI 131 [ ivtmp.15 ]))) "./understand-elf/matmul-v2.cpp":16:22 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 66 65 67 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 64)
+            (pc))) "./understand-elf/matmul-v2.cpp":16:22 273 {arm_cond_branch}
+     (expr_list:REG_DEAD (reg:CC 100 cc)
+        (int_list:REG_BR_PROB 1062895956 (nil)))
+ -> 64)
+(note 67 66 68 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(note 68 67 70 5 NOTE_INSN_DELETED)
+(insn 70 68 71 5 (set (reg:SI 1 r1)
+        (unspec:SI [
+                (const:SI (unspec:SI [
+                            (symbol_ref/v/f:SI ("*.LC1") [flags 0x82]  <var_decl 0x7f11831dbcf0 *.LC1>)
+                            (const:SI (plus:SI (unspec:SI [
+                                            (const_int 1 [0x1])
+                                        ] UNSPEC_PIC_LABEL)
+                                    (const_int 4 [0x4])))
+                        ] UNSPEC_SYMBOL_OFFSET))
+                (const_int 1 [0x1])
+            ] UNSPEC_PIC_UNIFIED)) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 254 {pic_load_addr_unified}
+     (expr_list:REG_EQUAL (symbol_ref/v/f:SI ("*.LC1") [flags 0x82]  <var_decl 0x7f11831dbcf0 *.LC1>)
+        (nil)))
+(insn 71 70 72 5 (set (reg:SI 0 r0)
+        (const_int 1 [0x1])) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 740 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 72 71 73 5 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__printf_chk") [flags 0x41]  <function_decl 0x7f118318f100 __printf_chk>) [0 __printf_chk S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "/usr/arm-linux-gnueabihf/include/bits/stdio2.h":112:23 291 {*call_value_symbol}
+     (expr_list:REG_DEAD (reg:SI 1 r1)
+        (expr_list:REG_UNUSED (reg:SI 0 r0)
+            (expr_list:REG_CALL_DECL (symbol_ref:SI ("__printf_chk") [flags 0x41]  <function_decl 0x7f118318f100 __printf_chk>)
+                (nil))))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 73 72 74 5 (set (reg:SI 126 [ ivtmp.32 ])
+        (plus:SI (reg:SI 126 [ ivtmp.32 ])
+            (const_int 400 [0x190]))) "./understand-elf/matmul-v2.cpp":14:18 7 {*arm_addsi3}
+     (nil))
+(insn 74 73 76 5 (set (reg:SI 119 [ ivtmp.35 ])
+        (plus:SI (reg:SI 119 [ ivtmp.35 ])
+            (const_int 1 [0x1]))) "./understand-elf/matmul-v2.cpp":14:18 7 {*arm_addsi3}
+     (nil))
+(insn 76 74 77 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 119 [ ivtmp.35 ])
+            (const_int 200 [0xc8]))) "./understand-elf/matmul-v2.cpp":14:18 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 77 76 78 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 75)
+            (pc))) "./understand-elf/matmul-v2.cpp":14:18 273 {arm_cond_branch}
+     (expr_list:REG_DEAD (reg:CC 100 cc)
+        (int_list:REG_BR_PROB 1062895924 (nil)))
+ -> 75)
+(note 78 77 79 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 79 78 80 6 (set (reg:SI 0 r0)
+        (reg/f:SI 121 [ _28 ])) "./understand-elf/matmul-v2.cpp":23:13 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 121 [ _28 ])
+        (nil)))
+(call_insn 80 79 81 6 (parallel [
+            (call (mem:SI (symbol_ref:SI ("_ZdaPv") [flags 0x41]  <function_decl 0x7f11833d3400 operator delete []>) [0 operator delete [] S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "./understand-elf/matmul-v2.cpp":23:13 290 {*call_symbol}
+     (expr_list:REG_DEAD (reg:SI 0 r0)
+        (expr_list:REG_CALL_DECL (symbol_ref:SI ("_ZdaPv") [flags 0x41]  <function_decl 0x7f11833d3400 operator delete []>)
+            (expr_list:REG_EH_REGION (const_int 0 [0])
+                (nil))))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 81 80 82 6 (set (reg:SI 0 r0)
+        (reg/f:SI 122 [ _30 ])) "./understand-elf/matmul-v2.cpp":24:13 740 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 122 [ _30 ])
+        (nil)))
+(call_insn 82 81 87 6 (parallel [
+            (call (mem:SI (symbol_ref:SI ("_ZdaPv") [flags 0x41]  <function_decl 0x7f11833d3400 operator delete []>) [0 operator delete [] S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "./understand-elf/matmul-v2.cpp":24:13 290 {*call_symbol}
+     (expr_list:REG_DEAD (reg:SI 0 r0)
+        (expr_list:REG_CALL_DECL (symbol_ref:SI ("_ZdaPv") [flags 0x41]  <function_decl 0x7f11833d3400 operator delete []>)
+            (expr_list:REG_EH_REGION (const_int 0 [0])
+                (nil))))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 87 82 88 6 (set (reg/i:SI 0 r0)
+        (const_int 0 [0])) "./understand-elf/matmul-v2.cpp":26:1 740 {*thumb2_movsi_vfp}
+     (nil))
+(insn 88 87 0 6 (use (reg/i:SI 0 r0)) "./understand-elf/matmul-v2.cpp":26:1 -1
+     (nil))

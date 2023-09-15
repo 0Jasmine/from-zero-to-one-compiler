@@ -3,50 +3,92 @@
 
 int main ()
 {
-  void * D.6413;
-  void * D.6412;
+  void * D.6429;
+  void * D.6428;
   int j;
   int i;
   int * vect;
   int * matrix;
-  int D.6410;
-  void * D.6390;
+  int D.6426;
+  int D.6396;
+  int * D.6395;
+  int * D.6394;
+  int * retval.1;
+  void * D.6393;
+  int D.6390;
+  int * D.6389;
+  int * D.6388;
+  int * retval.0;
   void * D.6387;
 
   <bb 2> :
-  D.6412 = operator new (4);
-  D.6387 = D.6412;
-  MEM[(int *)D.6387] = 1000000;
-  matrix = D.6387;
-  D.6413 = operator new (4);
-  D.6390 = D.6413;
-  MEM[(int *)D.6390] = 1000;
-  vect = D.6390;
-  i = 0;
-  goto <bb 7>; [INV]
+  D.6428 = operator new [] (4000000);
+  D.6387 = D.6428;
+  D.6388 = D.6387;
+  D.6389 = D.6388;
+  D.6390 = 999999;
+  goto <bb 4>; [INV]
 
   <bb 3> :
-  i.0_1 = (unsigned int) i;
-  _2 = i.0_1 * 4;
+  *D.6389 = 0;
+  D.6389 = D.6389 + 4;
+  D.6390 = D.6390 + -1;
+
+  <bb 4> :
+  if (D.6390 >= 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  retval.0 = D.6388;
+  matrix = D.6387;
+  D.6429 = operator new [] (4000);
+  D.6393 = D.6429;
+  D.6394 = D.6393;
+  D.6395 = D.6394;
+  D.6396 = 999;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  *D.6395 = 0;
+  D.6395 = D.6395 + 4;
+  D.6396 = D.6396 + -1;
+
+  <bb 7> :
+  if (D.6396 >= 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  retval.1 = D.6394;
+  vect = D.6393;
+  i = 0;
+  goto <bb 13>; [INV]
+
+  <bb 9> :
+  i.2_1 = (unsigned int) i;
+  _2 = i.2_1 * 4;
   _3 = vect + _2;
   _4 = i % 13;
   *_3 = _4;
   j = 0;
-  goto <bb 5>; [INV]
+  goto <bb 11>; [INV]
 
-  <bb 4> :
+  <bb 10> :
   _5 = i + j;
-  j.1_6 = (unsigned int) j;
-  _7 = j.1_6 * 4;
+  j.3_6 = (unsigned int) j;
+  _7 = j.3_6 * 4;
   _8 = matrix + _7;
   _9 = _5 % 20;
   *_8 = _9;
-  i.2_10 = (unsigned int) i;
-  _11 = i.2_10 * 4;
+  i.4_10 = (unsigned int) i;
+  _11 = i.4_10 * 4;
   _12 = vect + _11;
   _13 = *_12;
-  j.3_14 = (unsigned int) j;
-  _15 = j.3_14 * 4;
+  j.5_14 = (unsigned int) j;
+  _15 = j.5_14 * 4;
   _16 = matrix + _15;
   _17 = *_16;
   _18 = i * 1000;
@@ -65,46 +107,46 @@ int main ()
   printf ("%d ", _29);
   j = j + 1;
 
-  <bb 5> :
+  <bb 11> :
   if (j <= 999)
-    goto <bb 4>; [INV]
-  else
-    goto <bb 6>; [INV]
-
-  <bb 6> :
-  __builtin_putchar (10);
-  i = i + 1;
-
-  <bb 7> :
-  if (i <= 999)
-    goto <bb 3>; [INV]
-  else
-    goto <bb 8>; [INV]
-
-  <bb 8> :
-  if (matrix != 0B)
-    goto <bb 9>; [INV]
-  else
     goto <bb 10>; [INV]
-
-  <bb 9> :
-  operator delete [] (matrix);
-
-  <bb 10> :
-  if (vect != 0B)
-    goto <bb 11>; [INV]
   else
     goto <bb 12>; [INV]
 
-  <bb 11> :
-  operator delete [] (vect);
-
   <bb 12> :
-  D.6410 = 0;
+  __builtin_putchar (10);
+  i = i + 1;
 
   <bb 13> :
-<L12>:
-  return D.6410;
+  if (i <= 999)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 14> :
+  if (matrix != 0B)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  operator delete [] (matrix);
+
+  <bb 16> :
+  if (vect != 0B)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  operator delete [] (vect);
+
+  <bb 18> :
+  D.6426 = 0;
+
+  <bb 19> :
+<L18>:
+  return D.6426;
 
 }
 

@@ -1,0 +1,605 @@
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30) (executed once)
+
+Points-to analysis
+
+Constraints:
+
+ANYTHING = &ANYTHING
+ESCAPED = *ESCAPED
+ESCAPED = ESCAPED + UNKNOWN
+*ESCAPED = NONLOCAL
+NONLOCAL = &NONLOCAL
+NONLOCAL = &ESCAPED
+INTEGER = &ANYTHING
+ESCAPED = &NONLOCAL
+HEAP(10) = &NONLOCAL
+_28 = &HEAP(10)
+_62 = _42
+_62 = _28
+_63 = _43
+_63 = &NONLOCAL
+derefaddrtmp(15) = &NULL
+*_62 = derefaddrtmp(15)
+_42 = _62 + 32
+_43 = _63 + UNKNOWN
+_43 = &NONLOCAL
+ESCAPED = &NONLOCAL
+HEAP(17) = &NONLOCAL
+_30 = &HEAP(17)
+_64 = _39
+_64 = _30
+_65 = _40
+_65 = &NONLOCAL
+derefaddrtmp(22) = &NULL
+*_64 = derefaddrtmp(22)
+_39 = _64 + 32
+_40 = _65 + UNKNOWN
+_40 = &NONLOCAL
+i_66 = i_34
+i_66 = &NULL
+i.2_1 = i_66
+_2 = i.2_1 + UNKNOWN
+_2 = &NONLOCAL
+_3 = _30 + UNKNOWN
+_4 = i_66 + UNKNOWN
+*_3 = _4
+_10 = i_66 + UNKNOWN
+_10 = &NONLOCAL
+j_67 = j_37
+j_67 = &NULL
+_5 = i_66 + UNKNOWN
+_5 = j_67 + UNKNOWN
+j.3_6 = j_67
+_7 = j.3_6 + UNKNOWN
+_7 = &NONLOCAL
+_8 = _28 + UNKNOWN
+_9 = _5 + UNKNOWN
+*_8 = _9
+_11 = _10 + UNKNOWN
+_11 = j_67 + UNKNOWN
+_12 = _11
+_13 = _12 + UNKNOWN
+_13 = &NONLOCAL
+_14 = _28 + UNKNOWN
+_15 = _4 + UNKNOWN
+_15 = _9 + UNKNOWN
+*_14 = _15
+ESCAPED = &NONLOCAL
+ESCAPED = &STRING
+ESCAPED = _15
+j_37 = j_67 + UNKNOWN
+j_37 = &NONLOCAL
+ESCAPED = &NONLOCAL
+ESCAPED = &STRING
+i_34 = i_66 + UNKNOWN
+i_34 = &NONLOCAL
+
+Collapsing static cycles and doing variable substitution
+Building predecessor graph
+Detecting pointer and location equivalences
+
+
+// The constraint graph before var-substitution in dot format:
+strict digraph {
+  node [
+    shape = box
+  ]
+  edge [
+    fontsize = "12"
+  ]
+
+  // List of nodes and complex constraints in the constraint graph:
+"NULL";
+"ANYTHING"[label="ANYTHING = { 2 }"];
+"STRING";
+"ESCAPED"[label="ESCAPED = { 3 5 }"];
+"NONLOCAL"[label="NONLOCAL = { 4 5 }"];
+"STOREDANYTHING";
+"INTEGER"[label="INTEGER = { 2 }"];
+"HEAP(10)"[label="HEAP(10) = { 5 }"];
+"HEAP(17)"[label="HEAP(17) = { 5 }"];
+"_Znaj";
+"_28"[label="_28 = { 8 }"];
+"_62";
+"_42";
+"_63"[label="_63 = { 5 }"];
+"_43"[label="_43 = { 5 }"];
+"derefaddrtmp(15)"[label="derefaddrtmp(15) = { 1 }"];
+"_30"[label="_30 = { 9 }"];
+"_64";
+"_39";
+"_65"[label="_65 = { 5 }"];
+"_40"[label="_40 = { 5 }"];
+"derefaddrtmp(22)"[label="derefaddrtmp(22) = { 1 }"];
+"i_66"[label="i_66 = { 1 }"];
+"i_34"[label="i_34 = { 5 }"];
+"i.2_1";
+"_2"[label="_2 = { 5 }"];
+"_3";
+"_4";
+"_10"[label="_10 = { 5 }"];
+"j_67"[label="j_67 = { 1 }"];
+"j_37"[label="j_37 = { 5 }"];
+"_5";
+"j.3_6";
+"_7"[label="_7 = { 5 }"];
+"_8";
+"_9";
+"_11";
+"_12";
+"_13"[label="_13 = { 5 }"];
+"_14";
+"_15";
+"__printf_chk";
+"_ZdaPv";
+"main";
+"*NULL";
+"*ANYTHING";
+"*STRING";
+"*ESCAPED";
+"*NONLOCAL";
+"*STOREDANYTHING";
+"*INTEGER";
+"*HEAP(10)";
+"*HEAP(17)";
+"*_Znaj";
+"*_28";
+"*_62";
+"*_42";
+"*_63";
+"*_43";
+"*derefaddrtmp(15)";
+"*_30";
+"*_64";
+"*_39";
+"*_65";
+"*_40";
+"*derefaddrtmp(22)";
+"*i_66";
+"*i_34";
+"*i.2_1";
+"*_2";
+"*_3";
+"*_4";
+"*_10";
+"*j_67";
+"*j_37";
+"*_5";
+"*j.3_6";
+"*_7";
+"*_8";
+"*_9";
+"*_11";
+"*_12";
+"*_13";
+"*_14";
+"*_15";
+"*__printf_chk";
+"*_ZdaPv";
+"*main";
+
+  // Edges in the constraint graph:
+"_15" -> "ESCAPED";
+"*ESCAPED" -> "ESCAPED";
+"_28" -> "_62";
+"_42" -> "_62";
+"_43" -> "_63";
+"_30" -> "_64";
+"_39" -> "_64";
+"_40" -> "_65";
+"i_34" -> "i_66";
+"i_66" -> "i.2_1";
+"j_37" -> "j_67";
+"j_67" -> "j.3_6";
+"_11" -> "_12";
+"NONLOCAL" -> "*ESCAPED";
+"derefaddrtmp(15)" -> "*_62";
+"derefaddrtmp(22)" -> "*_64";
+"_4" -> "*_3";
+"_9" -> "*_8";
+"_15" -> "*_14";
+}
+
+
+Rewriting constraints and unifying variables
+Uniting pointer but not location equivalent variables
+Finding indirect cycles
+
+
+// The constraint graph before solve-graph in dot format:
+strict digraph {
+  node [
+    shape = box
+  ]
+  edge [
+    fontsize = "12"
+  ]
+
+  // List of nodes and complex constraints in the constraint graph:
+"NULL";
+"ANYTHING";
+"STRING";
+"ESCAPED" [label="\N\nESCAPED = ESCAPED + UNKNOWN\lESCAPED = *ESCAPED\l*ESCAPED = NONLOCAL\l"];
+"NONLOCAL";
+"STOREDANYTHING";
+"INTEGER";
+"HEAP(10)";
+"HEAP(17)";
+"_Znaj";
+"_28" [label="\N\n_8 = _28 + UNKNOWN\l_14 = _28 + UNKNOWN\l"];
+"_62" [label="\N\n_42 = _62 + 32\l*_62 = derefaddrtmp(15)\l"];
+"_42";
+"_63" [label="\N\n_63 = _63 + UNKNOWN\l"];
+"derefaddrtmp(15)";
+"_30" [label="\N\n_3 = _30 + UNKNOWN\l"];
+"_64" [label="\N\n_39 = _64 + 32\l*_64 = derefaddrtmp(15)\l"];
+"_39";
+"_65" [label="\N\n_65 = _65 + UNKNOWN\l"];
+"i_66" [label="\N\ni_34 = i_66 + UNKNOWN\l_2 = i_66 + UNKNOWN\l_4 = i_66 + UNKNOWN\l_10 = i_66 + UNKNOWN\l_5 = i_66 + UNKNOWN\l"];
+"i_34";
+"_2";
+"_3" [label="\N\n*_3 = _4\l"];
+"_4" [label="\N\n_15 = _4 + UNKNOWN\l"];
+"_10" [label="\N\n_11 = _10 + UNKNOWN\l"];
+"j_67" [label="\N\nj_37 = j_67 + UNKNOWN\l_5 = j_67 + UNKNOWN\l_7 = j_67 + UNKNOWN\l_11 = j_67 + UNKNOWN\l"];
+"j_37";
+"_5" [label="\N\n_9 = _5 + UNKNOWN\l"];
+"_7";
+"_8" [label="\N\n*_8 = _9\l"];
+"_9" [label="\N\n_15 = _9 + UNKNOWN\l"];
+"_11" [label="\N\n_13 = _11 + UNKNOWN\l"];
+"_13";
+"_14" [label="\N\n*_14 = _15\l"];
+"_15";
+"__printf_chk";
+"_ZdaPv";
+"main";
+
+  // Edges in the constraint graph:
+"STOREDANYTHING" -> "ESCAPED";
+"STOREDANYTHING" -> "HEAP(10)";
+"STOREDANYTHING" -> "HEAP(17)";
+"STOREDANYTHING" -> "_42";
+"STOREDANYTHING" -> "_63";
+"STOREDANYTHING" -> "_39";
+"STOREDANYTHING" -> "_65";
+"STOREDANYTHING" -> "i_34";
+"STOREDANYTHING" -> "_2";
+"STOREDANYTHING" -> "_3";
+"STOREDANYTHING" -> "_4";
+"STOREDANYTHING" -> "_10";
+"STOREDANYTHING" -> "j_37";
+"STOREDANYTHING" -> "_5";
+"STOREDANYTHING" -> "_7";
+"STOREDANYTHING" -> "_8";
+"STOREDANYTHING" -> "_9";
+"STOREDANYTHING" -> "_11";
+"STOREDANYTHING" -> "_13";
+"STOREDANYTHING" -> "_14";
+"STOREDANYTHING" -> "_15";
+"_28" -> "_62";
+"_42" -> "_62";
+"_30" -> "_64";
+"_39" -> "_64";
+"i_34" -> "i_66";
+"j_37" -> "j_67";
+"_15" -> "ESCAPED";
+}
+
+
+Solving graph
+
+
+// The constraint graph after solve-graph in dot format:
+strict digraph {
+  node [
+    shape = box
+  ]
+  edge [
+    fontsize = "12"
+  ]
+
+  // List of nodes and complex constraints in the constraint graph:
+"NULL";
+"ANYTHING";
+"STRING";
+"ESCAPED" [label="\N\nESCAPED = ESCAPED + UNKNOWN\lESCAPED = *ESCAPED\l*ESCAPED = NONLOCAL\l"];
+"NONLOCAL";
+"STOREDANYTHING";
+"INTEGER";
+"HEAP(10)";
+"HEAP(17)";
+"_Znaj";
+"_28" [label="\N\n_8 = _28 + UNKNOWN\l_14 = _28 + UNKNOWN\l"];
+"_62" [label="\N\n_42 = _62 + 32\l*_62 = derefaddrtmp(15)\l"];
+"_42";
+"_63" [label="\N\n_63 = _63 + UNKNOWN\l"];
+"derefaddrtmp(15)";
+"_30" [label="\N\n_3 = _30 + UNKNOWN\l"];
+"_64" [label="\N\n_39 = _64 + 32\l*_64 = derefaddrtmp(15)\l"];
+"_39";
+"_65" [label="\N\n_65 = _65 + UNKNOWN\l"];
+"i_66" [label="\N\ni_34 = i_66 + UNKNOWN\l_2 = i_66 + UNKNOWN\l_4 = i_66 + UNKNOWN\l_10 = i_66 + UNKNOWN\l_5 = i_66 + UNKNOWN\l"];
+"i_34";
+"_2";
+"_3" [label="\N\n*_3 = _4\l"];
+"_4" [label="\N\n_15 = _4 + UNKNOWN\l"];
+"_10" [label="\N\n_11 = _10 + UNKNOWN\l"];
+"j_67" [label="\N\nj_37 = j_67 + UNKNOWN\l_5 = j_67 + UNKNOWN\l_7 = j_67 + UNKNOWN\l_11 = j_67 + UNKNOWN\l"];
+"j_37";
+"_5" [label="\N\n_9 = _5 + UNKNOWN\l"];
+"_7";
+"_8" [label="\N\n*_8 = _9\l"];
+"_9" [label="\N\n_15 = _9 + UNKNOWN\l"];
+"_11" [label="\N\n_13 = _11 + UNKNOWN\l"];
+"_13";
+"_14" [label="\N\n*_14 = _15\l"];
+"_15";
+"__printf_chk";
+"_ZdaPv";
+"main";
+
+  // Edges in the constraint graph:
+"NONLOCAL" -> "ESCAPED";
+"STOREDANYTHING" -> "ESCAPED";
+"STOREDANYTHING" -> "HEAP(10)";
+"STOREDANYTHING" -> "HEAP(17)";
+"STOREDANYTHING" -> "_42";
+"STOREDANYTHING" -> "_63";
+"STOREDANYTHING" -> "_39";
+"STOREDANYTHING" -> "_65";
+"STOREDANYTHING" -> "i_34";
+"STOREDANYTHING" -> "_2";
+"STOREDANYTHING" -> "_3";
+"STOREDANYTHING" -> "_4";
+"STOREDANYTHING" -> "_10";
+"STOREDANYTHING" -> "j_37";
+"STOREDANYTHING" -> "_5";
+"STOREDANYTHING" -> "_7";
+"STOREDANYTHING" -> "_8";
+"STOREDANYTHING" -> "_9";
+"STOREDANYTHING" -> "_11";
+"STOREDANYTHING" -> "_13";
+"STOREDANYTHING" -> "_14";
+"STOREDANYTHING" -> "_15";
+"_28" -> "_62";
+"_42" -> "_62";
+"derefaddrtmp(15)" -> "HEAP(10)";
+"derefaddrtmp(15)" -> "HEAP(17)";
+"_30" -> "_64";
+"_39" -> "_64";
+"i_34" -> "i_66";
+"_4" -> "HEAP(17)";
+"j_37" -> "j_67";
+"_9" -> "HEAP(10)";
+"_15" -> "ESCAPED";
+"_15" -> "HEAP(10)";
+}
+
+
+
+Points-to sets
+
+ANYTHING = { ANYTHING }
+ESCAPED = { NULL STRING ESCAPED NONLOCAL }
+NONLOCAL = { ESCAPED NONLOCAL }
+STOREDANYTHING = { }
+INTEGER = { ANYTHING }
+HEAP(10) = { NULL NONLOCAL }
+HEAP(17) = { NULL NONLOCAL }
+_Znaj = { }
+_28 = { HEAP(10) }
+_62 = { HEAP(10) }
+_42 = { HEAP(10) }
+_63 = { NONLOCAL }
+_43 = { NONLOCAL } same as _63
+derefaddrtmp(15) = { NULL }
+_30 = { HEAP(17) }
+_64 = { HEAP(17) }
+_39 = { HEAP(17) }
+_65 = { NONLOCAL }
+_40 = { NONLOCAL } same as _65
+derefaddrtmp(22) = { NULL } same as derefaddrtmp(15)
+i_66 = { NULL NONLOCAL }
+i_34 = { NULL NONLOCAL }
+i.2_1 = { NULL NONLOCAL } same as i_66
+_2 = { NULL NONLOCAL }
+_3 = { HEAP(17) }
+_4 = { NULL NONLOCAL }
+_10 = { NULL NONLOCAL }
+j_67 = { NULL NONLOCAL }
+j_37 = { NULL NONLOCAL }
+_5 = { NULL NONLOCAL }
+j.3_6 = { NULL NONLOCAL } same as j_67
+_7 = { NULL NONLOCAL }
+_8 = { HEAP(10) }
+_9 = { NULL NONLOCAL }
+_11 = { NULL NONLOCAL }
+_12 = { NULL NONLOCAL } same as _11
+_13 = { NULL NONLOCAL }
+_14 = { HEAP(10) }
+_15 = { NULL NONLOCAL }
+__printf_chk = { }
+_ZdaPv = { }
+main = { }
+
+
+Alias information for int main()
+
+Aliased symbols
+
+
+Call clobber information
+
+ESCAPED, points-to non-local, points-to NULL, points-to vars: { }
+
+Flow-insensitive points-to information
+
+_3, points-to vars: { D.6712 }
+_8, points-to vars: { D.6711 }
+_14, points-to vars: { D.6711 }
+_28, points-to vars: { D.6711 }
+_30, points-to vars: { D.6712 }
+_39, points-to vars: { D.6712 }
+_42, points-to vars: { D.6711 }
+_62, points-to vars: { D.6711 }
+_64, points-to vars: { D.6712 }
+
+;; 5 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 14 4 5 13 10 6 7 12 8 11 9
+;;
+;; Loop 3
+;;  header 6, latch 11
+;;  depth 1, outer 0
+;;  nodes: 6 11 8 7 12
+;;
+;; Loop 4
+;;  header 7, latch 12
+;;  depth 2, outer 3
+;;  nodes: 7 12
+;;
+;; Loop 2
+;;  header 5, latch 13
+;;  depth 1, outer 0
+;;  nodes: 5 13
+;;
+;; Loop 1
+;;  header 3, latch 14
+;;  depth 1, outer 0
+;;  nodes: 3 14
+;; 2 succs { 3 }
+;; 3 succs { 14 4 }
+;; 14 succs { 3 }
+;; 4 succs { 5 }
+;; 5 succs { 13 10 }
+;; 13 succs { 5 }
+;; 10 succs { 6 }
+;; 6 succs { 7 }
+;; 7 succs { 12 8 }
+;; 12 succs { 7 }
+;; 8 succs { 11 9 }
+;; 11 succs { 6 }
+;; 9 succs { 1 }
+int main ()
+{
+  int j;
+  int i;
+  unsigned int i.2_1;
+  unsigned int _2;
+  int * _3;
+  int _4;
+  int _5;
+  unsigned int j.3_6;
+  unsigned int _7;
+  int * _8;
+  int _9;
+  int _10;
+  int _11;
+  unsigned int _12;
+  unsigned int _13;
+  int * _14;
+  int _15;
+  void * _28;
+  void * _30;
+  int * _39;
+  int _40;
+  int * _42;
+  int _43;
+  int * _62;
+  int _63;
+  int * _64;
+  int _65;
+
+  <bb 2> [local count: 108459]:
+  _28 = operator new [] (40000);
+
+  <bb 3> [local count: 10737416]:
+  # _62 = PHI <_42(14), _28(2)>
+  # _63 = PHI <_43(14), 9999(2)>
+  *_62 = 0;
+  _42 = _62 + 4;
+  _43 = _63 + -1;
+  if (_43 != -1)
+    goto <bb 14>; [98.99%]
+  else
+    goto <bb 4>; [1.01%]
+
+  <bb 14> [local count: 10628957]:
+  goto <bb 3>; [100.00%]
+
+  <bb 4> [local count: 108459]:
+  _30 = operator new [] (400);
+
+  <bb 5> [local count: 10737416]:
+  # _64 = PHI <_39(13), _30(4)>
+  # _65 = PHI <_40(13), 99(4)>
+  *_64 = 0;
+  _39 = _64 + 4;
+  _40 = _65 + -1;
+  if (_40 != -1)
+    goto <bb 13>; [98.99%]
+  else
+    goto <bb 10>; [1.01%]
+
+  <bb 13> [local count: 10628957]:
+  goto <bb 5>; [100.00%]
+
+  <bb 10> [local count: 108459]:
+
+  <bb 6> [local count: 10737416]:
+  # i_66 = PHI <i_34(11), 0(10)>
+  i.2_1 = (unsigned int) i_66;
+  _2 = i.2_1 * 4;
+  _3 = _30 + _2;
+  _4 = i_66 % 13;
+  *_3 = _4;
+  _10 = i_66 * 100;
+
+  <bb 7> [local count: 1063004409]:
+  # j_67 = PHI <j_37(12), 0(6)>
+  _5 = i_66 + j_67;
+  j.3_6 = (unsigned int) j_67;
+  _7 = j.3_6 * 4;
+  _8 = _28 + _7;
+  _9 = _5 % 20;
+  *_8 = _9;
+  _11 = _10 + j_67;
+  _12 = (unsigned int) _11;
+  _13 = _12 * 4;
+  _14 = _28 + _13;
+  _15 = _4 * _9;
+  *_14 = _15;
+  __printf_chk (1, "%d ", _15);
+  j_37 = j_67 + 1;
+  if (j_37 != 100)
+    goto <bb 12>; [98.99%]
+  else
+    goto <bb 8>; [1.01%]
+
+  <bb 12> [local count: 1052266996]:
+  goto <bb 7>; [100.00%]
+
+  <bb 8> [local count: 10737416]:
+  __printf_chk (1, "\n");
+  i_34 = i_66 + 1;
+  if (i_34 != 100)
+    goto <bb 11>; [98.99%]
+  else
+    goto <bb 9>; [1.01%]
+
+  <bb 11> [local count: 10628957]:
+  goto <bb 6>; [100.00%]
+
+  <bb 9> [local count: 108459]:
+  operator delete [] (_28);
+  operator delete [] (_30);
+  return 0;
+
+}
+
+

@@ -1,0 +1,249 @@
+
+;; Function printf (printf, funcdef_no=16, decl_uid=1060, cgraph_uid=17, symbol_order=16)
+
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+
+Value ranges after Early VRP:
+
+__fmt_2(D): const char * restrict [1B, +INF]
+_4: int VARYING
+
+
+__attribute__((artificial, gnu_inline, always_inline))
+__attribute__((nonnull (1), format (printf, 1, 2)))
+int printf (const char * restrict __fmt)
+{
+  int _4;
+
+  <bb 2> :
+  _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  return _4;
+
+}
+
+
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30)
+
+Created preheader block for loop 3
+;; 5 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 18 8 9 10 11 12 13 14 15 16 17
+;;
+;; Loop 3
+;;  header 12, latch 11
+;;  depth 1, outer 0
+;;  nodes: 12 11 10 8 9
+;;
+;; Loop 4
+;;  header 10, latch 9
+;;  depth 2, outer 3
+;;  nodes: 10 9
+;;
+;; Loop 2
+;;  header 7, latch 6
+;;  depth 1, outer 0
+;;  nodes: 7 6
+;;
+;; Loop 1
+;;  header 4, latch 3
+;;  depth 1, outer 0
+;;  nodes: 4 3
+;; 2 succs { 4 }
+;; 3 succs { 4 }
+;; 4 succs { 3 5 }
+;; 5 succs { 7 }
+;; 6 succs { 7 }
+;; 7 succs { 6 18 }
+;; 18 succs { 12 }
+;; 8 succs { 10 }
+;; 9 succs { 10 }
+;; 10 succs { 9 11 }
+;; 11 succs { 12 }
+;; 12 succs { 8 13 }
+;; 13 succs { 14 15 }
+;; 14 succs { 15 }
+;; 15 succs { 16 17 }
+;; 16 succs { 17 }
+;; 17 succs { 1 }
+Simplified relational if (_31 >= 0)
+ into if (_31 != -1)
+
+Simplified relational if (_33 >= 0)
+ into if (_33 != -1)
+
+Simplified relational if (i_34 <= 99)
+ into if (i_34 != 100)
+
+Simplified relational if (j_35 <= 99)
+ into if (j_35 != 100)
+
+
+Value ranges after Early VRP:
+
+i.2_1: unsigned int [0, 99]
+_2: unsigned int [0, 396]
+_3: void * [1B, +INF]
+_4: int [0, 12]
+_5: int [0, 198]
+j.3_6: unsigned int [0, 99]
+_7: unsigned int [0, 396]
+_8: void * [1B, +INF]
+_9: int [0, 19]
+_18: int [0, 9900]
+_19: int [0, 9999]
+_20: unsigned int [0, 9999]
+_21: unsigned int [0, 39996]
+_22: void * [1B, +INF]
+_23: int [0, 228]
+_30: void * [_44, +INF]
+_31: int [-1, 9999]
+_32: void * [_52, +INF]
+_33: int [-1, 99]
+i_34: int [0, 100]
+j_35: int [0, 100]
+_44: void * [1B, +INF]
+_52: void * [1B, +INF]
+i_66: int [1, 100]
+j_70: int [1, 100]
+_72: int * [1B, +INF]
+_73: int [-1, 98]
+_75: int * [1B, +INF]
+_76: int [-1, 9998]
+_77: int VARYING
+_78: int VARYING
+
+
+Removing basic block 13
+Merging blocks 14 and 15
+Removing basic block 18
+Merging blocks 14 and 16
+Merging blocks 14 and 17
+int main ()
+{
+  int j;
+  int i;
+  int * vect;
+  int * matrix;
+  unsigned int i.2_1;
+  unsigned int _2;
+  int * _3;
+  int _4;
+  int _5;
+  unsigned int j.3_6;
+  unsigned int _7;
+  int * _8;
+  int _9;
+  int _18;
+  int _19;
+  unsigned int _20;
+  unsigned int _21;
+  int * _22;
+  int _23;
+  int * _30;
+  int _31;
+  int * _32;
+  int _33;
+  void * _44;
+  void * _52;
+  int * _72;
+  int _73;
+  int * _75;
+  int _76;
+  int _77;
+  int _78;
+
+  <bb 2> :
+  _44 = operator new [] (40000);
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  *_30 = 0;
+  _75 = _30 + 4;
+  _76 = _31 + -1;
+
+  <bb 4> :
+  # _30 = PHI <_44(2), _75(3)>
+  # _31 = PHI <9999(2), _76(3)>
+  if (_31 != -1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  _52 = operator new [] (400);
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  *_32 = 0;
+  _72 = _32 + 4;
+  _73 = _33 + -1;
+
+  <bb 7> :
+  # _32 = PHI <_52(5), _72(6)>
+  # _33 = PHI <99(5), _73(6)>
+  if (_33 != -1)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 8> :
+  i.2_1 = (unsigned int) i_34;
+  _2 = i.2_1 * 4;
+  _3 = _52 + _2;
+  _4 = i_34 % 13;
+  *_3 = _4;
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+  _5 = i_34 + j_35;
+  j.3_6 = (unsigned int) j_35;
+  _7 = j.3_6 * 4;
+  _8 = _44 + _7;
+  _9 = _5 % 20;
+  *_8 = _9;
+  _18 = i_34 * 100;
+  _19 = _18 + j_35;
+  _20 = (unsigned int) _19;
+  _21 = _20 * 4;
+  _22 = _44 + _21;
+  _23 = _4 * _9;
+  *_22 = _23;
+  _77 = __printf_chk (1, "%d ", _23);
+  j_70 = j_35 + 1;
+
+  <bb 10> :
+  # j_35 = PHI <0(8), j_70(9)>
+  if (j_35 != 100)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 11> :
+  _78 = __printf_chk (1, "\n");
+  i_66 = i_34 + 1;
+
+  <bb 12> :
+  # i_34 = PHI <0(7), i_66(11)>
+  if (i_34 != 100)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 13> :
+  operator delete [] (_44);
+  operator delete [] (_52);
+  return 0;
+
+}
+
+

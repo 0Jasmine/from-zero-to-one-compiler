@@ -1,165 +1,136 @@
-	.arch armv7-a
-	.fpu vfpv3-d16
-	.eabi_attribute 28, 1
-	.eabi_attribute 20, 1
-	.eabi_attribute 21, 1
-	.eabi_attribute 23, 3
-	.eabi_attribute 24, 1
-	.eabi_attribute 25, 1
-	.eabi_attribute 26, 2
-	.eabi_attribute 30, 6
-	.eabi_attribute 34, 1
-	.eabi_attribute 18, 4
+	.text
 	.file	"matmul-v2.cpp"
-	.text
-	.section	.rodata
-	.align	2
-.LC0:
-	.ascii	"%d \000"
-	.text
-	.align	1
-	.global	main
-	.syntax unified
-	.thumb
-	.thumb_func
-	.type	main, %function
-main:
-	.fnstart
-.LFB0:
-	@ args = 0, pretend = 0, frame = 16
-	@ frame_needed = 1, uses_anonymous_args = 0
-	push	{r7, lr}
-	.save {r7, lr}
-	.pad #16
-	sub	sp, sp, #16
-	.setfp r7, sp, #0
-	add	r7, sp, #0
-	movs	r0, #4
-	bl	_Znwj(PLT)
-	mov	r3, r0
-	movw	r2, #10000
-	str	r2, [r3]
-	str	r3, [r7, #8]
-	movs	r0, #4
-	bl	_Znwj(PLT)
-	mov	r3, r0
-	movs	r2, #100
-	str	r2, [r3]
-	str	r3, [r7, #12]
-	movs	r3, #0
-	str	r3, [r7]
-	b	.L2
-.L5:
-	ldr	r3, [r7]
-	lsls	r3, r3, #2
-	ldr	r2, [r7, #12]
-	adds	r1, r2, r3
-	ldr	r2, [r7]
-	movw	r3, #60495
-	movt	r3, 20164
-	smull	r0, r3, r3, r2
-	asrs	r0, r3, #2
-	asrs	r3, r2, #31
-	subs	r3, r0, r3
-	movs	r0, #13
-	mul	r3, r0, r3
-	subs	r3, r2, r3
-	str	r3, [r1]
-	movs	r3, #0
-	str	r3, [r7, #4]
-	b	.L3
-.L4:
-	ldr	r2, [r7]
-	ldr	r3, [r7, #4]
-	add	r2, r2, r3
-	ldr	r3, [r7, #4]
-	lsls	r3, r3, #2
-	ldr	r1, [r7, #8]
-	add	r1, r1, r3
-	movw	r3, #26215
-	movt	r3, 26214
-	smull	r0, r3, r3, r2
-	asrs	r0, r3, #3
-	asrs	r3, r2, #31
-	subs	r3, r0, r3
-	movs	r0, #20
-	mul	r3, r0, r3
-	subs	r3, r2, r3
-	str	r3, [r1]
-	ldr	r3, [r7]
-	lsls	r3, r3, #2
-	ldr	r2, [r7, #12]
-	add	r3, r3, r2
-	ldr	r2, [r3]
-	ldr	r3, [r7, #4]
-	lsls	r3, r3, #2
-	ldr	r1, [r7, #8]
-	add	r3, r3, r1
-	ldr	r1, [r3]
-	ldr	r3, [r7]
-	movs	r0, #100
-	mul	r0, r3, r0
-	ldr	r3, [r7, #4]
-	add	r3, r3, r0
-	lsls	r3, r3, #2
-	ldr	r0, [r7, #8]
-	add	r3, r3, r0
-	mul	r2, r1, r2
-	str	r2, [r3]
-	ldr	r3, [r7]
-	movs	r2, #100
-	mul	r2, r3, r2
-	ldr	r3, [r7, #4]
-	add	r3, r3, r2
-	lsls	r3, r3, #2
-	ldr	r2, [r7, #8]
-	add	r3, r3, r2
-	ldr	r3, [r3]
-	mov	r1, r3
-	ldr	r3, .L9
-.LPIC0:
-	add	r3, pc
-	mov	r0, r3
-	bl	printf(PLT)
-	ldr	r3, [r7, #4]
-	adds	r3, r3, #1
-	str	r3, [r7, #4]
-.L3:
-	ldr	r3, [r7, #4]
-	cmp	r3, #99
-	ble	.L4
-	movs	r0, #10
-	bl	putchar(PLT)
-	ldr	r3, [r7]
-	adds	r3, r3, #1
-	str	r3, [r7]
-.L2:
-	ldr	r3, [r7]
-	cmp	r3, #99
-	ble	.L5
-	ldr	r3, [r7, #8]
-	cmp	r3, #0
-	beq	.L6
-	ldr	r0, [r7, #8]
-	bl	_ZdaPv(PLT)
-.L6:
-	ldr	r3, [r7, #12]
-	cmp	r3, #0
-	beq	.L7
-	ldr	r0, [r7, #12]
-	bl	_ZdaPv(PLT)
-.L7:
-	movs	r3, #0
-	mov	r0, r3
-	adds	r7, r7, #16
-	mov	sp, r7
-	@ sp needed
-	pop	{r7, pc}
-.L10:
-	.align	2
-.L9:
-	.word	.LC0-(.LPIC0+4)
-	.fnend
-	.size	main, .-main
-	.ident	"GCC: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0"
-	.section	.note.GNU-stack,"",%progbits
+	.globl	main                            # -- Begin function main
+	.p2align	4, 0x90
+	.type	main,@function
+main:                                   # @main
+	.cfi_startproc
+# %bb.0:
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$64, %rsp
+	movl	$0, -4(%rbp)
+	movl	$40000, %edi                    # imm = 0x9C40
+	callq	_Znam@PLT
+	movq	%rax, %rdi
+	movq	%rdi, -48(%rbp)                 # 8-byte Spill
+	xorl	%esi, %esi
+	movl	$40000, %edx                    # imm = 0x9C40
+	callq	memset@PLT
+	movq	-48(%rbp), %rax                 # 8-byte Reload
+	movq	%rax, -16(%rbp)
+	movl	$400, %edi                      # imm = 0x190
+	callq	_Znam@PLT
+	movq	%rax, %rdi
+	movq	%rdi, -40(%rbp)                 # 8-byte Spill
+	xorl	%esi, %esi
+	movl	$400, %edx                      # imm = 0x190
+	callq	memset@PLT
+	movq	-40(%rbp), %rax                 # 8-byte Reload
+	movq	%rax, -24(%rbp)
+	movl	$0, -28(%rbp)
+.LBB0_1:                                # =>This Loop Header: Depth=1
+                                        #     Child Loop BB0_3 Depth 2
+	cmpl	$100, -28(%rbp)
+	jge	.LBB0_8
+# %bb.2:                                #   in Loop: Header=BB0_1 Depth=1
+	movl	-28(%rbp), %eax
+	movl	$13, %ecx
+	cltd
+	idivl	%ecx
+	movq	-24(%rbp), %rax
+	movslq	-28(%rbp), %rcx
+	movl	%edx, (%rax,%rcx,4)
+	movl	$0, -32(%rbp)
+.LBB0_3:                                #   Parent Loop BB0_1 Depth=1
+                                        # =>  This Inner Loop Header: Depth=2
+	cmpl	$100, -32(%rbp)
+	jge	.LBB0_6
+# %bb.4:                                #   in Loop: Header=BB0_3 Depth=2
+	movl	-28(%rbp), %eax
+	addl	-32(%rbp), %eax
+	movl	$20, %ecx
+	cltd
+	idivl	%ecx
+	movq	-16(%rbp), %rax
+	movslq	-32(%rbp), %rcx
+	movl	%edx, (%rax,%rcx,4)
+	movq	-24(%rbp), %rax
+	movslq	-28(%rbp), %rcx
+	movl	(%rax,%rcx,4), %edx
+	movq	-16(%rbp), %rax
+	movslq	-32(%rbp), %rcx
+	imull	(%rax,%rcx,4), %edx
+	movq	-16(%rbp), %rax
+	imull	$100, -28(%rbp), %ecx
+	addl	-32(%rbp), %ecx
+	movslq	%ecx, %rcx
+	movl	%edx, (%rax,%rcx,4)
+	movq	-16(%rbp), %rax
+	imull	$100, -28(%rbp), %ecx
+	addl	-32(%rbp), %ecx
+	movslq	%ecx, %rcx
+	movl	(%rax,%rcx,4), %esi
+	leaq	.L.str(%rip), %rdi
+	movb	$0, %al
+	callq	printf@PLT
+# %bb.5:                                #   in Loop: Header=BB0_3 Depth=2
+	movl	-32(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -32(%rbp)
+	jmp	.LBB0_3
+.LBB0_6:                                #   in Loop: Header=BB0_1 Depth=1
+	leaq	.L.str.1(%rip), %rdi
+	movb	$0, %al
+	callq	printf@PLT
+# %bb.7:                                #   in Loop: Header=BB0_1 Depth=1
+	movl	-28(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -28(%rbp)
+	jmp	.LBB0_1
+.LBB0_8:
+	movq	-16(%rbp), %rax
+	movq	%rax, -56(%rbp)                 # 8-byte Spill
+	cmpq	$0, %rax
+	je	.LBB0_10
+# %bb.9:
+	movq	-56(%rbp), %rdi                 # 8-byte Reload
+	callq	_ZdaPv@PLT
+.LBB0_10:
+	movq	-24(%rbp), %rax
+	movq	%rax, -64(%rbp)                 # 8-byte Spill
+	cmpq	$0, %rax
+	je	.LBB0_12
+# %bb.11:
+	movq	-64(%rbp), %rdi                 # 8-byte Reload
+	callq	_ZdaPv@PLT
+.LBB0_12:
+	xorl	%eax, %eax
+	addq	$64, %rsp
+	popq	%rbp
+	.cfi_def_cfa %rsp, 8
+	retq
+.Lfunc_end0:
+	.size	main, .Lfunc_end0-main
+	.cfi_endproc
+                                        # -- End function
+	.type	.L.str,@object                  # @.str
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.L.str:
+	.asciz	"%d "
+	.size	.L.str, 4
+
+	.type	.L.str.1,@object                # @.str.1
+.L.str.1:
+	.asciz	"\n"
+	.size	.L.str.1, 2
+
+	.ident	"Ubuntu clang version 14.0.0-1ubuntu1.1"
+	.section	".note.GNU-stack","",@progbits
+	.addrsig
+	.addrsig_sym _Znam
+	.addrsig_sym printf
+	.addrsig_sym _ZdaPv

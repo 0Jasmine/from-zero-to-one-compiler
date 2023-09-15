@@ -16,29 +16,37 @@ After removal of unreachable regions:
 
 int main ()
 {
-  void * D.6413;
-  void * D.6412;
+  void * D.6429;
+  void * D.6428;
   int j;
   int i;
   int * vect;
   int * matrix;
-  int D.6410;
-  void * D.6390;
+  int D.6426;
+  int D.6396;
+  int * D.6395;
+  int * D.6394;
+  int * retval.1;
+  void * D.6393;
+  int D.6390;
+  int * D.6389;
+  int * D.6388;
+  int * retval.0;
   void * D.6387;
-  unsigned int i.0_1;
+  unsigned int i.2_1;
   unsigned int _2;
   int * _3;
   int _4;
   int _5;
-  unsigned int j.1_6;
+  unsigned int j.3_6;
   unsigned int _7;
   int * _8;
   int _9;
-  unsigned int i.2_10;
+  unsigned int i.4_10;
   unsigned int _11;
   int * _12;
   int _13;
-  unsigned int j.3_14;
+  unsigned int j.5_14;
   unsigned int _15;
   int * _16;
   int _17;
@@ -54,106 +62,160 @@ int main ()
   unsigned int _27;
   int * _28;
   int _29;
-  void * _38;
-  void * _39;
-  void * _43;
+  int * _30;
+  int _31;
+  int * _32;
+  int _33;
   void * _44;
-  int _50;
+  void * _45;
+  int * _46;
+  int * _47;
+  int _48;
+  int * retval.0_49;
+  void * _52;
+  void * _53;
+  int * _54;
+  int * _55;
+  int _56;
+  int * retval.1_57;
+  int _62;
+  int * _72;
+  int _73;
+  int * _75;
+  int _76;
 
   <bb 2> :
-  _38 = operator new (4);
-  _39 = _38;
-  MEM[(int *)_39] = 10000;
-  matrix_41 = _39;
-  _43 = operator new (4);
-  _44 = _43;
-  MEM[(int *)_44] = 100;
-  vect_46 = _44;
-  i_47 = 0;
-  goto <bb 7>; [INV]
+  _44 = operator new [] (40000);
+  _45 = _44;
+  _46 = _45;
+  _47 = _46;
+  _48 = 9999;
+  goto <bb 4>; [INV]
 
   <bb 3> :
-  i.0_1 = (unsigned int) i_30;
-  _2 = i.0_1 * 4;
-  _3 = vect_46 + _2;
-  _4 = i_30 % 13;
-  *_3 = _4;
-  j_52 = 0;
-  goto <bb 5>; [INV]
+  *_30 = 0;
+  _75 = _30 + 4;
+  _76 = _31 + -1;
 
   <bb 4> :
-  _5 = i_30 + j_31;
-  j.1_6 = (unsigned int) j_31;
-  _7 = j.1_6 * 4;
-  _8 = matrix_41 + _7;
-  _9 = _5 % 20;
-  *_8 = _9;
-  i.2_10 = (unsigned int) i_30;
-  _11 = i.2_10 * 4;
-  _12 = vect_46 + _11;
-  _13 = *_12;
-  j.3_14 = (unsigned int) j_31;
-  _15 = j.3_14 * 4;
-  _16 = matrix_41 + _15;
-  _17 = *_16;
-  _18 = i_30 * 100;
-  _19 = j_31 + _18;
-  _20 = (unsigned int) _19;
-  _21 = _20 * 4;
-  _22 = matrix_41 + _21;
-  _23 = _13 * _17;
-  *_22 = _23;
-  _24 = i_30 * 100;
-  _25 = j_31 + _24;
-  _26 = (unsigned int) _25;
-  _27 = _26 * 4;
-  _28 = matrix_41 + _27;
-  _29 = *_28;
-  printf ("%d ", _29);
-  j_58 = j_31 + 1;
+  # _30 = PHI <_47(2), _75(3)>
+  # _31 = PHI <_48(2), _76(3)>
+  if (_31 >= 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
 
   <bb 5> :
-  # j_31 = PHI <j_52(3), j_58(4)>
-  if (j_31 <= 99)
-    goto <bb 4>; [INV]
-  else
-    goto <bb 6>; [INV]
+  retval.0_49 = _46;
+  matrix_50 = _45;
+  _52 = operator new [] (400);
+  _53 = _52;
+  _54 = _53;
+  _55 = _54;
+  _56 = 99;
+  goto <bb 7>; [INV]
 
   <bb 6> :
-  __builtin_putchar (10);
-  i_54 = i_30 + 1;
+  *_32 = 0;
+  _72 = _32 + 4;
+  _73 = _33 + -1;
 
   <bb 7> :
-  # i_30 = PHI <i_47(2), i_54(6)>
-  if (i_30 <= 99)
-    goto <bb 3>; [INV]
+  # _32 = PHI <_55(5), _72(6)>
+  # _33 = PHI <_56(5), _73(6)>
+  if (_33 >= 0)
+    goto <bb 6>; [INV]
   else
     goto <bb 8>; [INV]
 
   <bb 8> :
-  if (matrix_41 != 0B)
-    goto <bb 9>; [INV]
-  else
-    goto <bb 10>; [INV]
+  retval.1_57 = _54;
+  vect_58 = _53;
+  i_59 = 0;
+  goto <bb 13>; [INV]
 
   <bb 9> :
-  operator delete [] (matrix_41);
+  i.2_1 = (unsigned int) i_34;
+  _2 = i.2_1 * 4;
+  _3 = vect_58 + _2;
+  _4 = i_34 % 13;
+  *_3 = _4;
+  j_64 = 0;
+  goto <bb 11>; [INV]
 
   <bb 10> :
-  if (vect_46 != 0B)
-    goto <bb 11>; [INV]
+  _5 = i_34 + j_35;
+  j.3_6 = (unsigned int) j_35;
+  _7 = j.3_6 * 4;
+  _8 = matrix_50 + _7;
+  _9 = _5 % 20;
+  *_8 = _9;
+  i.4_10 = (unsigned int) i_34;
+  _11 = i.4_10 * 4;
+  _12 = vect_58 + _11;
+  _13 = *_12;
+  j.5_14 = (unsigned int) j_35;
+  _15 = j.5_14 * 4;
+  _16 = matrix_50 + _15;
+  _17 = *_16;
+  _18 = i_34 * 100;
+  _19 = j_35 + _18;
+  _20 = (unsigned int) _19;
+  _21 = _20 * 4;
+  _22 = matrix_50 + _21;
+  _23 = _13 * _17;
+  *_22 = _23;
+  _24 = i_34 * 100;
+  _25 = j_35 + _24;
+  _26 = (unsigned int) _25;
+  _27 = _26 * 4;
+  _28 = matrix_50 + _27;
+  _29 = *_28;
+  printf ("%d ", _29);
+  j_70 = j_35 + 1;
+
+  <bb 11> :
+  # j_35 = PHI <j_64(9), j_70(10)>
+  if (j_35 <= 99)
+    goto <bb 10>; [INV]
   else
     goto <bb 12>; [INV]
 
-  <bb 11> :
-  operator delete [] (vect_46);
-
   <bb 12> :
-  _50 = 0;
+  __builtin_putchar (10);
+  i_66 = i_34 + 1;
 
   <bb 13> :
-<L12>:
-  return _50;
+  # i_34 = PHI <i_59(8), i_66(12)>
+  if (i_34 <= 99)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 14> :
+  if (matrix_50 != 0B)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  operator delete [] (matrix_50);
+
+  <bb 16> :
+  if (vect_58 != 0B)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  operator delete [] (vect_58);
+
+  <bb 18> :
+  _62 = 0;
+
+  <bb 19> :
+<L18>:
+  return _62;
 
 }
 

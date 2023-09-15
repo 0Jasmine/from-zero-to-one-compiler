@@ -1,0 +1,250 @@
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30) (executed once)
+
+;; 5 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 14 8 9 10 11 12 13
+;;
+;; Loop 3
+;;  header 12, latch 11
+;;  depth 1, outer 0
+;;  nodes: 12 11 10 8 9
+;;
+;; Loop 4
+;;  header 10, latch 9
+;;  depth 2, outer 3
+;;  nodes: 10 9
+;;
+;; Loop 2
+;;  header 7, latch 6
+;;  depth 1, outer 0
+;;  nodes: 7 6
+;;
+;; Loop 1
+;;  header 4, latch 3
+;;  depth 1, outer 0
+;;  nodes: 4 3
+;; 2 succs { 4 }
+;; 3 succs { 4 }
+;; 4 succs { 3 5 }
+;; 5 succs { 7 }
+;; 6 succs { 7 }
+;; 7 succs { 6 14 }
+;; 14 succs { 12 }
+;; 8 succs { 10 }
+;; 9 succs { 10 }
+;; 10 succs { 9 11 }
+;; 11 succs { 12 }
+;; 12 succs { 8 13 }
+;; 13 succs { 1 }
+
+SSA replacement table
+N_i -> { O_1 ... O_j } means that N_i replaces O_1, ..., O_j
+
+_46 -> { _16 }
+_47 -> { _17 }
+_48 -> { _18 }
+_49 -> { _19 }
+i_50 -> { i_20 }
+j_51 -> { j_21 }
+Incremental SSA update started at block: 4
+Number of blocks in CFG: 15
+Number of blocks to update: 9 ( 60%)
+
+
+
+Value ranges after VRP:
+
+i.2_1: unsigned int [0, 99]
+_2: unsigned int [0, 396]
+_3: void * [1B, +INF]  EQUIVALENCES: { } (0 elements)
+_4: int [0, 12]
+_5: int [0, 198]
+j.3_6: unsigned int [0, 99]
+_7: unsigned int [0, 396]
+_8: void * [1B, +INF]  EQUIVALENCES: { } (0 elements)
+_9: int [0, 19]
+_10: int [0, 9900]
+_11: int [0, 9999]
+_12: unsigned int [0, 9999]
+_13: unsigned int [0, 39996]
+_14: void * [1B, +INF]  EQUIVALENCES: { } (0 elements)
+_15: int [0, 228]
+_16: void * [1B, +INF]
+_17: int [-1, 9999]
+_18: void * [1B, +INF]
+_19: int [-1, 99]
+i_20: int [0, 100]
+j_21: int [0, 100]
+.MEM_22: <<< error >>> VARYING
+.MEM_23: <<< error >>> VARYING
+.MEM_24: <<< error >>> VARYING
+.MEM_25: <<< error >>> VARYING
+_28: void * [1B, +INF]
+_30: void * [1B, +INF]
+i_34: int [1, 100]
+j_37: int [1, 100]
+_39: int * [1B, +INF]
+_40: int [-1, 98]
+_42: int * [1B, +INF]
+_43: int [-1, 9998]
+_46: int * [1B, +INF]  EQUIVALENCES: { _16 } (1 elements)
+_47: int [0, 9999]  EQUIVALENCES: { _17 } (1 elements)
+_48: int * [1B, +INF]  EQUIVALENCES: { _18 } (1 elements)
+_49: int [0, 99]  EQUIVALENCES: { _19 } (1 elements)
+i_50: int [0, 99]  EQUIVALENCES: { i_20 } (1 elements)
+j_51: int [0, 99]  EQUIVALENCES: { j_21 } (1 elements)
+
+
+
+SSA replacement table
+N_i -> { O_1 ... O_j } means that N_i replaces O_1, ..., O_j
+
+j_52 -> { j_21 }
+.MEM_53 -> { .MEM_24 }
+i_54 -> { i_20 }
+.MEM_55 -> { .MEM_25 }
+_56 -> { _18 }
+_57 -> { _19 }
+.MEM_58 -> { .MEM_23 }
+_59 -> { _16 }
+_60 -> { _17 }
+.MEM_61 -> { .MEM_22 }
+_62 -> { _16 }
+_63 -> { _17 }
+_64 -> { _18 }
+_65 -> { _19 }
+i_66 -> { i_20 }
+j_67 -> { j_21 }
+.MEM_68 -> { .MEM_22 }
+.MEM_69 -> { .MEM_23 }
+.MEM_70 -> { .MEM_24 }
+.MEM_71 -> { .MEM_25 }
+Incremental SSA update started at block: 21
+Number of blocks in CFG: 23
+Number of blocks to update: 20 ( 87%)
+
+
+Merging blocks 2 and 21
+Removing basic block 3
+Merging blocks 5 and 19
+Removing basic block 6
+Removing basic block 8
+Removing basic block 9
+Merging blocks 11 and 12
+Removing basic block 14
+Merging blocks 16 and 10
+Merging blocks 18 and 15
+Merging blocks 20 and 7
+Merging blocks 22 and 4
+int main ()
+{
+  int j;
+  int i;
+  unsigned int i.2_1;
+  unsigned int _2;
+  int * _3;
+  int _4;
+  int _5;
+  unsigned int j.3_6;
+  unsigned int _7;
+  int * _8;
+  int _9;
+  int _10;
+  int _11;
+  unsigned int _12;
+  unsigned int _13;
+  int * _14;
+  int _15;
+  void * _28;
+  void * _30;
+  int * _39;
+  int _40;
+  int * _42;
+  int _43;
+  int * _62;
+  int _63;
+  int * _64;
+  int _65;
+
+  <bb 2> [local count: 108459]:
+  _28 = operator new [] (40000);
+
+  <bb 3> [local count: 10737416]:
+  # _62 = PHI <_42(3), _28(2)>
+  # _63 = PHI <_43(3), 9999(2)>
+  *_62 = 0;
+  _42 = _62 + 4;
+  _43 = _63 + -1;
+  if (_43 != -1)
+    goto <bb 3>; [98.99%]
+  else
+    goto <bb 4>; [1.01%]
+
+  <bb 4> [local count: 108459]:
+  _30 = operator new [] (400);
+
+  <bb 5> [local count: 10737416]:
+  # _64 = PHI <_39(5), _30(4)>
+  # _65 = PHI <_40(5), 99(4)>
+  *_64 = 0;
+  _39 = _64 + 4;
+  _40 = _65 + -1;
+  if (_40 != -1)
+    goto <bb 5>; [98.99%]
+  else
+    goto <bb 10>; [1.01%]
+
+  <bb 6> [local count: 10737416]:
+  # i_66 = PHI <i_34(8), i_54(10)>
+  i.2_1 = (unsigned int) i_66;
+  _2 = i.2_1 * 4;
+  _3 = _30 + _2;
+  _4 = i_66 % 13;
+  *_3 = _4;
+
+  <bb 7> [local count: 1063004409]:
+  # j_67 = PHI <j_37(7), 0(6)>
+  _5 = i_66 + j_67;
+  j.3_6 = (unsigned int) j_67;
+  _7 = j.3_6 * 4;
+  _8 = _28 + _7;
+  _9 = _5 % 20;
+  *_8 = _9;
+  _10 = i_66 * 100;
+  _11 = _10 + j_67;
+  _12 = (unsigned int) _11;
+  _13 = _12 * 4;
+  _14 = _28 + _13;
+  _15 = _4 * _9;
+  *_14 = _15;
+  __printf_chk (1, "%d ", _15);
+  j_37 = j_67 + 1;
+  if (j_37 != 100)
+    goto <bb 7>; [98.99%]
+  else
+    goto <bb 8>; [1.01%]
+
+  <bb 8> [local count: 10737416]:
+  __printf_chk (1, "\n");
+  i_34 = i_66 + 1;
+  if (i_34 != 100)
+    goto <bb 6>; [98.99%]
+  else
+    goto <bb 9>; [1.01%]
+
+  <bb 9> [local count: 108459]:
+  operator delete [] (_28);
+  operator delete [] (_30);
+  return 0;
+
+  <bb 10> [local count: 108459]:
+  # i_54 = PHI <0(5)>
+  goto <bb 6>; [100.00%]
+
+}
+
+

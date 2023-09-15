@@ -1,0 +1,175 @@
+
+;; Function main (main, funcdef_no=30, decl_uid=6647, cgraph_uid=31, symbol_order=30) (executed once)
+
+;; 5 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 8 5 7 6
+;;
+;; Loop 3
+;;  header 3, latch 7
+;;  depth 1, outer 0
+;;  nodes: 3 7 5 4 8
+;;
+;; Loop 4
+;;  header 4, latch 8
+;;  depth 2, outer 3
+;;  nodes: 4 8
+;; 2 succs { 3 }
+;; 3 succs { 4 }
+;; 4 succs { 8 5 }
+;; 8 succs { 4 }
+;; 5 succs { 7 6 }
+;; 7 succs { 3 }
+;; 6 succs { 1 }
+
+SSA replacement table
+N_i -> { O_1 ... O_j } means that N_i replaces O_1, ..., O_j
+
+ivtmp.35_10 -> { ivtmp.35_24 }
+_19 -> { _28 }
+ivtmp.15_40 -> { ivtmp.15_69 }
+_65 -> { _30 }
+ivtmp.35_66 -> { ivtmp.35_23 }
+Incremental SSA update started at block: 2
+Number of blocks in CFG: 9
+Number of blocks to update: 7 ( 78%)
+
+
+
+Value ranges after VRP:
+
+_4: int [0, 12]
+_5: int [0, 198]
+_9: int [0, 19]
+ivtmp.35_10: unsigned int [ivtmp.15_69, ivtmp.15_69]  EQUIVALENCES: { ivtmp.35_24 ivtmp.15_69 } (2 elements)
+_15: int [0, 228]
+_16: int [0, 9900]
+_17: unsigned int [0, 9900]
+_18: unsigned int [10000, 19900]
+_19: void * [1B, +INF]  EQUIVALENCES: { _28 } (1 elements)
+_20: void * VARYING
+_21: int [0, 99]
+_22: unsigned int [0, 99]
+ivtmp.35_23: unsigned int [ivtmp.15_69 + 1, ivtmp.15_69 + 1]
+ivtmp.35_24: unsigned int [100, 199]
+_25: void * [1B, +INF]
+_28: void * [1B, +INF]
+_30: void * [1B, +INF]
+ivtmp.17_38: unsigned int VARYING
+ivtmp.15_40: unsigned int ~[ivtmp.35_24, ivtmp.35_24]  EQUIVALENCES: { ivtmp.15_69 } (1 elements)
+_43: void * VARYING
+ivtmp.32_46: unsigned int [1, +INF]
+ivtmp.32_47: unsigned int VARYING
+ivtmp.32_48: unsigned int VARYING
+_49: void * [1B, +INF]
+ivtmp.30_50: unsigned int [1, +INF]
+ivtmp.30_51: unsigned int VARYING
+ivtmp.30_52: unsigned int VARYING
+_57: void * VARYING
+ivtmp.20_58: unsigned int VARYING
+ivtmp.20_59: unsigned int VARYING
+ivtmp.15_60: unsigned int VARYING
+ivtmp.17_64: unsigned int VARYING
+_65: void * [1B, +INF]  EQUIVALENCES: { _30 } (1 elements)
+ivtmp.35_66: unsigned int ~[200, 200]  EQUIVALENCES: { ivtmp.35_23 } (1 elements)
+ivtmp.15_69: unsigned int VARYING
+.MEM_70: <<< error >>> VARYING
+.MEM_71: <<< error >>> VARYING
+
+
+threading bb 8 up to 15 stmts
+threading bb 5 kills 1 stmts
+threading bb 5 up to 16 stmts
+Removing basic block 7
+Removing basic block 8
+int main ()
+{
+  unsigned int ivtmp.35;
+  unsigned int ivtmp.32;
+  unsigned int ivtmp.30;
+  unsigned int ivtmp.20;
+  unsigned int ivtmp.17;
+  unsigned int ivtmp.15;
+  int j;
+  int i;
+  int _4;
+  int _5;
+  int _9;
+  int _15;
+  int _16;
+  unsigned int _17;
+  unsigned int _18;
+  void * _20;
+  int _21;
+  unsigned int _22;
+  int * _25;
+  void * _28;
+  void * _30;
+  void * _43;
+  int * _49;
+  void * _57;
+
+  <bb 2> [local count: 108459]:
+  _28 = operator new [] (40000);
+  __builtin_memset (_28, 0, 40000);
+  _30 = operator new [] (400);
+  __builtin_memset (_30, 0, 400);
+  _49 = _30 + 4294967292;
+  ivtmp.30_50 = (unsigned int) _49;
+  _25 = _28 + 4294967292;
+  ivtmp.32_46 = (unsigned int) _25;
+
+  <bb 3> [local count: 10737416]:
+  # ivtmp.30_52 = PHI <ivtmp.30_51(5), ivtmp.30_50(2)>
+  # ivtmp.32_48 = PHI <ivtmp.32_47(5), ivtmp.32_46(2)>
+  # ivtmp.35_24 = PHI <ivtmp.35_23(5), 100(2)>
+  _22 = ivtmp.35_24 + 4294967196;
+  _21 = (int) _22;
+  _4 = _21 % 13;
+  ivtmp.30_51 = ivtmp.30_52 + 4;
+  _20 = (void *) ivtmp.30_51;
+  MEM[(int *)_20] = _4;
+  _18 = ivtmp.35_24 * 100;
+  _17 = _18 + 4294957296;
+  _16 = (int) _17;
+
+  <bb 4> [local count: 1063004409]:
+  # ivtmp.15_60 = PHI <ivtmp.15_69(4), _22(3)>
+  # ivtmp.17_64 = PHI <ivtmp.17_38(4), ivtmp.32_46(3)>
+  # ivtmp.20_59 = PHI <ivtmp.20_58(4), ivtmp.32_48(3)>
+  _5 = (int) ivtmp.15_60;
+  _9 = _5 % 20;
+  ivtmp.17_38 = ivtmp.17_64 + 4;
+  _43 = (void *) ivtmp.17_38;
+  MEM[(int *)_43] = _9;
+  _15 = _4 * _9;
+  ivtmp.20_58 = ivtmp.20_59 + 4;
+  _57 = (void *) ivtmp.20_58;
+  MEM[(int *)_57] = _15;
+  __printf_chk (1, "%d ", _15);
+  ivtmp.15_69 = ivtmp.15_60 + 1;
+  if (ivtmp.35_24 != ivtmp.15_69)
+    goto <bb 4>; [98.99%]
+  else
+    goto <bb 5>; [1.01%]
+
+  <bb 5> [local count: 10737416]:
+  __printf_chk (1, "\n");
+  ivtmp.32_47 = ivtmp.32_48 + 400;
+  ivtmp.35_23 = ivtmp.35_24 + 1;
+  if (ivtmp.35_23 != 200)
+    goto <bb 3>; [98.99%]
+  else
+    goto <bb 6>; [1.01%]
+
+  <bb 6> [local count: 108459]:
+  operator delete [] (_28);
+  operator delete [] (_30);
+  return 0;
+
+}
+
+

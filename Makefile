@@ -1,7 +1,8 @@
 # coding by Jasmine Xie
 .PHONY: all compile assemble link load clean
 
-ARMPRE:=arm-linux-gnueabihf-
+ARMCPL:=arm-linux-gnueabihf-g++
+LLVMCPL:=clang++
 MALMAT:=./understand-elf/matmul-v2
 
 all: preprocess compile assemble link
@@ -11,9 +12,9 @@ all: preprocess compile assemble link
 	@if [ ! -d ./understand-elf/rtl-process ];then \
 		mkdir ./understand-elf/rtl-process; \
 	fi;
-	$(ARMPRE)g++ -std=c++17 -fdump-tree-all-graph -O0 $(MALMAT).cpp 
+	$(ARMCPL) -std=c++17 -fdump-tree-all-graph -O0 $(MALMAT).cpp
 	@mv ./a* ./understand-elf/tree-process/
-	$(ARMPRE)g++ -std=c++17 -fdump-rtl-all-graph -O0 $(MALMAT).cpp 
+	$(ARMCPL) -std=c++17 -fdump-rtl-all-graph -O0 $(MALMAT).cpp 
 	@mv ./a* ./understand-elf/rtl-process/
 
 def-all: def-preprocess def-compile def-assemble
@@ -23,35 +24,59 @@ def-all: def-preprocess def-compile def-assemble
 	@if [ ! -d ./understand-elf/defN-rtl-process ];then \
 		mkdir ./understand-elf/defN-rtl-process; \
 	fi;
-	$(ARMPRE)g++ -std=c++17 -fdump-tree-all-graph -O0 $(MALMAT).cpp -D N=100
+	$(ARMCPL) -std=c++17 -fdump-tree-all-graph -O0 $(MALMAT).cpp -D N=100
 	@mv ./a* ./understand-elf/defN-tree-process/
-	$(ARMPRE)g++ -std=c++17 -fdump-rtl-all-graph -O0 $(MALMAT).cpp -D N=100
+	$(ARMCPL) -std=c++17 -fdump-rtl-all-graph -O0 $(MALMAT).cpp -D N=100
 	@mv ./a* ./understand-elf/defN-rtl-process/
 
+opt-all: preprocess-optimize compile-optimize assemble-optimize
+	@if [ ! -d ./understand-elf/opt-tree-process ];then \
+		mkdir ./understand-elf/opt-tree-process; \
+	fi;
+	@if [ ! -d ./understand-elf/opt-rtl-process ];then \
+		mkdir ./understand-elf/opt-rtl-process; \
+	fi;
+	$(ARMCPL) -std=c++17 -fdump-tree-all-graph -O3 $(MALMAT).cpp -D N=100
+	@mv ./a* ./understand-elf/opt-tree-process/
+	$(ARMCPL) -std=c++17 -fdump-rtl-all-graph -O3 $(MALMAT).cpp -D N=100
+	@mv ./a* ./understand-elf/opt-rtl-process/
+
 preprocess:
-	@$(ARMPRE)g++ -std=c++17 -O0 -E $(MALMAT).cpp -o $(MALMAT).i
+	@$(LLVMCPL) -std=c++17 -O0 -E $(MALMAT).cpp -o $(MALMAT).i
 
 compile:
-	@$(ARMPRE)g++ -std=c++17 -O0 -S $(MALMAT).cpp -o $(MALMAT).s
+	@$(LLVMCPL) -std=c++17 -O0 -S $(MALMAT).cpp -o $(MALMAT).s
 
 assemble:
-	@$(ARMPRE)g++ -std=c++17 -O0 -c $(MALMAT).cpp -o $(MALMAT).o
+	@$(LLVMCPL) -std=c++17 -O0 -c $(MALMAT).cpp -o $(MALMAT).o
 
 link:
-	@$(ARMPRE)g++ -std=c++17 $(MALMAT).cpp -o $(MALMAT)
+	@$(LLVMCPL) -std=c++17 $(MALMAT).cpp -o $(MALMAT)
 
 def-preprocess:
-	@$(ARMPRE)g++ -std=c++17 -O0 -E $(MALMAT).cpp -o $(MALMAT)-defN.i -D N=100
+	@$(LLVMCPL) -std=c++17 -O0 -E $(MALMAT).cpp -o $(MALMAT)-defN.i -D N=100
 
 def-compile:
-	@$(ARMPRE)g++ -std=c++17 -O0 -S $(MALMAT).cpp -o $(MALMAT)-defN.s -D N=100
+	@$(LLVMCPL) -std=c++17 -O0 -S $(MALMAT).cpp -o $(MALMAT)-defN.s -D N=100
 
 def-assemble:
-	@$(ARMPRE)g++ -std=c++17 -O0 -c $(MALMAT).cpp -o $(MALMAT)-defN.o -D N=100
+	@$(LLVMCPL) -std=c++17 -O0 -c $(MALMAT).cpp -o $(MALMAT)-defN.o -D N=100
+
+preprocess-optimize:
+	@$(LLVMCPL) -std=c++17 -O3 -E $(MALMAT).cpp -o $(MALMAT)-opt.i -D N=100
+
+compile-optimize:
+	@$(LLVMCPL) -std=c++17 -O3 -S $(MALMAT).cpp -o $(MALMAT)-opt.s -D N=100
+
+assemble-optimize:
+	@$(LLVMCPL) -std=c++17 -O3 -c $(MALMAT).cpp -o $(MALMAT)-opt.o -D N=100
 
 tokens:
-	@clang -std=c++17 -E -Xclang -dump-tokens $(MALMAT).cpp
+	@$(LLVMCPL) -std=c++17 -E -Xclang -dump-tokens $(MALMAT).cpp
+
+ast:
+	@$(LLVMCPL) -std=c++17 -E -Xclang -ast-dump $(MALMAT).cpp
 
 clean:
 	rm -v */*.i */*.s */*.o 
-	rm -vrf ./understand-elf/tree-process ./understand-elf/rtl-process
+	rm -vrf ./understand-elf/*tree-process ./understand-elf/*rtl-process

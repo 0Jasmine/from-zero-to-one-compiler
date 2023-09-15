@@ -9,8 +9,8 @@
 /// @return 0 正常退出
 int main()
 {
-    auto matrix =  new int(N*N);
-    auto vect = new int(N);
+    auto matrix =  new int[N*N]{};
+    auto vect = new int[N]{};
     for(int i=0;i<N;i++){
         vect[i] = i % 13;
         for(int j=0;j<N;j++){
