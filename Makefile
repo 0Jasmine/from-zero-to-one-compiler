@@ -4,6 +4,9 @@
 ARMCPL:=arm-linux-gnueabihf-g++
 LLVMCPL:=clang++
 MALMAT:=./understand-elf/matmul-v2
+ORIGINBC:=./understand-elf/matmul-v2-O2
+test-pass:=argpromotion
+unroll_opt:=-targetlibinfo -domtree -loops -loop-simplify -lcssa -basic-aa -aa -scalar-evolution -loop-unroll -verify
 
 all: preprocess compile assemble link
 	@if [ ! -d ./understand-elf/tree-process ];then \
@@ -100,6 +103,59 @@ tokens:
 
 ast:
 	@$(LLVMCPL) -std=c++17 -E -Xclang -ast-dump $(MALMAT).cpp
+
+llvmir:
+	@$(LLVMCPL) -std=c++17 -O0 -S -emit-llvm $(MALMAT).cpp -o $(MALMAT)-O0.ll
+	@$(LLVMCPL) -std=c++17 -O1 -S -emit-llvm $(MALMAT).cpp -o $(MALMAT)-O1.ll
+	@$(LLVMCPL) -std=c++17 -O2 -S -emit-llvm $(MALMAT).cpp -o $(MALMAT)-O2.ll
+	@$(LLVMCPL) -std=c++17 -O3 -S -emit-llvm $(MALMAT).cpp -o $(MALMAT)-O3.ll
+
+pass:
+	llc -print-before-all -print-after-all $(MALMAT)-O0.ll > ./understand-elf/pass.log 2>&1
+
+trans-bc:
+	for tf in $$(find -type f -wholename "*.ll");do \
+		llvm-as $$tf; \
+	done;
+
+trans-ll:
+	for tf in $$(find -type f -wholename "*.bc");do \
+		llvm-dis $$tf; \
+	done;
+
+test-opt:
+	@if [ $(test-pass) = argpromotion ];then \
+	 echo "default to test pass 'argpromotion' "; \
+	 echo "to specify pass use '-e test-pass=<specific pass>'"; \
+	fi
+	@if [ ! -d ./understand-elf/pass-test ];then \
+		mkdir ./understand-elf/pass-test; \
+	fi;
+	opt --$(test-pass) $(ORIGINBC).bc -o ./understand-elf/pass-test/$(test-pass).bc
+	llvm-dis ./understand-elf/pass-test/$(test-pass).bc
+	-diff ./understand-elf/pass-test/$(test-pass).ll $(ORIGINBC).ll
+
+test-all-option:
+	@if [ ! -d ./understand-elf/pass-test ];then \
+		mkdir ./understand-elf/pass-test; \
+	fi;
+	@echo "output the diff page into ./understand-elf/pass-test/pass-result"
+	@echo > ./understand-elf/pass-test/pass-result
+	@-for option in $$(cat ./understand-elf/opttf-options);do \
+		opt --$$option $(ORIGINBC).bc -o ./understand-elf/pass-test/$$option.bc; \
+		if [ $$? -eq 0 ];then \
+			llvm-dis ./understand-elf/pass-test/$$option.bc &2> /dev/null; \
+			diff ./understand-elf/pass-test/$$option.ll $(ORIGINBC).ll >> ./understand-elf/pass-test/pass-result ; \
+			echo >> ./understand-elf/pass-test/pass-result; \
+			echo >> ./understand-elf/pass-test/pass-result; \
+		fi; \
+	done
+	@echo "Finish $$(wc -l ./understand-elf/opttf-options | grep -E -o '[0-9]+') pass"
+
+test-unroll:
+	@opt $(unroll_opt)  $(ORIGINBC).bc -o ./understand-elf/pass-test/test-unroll.bc
+	@llvm-dis ./understand-elf/pass-test/test-unroll.bc &2> /dev/null; 
+	@diff ./understand-elf/pass-test/test-unroll.ll $(ORIGINBC).ll
 
 clean:
 	rm -v */*.i */*.s */*.o 
