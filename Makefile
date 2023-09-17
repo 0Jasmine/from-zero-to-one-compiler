@@ -157,6 +157,13 @@ test-unroll:
 	@llvm-dis ./understand-elf/pass-test/test-unroll.bc &2> /dev/null; 
 	@diff ./understand-elf/pass-test/test-unroll.ll $(ORIGINBC).ll
 
+test-ir:
+	clang ./intro-to-llvmir/simple-example.ll -o ./intro-to-llvmir/simple-example
+	@echo "execute the elf without command line arguments, its output:"
+	./intro-to-llvmir/simple-example
+	@echo "execute the elf with command line arguments, its output:"
+	./intro-to-llvmir/simple-example two arguments
+
 clean:
 	rm -v */*.i */*.s */*.o 
 	rm -vrf ./understand-elf/*tree-process ./understand-elf/*rtl-process
