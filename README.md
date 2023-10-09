@@ -1,7 +1,9 @@
-# 项目目录
+# directory
 ```
+├── arm-assembly
 ├── intro-to-llvmir
-└── understand-elf  
+├── simple-syntax-analyse
+└── understand-elf
     ├── defN-rtl-process
     ├── defN-tree-process
     ├── opt1-rtl-process
@@ -10,14 +12,13 @@
     ├── opt2-tree-process
     ├── opt-rtl-process
     ├── opt-tree-process
+    ├── pass-test
     ├── rtl-process
     └── tree-process
 
-12 directories
+15 directories
 ```
 
-# 小组成员
-|成员|主页|
-|-|-|
+# about me
+
 |Jasmine Xie|[here](https://github.com/0jasmine)|
-|Xv Xin|[there](https://github.com/0jasmine)|
