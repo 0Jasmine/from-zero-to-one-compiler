@@ -10,6 +10,11 @@ postexpr:
 	@gcc -g -o post-expr post-expr.c 2> /dev/null
 	./post-expr
 
+parsearm:
+	@bison -d parse-arm.y -o parse-arm.c
+	@gcc -g -o parse-arm parse-arm.c 2> /dev/null
+	./parse-arm
+
 test:
 	@g++ -o test trans.cpp
 	@./test
