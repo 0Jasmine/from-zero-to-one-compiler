@@ -11,8 +11,11 @@ using std::shared_ptr;
 using std::string;
 using std::vector;
 
+class RegUnit;
+
 enum class RegOP
 {
+    ORIGIN,
     EPSILON,
     SINGLE,
     CONCAT,
@@ -30,6 +33,7 @@ protected:
     friend class ClosureUnit;
     shared_ptr<RegUnit> _begin{nullptr};
     shared_ptr<RegUnit> _end{nullptr};
+    RegOP _type{RegOP::ORIGIN};
     bool _closure{false};
     bool _branch{false};
 
@@ -52,9 +56,11 @@ public:
     EpsilonUnit() = delete;
     EpsilonUnit(shared_ptr<RegUnit> &unit)
     {
-
+        this->_type = RegOP::EPSILON;
         this->_begin = std::make_shared<RegUnit>();
         this->_end = std::make_shared<RegUnit>();
+
+
         if (unit != nullptr)
         {
             // -o-...-O
@@ -91,10 +97,13 @@ protected:
 public:
     SingleUnit(const char &a) : _a(a)
     {
+        this->_type = RegOP::SINGLE;
         // -o-O
         this->_begin = std::make_shared<RegUnit>();
         this->_end = std::make_shared<RegUnit>();
-        this->_begin->SetNext(this->end());
+
+
+        this->_begin->SetNext(this->_end);
     }
     void print() override
     {
@@ -109,6 +118,7 @@ public:
         this->_end->print();
     }
     ~SingleUnit() = default;
+    char GetChar(){ return _a; }
     virtual RegUnit* next() override{ return _end->next();  }
     virtual void SetNext(shared_ptr<RegUnit> &unit){  _end->SetNext(unit); }
 };
@@ -118,11 +128,23 @@ class ConcatUnit : public RegUnit
 protected:
 public:
     ConcatUnit() = delete;
+    ConcatUnit(shared_ptr<RegUnit> &unit)
+    {
+        this->_type = RegOP::CONCAT;
+        this->_begin = std::make_shared<RegUnit>();
+        this->_end = std::make_shared<RegUnit>();
+
+
+        this->_begin->SetNext(unit);
+        unit->SetNext(this->_end);
+    }
     ConcatUnit(shared_ptr<RegUnit> &unit1, shared_ptr<RegUnit> &unit2)
     {
+        this->_type = RegOP::CONCAT;
         this->_begin = std::make_shared<RegUnit>();
         this->_end = std::make_shared<RegUnit>();
         auto eps = std::make_shared<RegUnit>();
+
 
         this->_begin->SetNext(unit1);
         unit1->SetNext(eps);
@@ -132,6 +154,8 @@ public:
     void append(shared_ptr<RegUnit> &unit)
     {
         auto eps = std::make_shared<RegUnit>();
+
+        
         this->SetNext(unit);
         unit->SetNext(eps);
         _end = eps;
@@ -157,14 +181,16 @@ class OrUnit : public RegUnit
 {
 protected:
     vector<shared_ptr<RegUnit>> ors;
-
+    static int wsc;
 public:
     OrUnit() = delete;
     OrUnit(int concat_len, ...)
     {
+        this->_type = RegOP::ORSET;
         this->_branch = true;
         this->_begin = std::make_shared<RegUnit>();
         this->_end = std::make_shared<RegUnit>();
+
 
         va_list ccs;
         va_start(ccs, concat_len);
@@ -177,40 +203,63 @@ public:
         }
         va_end(ccs);
     }
-    void print() override
+    void add(shared_ptr<RegUnit> &unit)
     {
+        unit->SetNext(this->_end);
+        ors.emplace_back(shared_ptr<RegUnit>(unit));
+    }
+    void print() override
+    {    
+        if (wsc)
+        {
+            for (int i = 0; i < wsc; i++)
+                printf("\t");
+        }
         printf("%p %s ", this, "OrUnit");
+        wsc++;
         this->_begin->print();
         printf("\n");
         for (auto &_or : ors)
         {
+            if(wsc)
+            {
+                for(int i=0;i<wsc;i++) printf("\t");
+            }
             _or->print();
             printf("\n");
         }
         this->_end->print();
+        wsc--;
     }
     ~OrUnit() = default;
-    virtual RegUnit *next() override{ return nullptr; }
+    virtual RegUnit *next() override { return _end->next(); }
     virtual void SetNext(shared_ptr<RegUnit> &unit){  _end->SetNext(unit); }
 };
 
 class ClosureUnit : public RegUnit
 {
 protected:
+    static const unsigned infinite = 0xffffffff; 
+    unsigned _upcount{0};
+    unsigned _downcount{0};
 public:
     ClosureUnit() = delete;
-    ClosureUnit(shared_ptr<RegUnit> &unit)
+    ClosureUnit(shared_ptr<RegUnit> &unit, unsigned downcount = 0, unsigned upcount = infinite)
     {
+        this->_type = RegOP::CLOSURE;
         this->_begin = std::make_shared<RegUnit>();
         this->_end = std::make_shared<RegUnit>();
+        this->_upcount = upcount;
+        this->_downcount = downcount;
         this->_closure = true;
+
 
         this->_begin->SetNext(unit);
         unit->SetNext(this->_end);
     }
     void print() override
     {
-        printf("%p %s ", this, "ClosureUnit");
+        printf("%p %s %u~%u times", this, "ClosureUnit", _downcount, _upcount);
         RegUnit* finish = this->_end.get();
         RegUnit * iter = this->_begin.get();
         while(iter != finish)
@@ -225,6 +274,7 @@ public:
     virtual void SetNext(shared_ptr<RegUnit> &unit){  _end->SetNext(unit); }
 };
 
+int OrUnit::wsc = 0;
 bool move(RegUnit *state, char action)
 {
 }
