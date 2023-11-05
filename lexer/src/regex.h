@@ -1,5 +1,3 @@
-// @brief Thompson 构造法
-
 #include <string>
 using std::string;
 
