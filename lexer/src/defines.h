@@ -1,5 +1,4 @@
-// @brief Thompson 构造法
-
+/// @brief 类型定义
 #include <string>
 using std::string;
 
