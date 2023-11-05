@@ -1,5 +1,6 @@
 %{
-#include "regex.h"
+
+#include"regex.h"
 #include <memory>
 #include <vector>
 #include <cstdlib>
@@ -7,6 +8,7 @@ char yylex();
 void yyerror(char* msg);
 constexpr uint32_t infinite = 0xffffffff;
 std::vector<std::shared_ptr<RegUnit>*> units{};
+std::unique_ptr<Transformer> gtf{nullptr};
 %}
 
 %union{
@@ -20,7 +22,7 @@ std::vector<std::shared_ptr<RegUnit>*> units{};
 %%
 
 line: 
-    line regex '\n' { (*$2)->print(); printf("\n> "); for(auto& it:units){delete it; } units.clear(); }
+    line regex '\n' { (*$2)->print(); gtf.reset(new Transformer((*$2).get())); printf("\n> ");  }
     | line '\n'
     |
 
@@ -126,6 +128,16 @@ atomic:
     | 'x' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('x')));  $$ = units.back(); }
     | 'y' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('y')));  $$ = units.back(); }
     | 'z' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('z')));  $$ = units.back(); }
+    | '1' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('1')));  $$ = units.back(); }
+    | '2' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('2')));  $$ = units.back(); }
+    | '3' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('3')));  $$ = units.back(); }
+    | '4' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('4')));  $$ = units.back(); }
+    | '5' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('5')));  $$ = units.back(); }
+    | '6' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('6')));  $$ = units.back(); }
+    | '7' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('7')));  $$ = units.back(); }
+    | '8' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('8')));  $$ = units.back(); }
+    | '9' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('9')));  $$ = units.back(); }
+    | '0' { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('0')));  $$ = units.back(); }
 
 decimalarea:
     decimal { $$ = $1<<32; }
@@ -151,7 +163,9 @@ inumber:
 
 char yylex()
 {
-    return getchar();
+    char ch = getchar();
+    while(ch==' '|| ch=='\t') ch=getchar();
+    return ch;
 }
 void yyerror(char* msg)
 {

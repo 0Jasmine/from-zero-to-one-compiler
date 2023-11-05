@@ -62,7 +62,7 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 12 "./src/parser.yy"
+#line 14 "./src/parser.yy"
 
     std::shared_ptr<RegUnit>* ru;
     uint64_t number;

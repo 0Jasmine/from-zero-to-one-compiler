@@ -69,7 +69,8 @@
 /* First part of user prologue.  */
 #line 1 "./src/parser.yy"
 
-#include "regex.h"
+
+#include"regex.h"
 #include <memory>
 #include <vector>
 #include <cstdlib>
@@ -77,8 +78,9 @@ char yylex();
 void yyerror(char* msg);
 constexpr uint32_t infinite = 0xffffffff;
 std::vector<std::shared_ptr<RegUnit>*> units{};
+std::unique_ptr<Transformer> gtf{nullptr};
 
-#line 82 "./src/parser.cpp"
+#line 84 "./src/parser.cpp"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -147,17 +149,17 @@ enum yysymbol_kind_t
   YYSYMBOL_38_x_ = 38,                     /* 'x'  */
   YYSYMBOL_39_y_ = 39,                     /* 'y'  */
   YYSYMBOL_40_z_ = 40,                     /* 'z'  */
-  YYSYMBOL_41_ = 41,                       /* ','  */
-  YYSYMBOL_42_1_ = 42,                     /* '1'  */
-  YYSYMBOL_43_2_ = 43,                     /* '2'  */
-  YYSYMBOL_44_3_ = 44,                     /* '3'  */
-  YYSYMBOL_45_4_ = 45,                     /* '4'  */
-  YYSYMBOL_46_5_ = 46,                     /* '5'  */
-  YYSYMBOL_47_6_ = 47,                     /* '6'  */
-  YYSYMBOL_48_7_ = 48,                     /* '7'  */
-  YYSYMBOL_49_8_ = 49,                     /* '8'  */
-  YYSYMBOL_50_9_ = 50,                     /* '9'  */
-  YYSYMBOL_51_0_ = 51,                     /* '0'  */
+  YYSYMBOL_41_1_ = 41,                     /* '1'  */
+  YYSYMBOL_42_2_ = 42,                     /* '2'  */
+  YYSYMBOL_43_3_ = 43,                     /* '3'  */
+  YYSYMBOL_44_4_ = 44,                     /* '4'  */
+  YYSYMBOL_45_5_ = 45,                     /* '5'  */
+  YYSYMBOL_46_6_ = 46,                     /* '6'  */
+  YYSYMBOL_47_7_ = 47,                     /* '7'  */
+  YYSYMBOL_48_8_ = 48,                     /* '8'  */
+  YYSYMBOL_49_9_ = 49,                     /* '9'  */
+  YYSYMBOL_50_0_ = 50,                     /* '0'  */
+  YYSYMBOL_51_ = 51,                       /* ','  */
   YYSYMBOL_YYACCEPT = 52,                  /* $accept  */
   YYSYMBOL_line = 53,                      /* line  */
   YYSYMBOL_regex = 54,                     /* regex  */
@@ -496,16 +498,16 @@ union yyalloc
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  2
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   161
+#define YYLAST   199
 
 /* YYNTOKENS -- Number of terminals.  */
 #define YYNTOKENS  52
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  11
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  61
+#define YYNRULES  71
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  74
+#define YYNSTATES  84
 
 /* YYMAXUTOK -- Last valid token kind.  */
 #define YYMAXUTOK   257
@@ -526,8 +528,8 @@ static const yytype_int8 yytranslate[] =
        3,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-      10,    11,     6,     5,    41,    14,     2,     2,    51,    42,
-      43,    44,    45,    46,    47,    48,    49,    50,     2,     2,
+      10,    11,     6,     5,    51,    14,     2,     2,    50,    41,
+      42,    43,    44,    45,    46,    47,    48,    49,     2,     2,
        2,     2,     2,     7,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
@@ -554,13 +556,14 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    23,    23,    24,    25,    30,    32,    35,    37,    43,
-      46,    49,    52,    58,    64,    65,    66,    70,    72,    84,
-      98,   102,   103,   104,   105,   106,   107,   108,   109,   110,
-     111,   112,   113,   114,   115,   116,   117,   118,   119,   120,
-     121,   122,   123,   124,   125,   126,   127,   130,   131,   132,
-     135,   136,   139,   140,   141,   142,   143,   144,   145,   146,
-     147,   148
+       0,    25,    25,    26,    27,    32,    34,    38,    40,    46,
+      49,    52,    55,    61,    67,    68,    69,    73,    75,    87,
+     101,   105,   106,   107,   108,   109,   110,   111,   112,   113,
+     114,   115,   116,   117,   118,   119,   120,   121,   122,   123,
+     124,   125,   126,   127,   128,   129,   130,   131,   132,   133,
+     134,   135,   136,   137,   138,   139,   140,   143,   144,   145,
+     148,   149,   152,   153,   154,   155,   156,   157,   158,   159,
+     160,   161
 };
 #endif
 
@@ -580,8 +583,8 @@ static const char *const yytname[] =
   "'*'", "'?'", "'{'", "'}'", "'('", "')'", "'['", "']'", "'-'", "'a'",
   "'b'", "'c'", "'d'", "'e'", "'f'", "'g'", "'h'", "'i'", "'j'", "'k'",
   "'l'", "'m'", "'n'", "'o'", "'p'", "'q'", "'r'", "'s'", "'t'", "'u'",
-  "'v'", "'w'", "'x'", "'y'", "'z'", "','", "'1'", "'2'", "'3'", "'4'",
-  "'5'", "'6'", "'7'", "'8'", "'9'", "'0'", "$accept", "line", "regex",
+  "'v'", "'w'", "'x'", "'y'", "'z'", "'1'", "'2'", "'3'", "'4'", "'5'",
+  "'6'", "'7'", "'8'", "'9'", "'0'", "','", "$accept", "line", "regex",
   "aexpr", "orexp", "factor", "optional", "atomic", "decimalarea",
   "decimal", "inumber", YY_NULLPTR
 };
@@ -593,7 +596,7 @@ yysymbol_name (yysymbol_kind_t yysymbol)
 }
 #endif
 
-#define YYPACT_NINF (-20)
+#define YYPACT_NINF (-17)
 
 #define yypact_value_is_default(Yyn) \
   ((Yyn) == YYPACT_NINF)
@@ -607,14 +610,15 @@ yysymbol_name (yysymbol_kind_t yysymbol)
    STATE-NUM.  */
 static const yytype_int16 yypact[] =
 {
-     -20,    48,   -20,   -20,    79,    79,   -20,   -20,   -20,   -20,
-     -20,   -20,   -20,   -20,   -20,   -20,   -20,   -20,   -20,   -20,
-     -20,   -20,   -20,   -20,   -20,   -20,   -20,   -20,   -20,   -20,
-     -20,   -20,    89,    79,   -20,   153,   -20,    45,   -20,    -8,
-     -11,   -20,    79,   -20,   -20,   -20,   -20,    -6,   -20,   -20,
-     -20,    36,   105,    79,   -20,   -20,   -20,   -20,   -20,   -20,
-     -20,   -20,   -20,   -20,    -3,   106,   -20,   105,   -20,   -20,
-      -6,   -20,   -20,    -6
+     -17,    58,   -17,   -17,    99,    99,   -17,   -17,   -17,   -17,
+     -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,
+     -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,
+     -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,
+     -17,   -17,    62,    99,   -17,   191,   -17,    60,   -17,    -8,
+     -11,   -17,    99,   -17,   -17,   -17,   -17,   145,   -17,   -17,
+     -17,    46,   135,    99,   -17,   -17,   -17,   -17,   -17,   -17,
+     -17,   -17,   -17,   -17,    -3,     5,   -17,   135,   -17,   -17,
+     145,   -17,   -17,   145
 };
 
 /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -625,25 +629,26 @@ static const yytype_int8 yydefact[] =
        4,     0,     1,     3,     0,     0,    21,    22,    23,    24,
       25,    26,    27,    28,    29,    30,    31,    32,    33,    34,
       35,    36,    37,    38,    39,    40,    41,    42,    43,    44,
-      45,    46,     0,     6,     8,    13,    16,     0,    20,     0,
+      45,    46,    47,    48,    49,    50,    51,    52,    53,    54,
+      55,    56,     0,     6,     8,    13,    16,     0,    20,     0,
       16,     2,     0,     7,     9,    10,    11,     0,    14,    15,
-      17,    16,     0,     5,    52,    53,    54,    55,    56,    57,
-      58,    59,    60,    61,     0,    47,    51,     0,    19,    12,
-      48,    50,    18,    49
+      17,    16,     0,     5,    62,    63,    64,    65,    66,    67,
+      68,    69,    70,    71,     0,    57,    61,     0,    19,    12,
+      58,    60,    18,    59
 };
 
 /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-     -20,   -20,    51,    10,     0,    -4,   -20,    -5,   -20,   -13,
-     -19
+     -17,   -17,    65,    10,     0,    -4,   -17,    -5,   -17,    30,
+     -16
 };
 
 /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int8 yydefgoto[] =
 {
-       0,     1,    32,    33,    34,    35,    39,    36,    64,    65,
-      66
+       0,     1,    42,    43,    44,    45,    49,    46,    74,    75,
+      76
 };
 
 /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -651,23 +656,26 @@ static const yytype_int8 yydefgoto[] =
    number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_int8 yytable[] =
 {
-      40,    38,     4,    52,     5,    49,    69,     6,     7,     8,
+      50,    48,     4,    62,     5,    59,    79,     6,     7,     8,
        9,    10,    11,    12,    13,    14,    15,    16,    17,    18,
       19,    20,    21,    22,    23,    24,    25,    26,    27,    28,
-      29,    30,    31,    43,    51,    50,    54,    55,    56,    57,
-      58,    59,    60,    61,    62,    63,    71,    68,     2,    42,
-      67,     3,    53,    43,    71,    37,    48,    73,     4,     0,
-       5,     0,    72,     6,     7,     8,     9,    10,    11,    12,
+      29,    30,    31,    32,    33,    34,    35,    36,    37,    38,
+      39,    40,    41,    53,    61,    60,    64,    65,    66,    67,
+      68,    69,    70,    71,    72,    73,    80,    78,     2,    81,
+      77,     3,    63,    53,    52,    51,    52,    81,     4,    47,
+       5,    58,    82,     6,     7,     8,     9,    10,    11,    12,
       13,    14,    15,    16,    17,    18,    19,    20,    21,    22,
-      23,    24,    25,    26,    27,    28,    29,    30,    31,     4,
-       0,     5,    41,    42,     6,     7,     8,     9,    10,    11,
+      23,    24,    25,    26,    27,    28,    29,    30,    31,    32,
+      33,    34,    35,    36,    37,    38,    39,    40,    41,     4,
+      83,     5,     0,     0,     6,     7,     8,     9,    10,    11,
       12,    13,    14,    15,    16,    17,    18,    19,    20,    21,
       22,    23,    24,    25,    26,    27,    28,    29,    30,    31,
+      32,    33,    34,    35,    36,    37,    38,    39,    40,    41,
        6,     7,     8,     9,    10,    11,    12,    13,    14,    15,
       16,    17,    18,    19,    20,    21,    22,    23,    24,    25,
-      26,    27,    28,    29,    30,    31,     0,    70,    54,    55,
-      56,    57,    58,    59,    60,    61,    62,    63,    44,    45,
-      46,    47
+      26,    27,    28,    29,    30,    31,    32,    33,    34,    35,
+      36,    37,    38,    39,    40,    41,    64,    65,    66,    67,
+      68,    69,    70,    71,    72,    73,    54,    55,    56,    57
 };
 
 static const yytype_int8 yycheck[] =
@@ -675,20 +683,23 @@ static const yytype_int8 yycheck[] =
        5,     5,    10,    14,    12,    13,     9,    15,    16,    17,
       18,    19,    20,    21,    22,    23,    24,    25,    26,    27,
       28,    29,    30,    31,    32,    33,    34,    35,    36,    37,
-      38,    39,    40,    33,    39,    39,    42,    43,    44,    45,
-      46,    47,    48,    49,    50,    51,    65,    52,     0,     4,
-      14,     3,    42,    53,    73,     4,    11,    70,    10,    -1,
-      12,    -1,    67,    15,    16,    17,    18,    19,    20,    21,
+      38,    39,    40,    41,    42,    43,    44,    45,    46,    47,
+      48,    49,    50,    43,    49,    49,    41,    42,    43,    44,
+      45,    46,    47,    48,    49,    50,    51,    62,     0,    75,
+      14,     3,    52,    63,     4,     3,     4,    83,    10,     4,
+      12,    11,    77,    15,    16,    17,    18,    19,    20,    21,
       22,    23,    24,    25,    26,    27,    28,    29,    30,    31,
-      32,    33,    34,    35,    36,    37,    38,    39,    40,    10,
-      -1,    12,     3,     4,    15,    16,    17,    18,    19,    20,
+      32,    33,    34,    35,    36,    37,    38,    39,    40,    41,
+      42,    43,    44,    45,    46,    47,    48,    49,    50,    10,
+      80,    12,    -1,    -1,    15,    16,    17,    18,    19,    20,
       21,    22,    23,    24,    25,    26,    27,    28,    29,    30,
       31,    32,    33,    34,    35,    36,    37,    38,    39,    40,
+      41,    42,    43,    44,    45,    46,    47,    48,    49,    50,
       15,    16,    17,    18,    19,    20,    21,    22,    23,    24,
       25,    26,    27,    28,    29,    30,    31,    32,    33,    34,
-      35,    36,    37,    38,    39,    40,    -1,    41,    42,    43,
-      44,    45,    46,    47,    48,    49,    50,    51,     5,     6,
-       7,     8
+      35,    36,    37,    38,    39,    40,    41,    42,    43,    44,
+      45,    46,    47,    48,    49,    50,    41,    42,    43,    44,
+      45,    46,    47,    48,    49,    50,     5,     6,     7,     8
 };
 
 /* YYSTOS[STATE-NUM] -- The symbol kind of the accessing symbol of
@@ -698,11 +709,12 @@ static const yytype_int8 yystos[] =
        0,    53,     0,     3,    10,    12,    15,    16,    17,    18,
       19,    20,    21,    22,    23,    24,    25,    26,    27,    28,
       29,    30,    31,    32,    33,    34,    35,    36,    37,    38,
-      39,    40,    54,    55,    56,    57,    59,    54,    57,    58,
+      39,    40,    41,    42,    43,    44,    45,    46,    47,    48,
+      49,    50,    54,    55,    56,    57,    59,    54,    57,    58,
       59,     3,     4,    56,     5,     6,     7,     8,    11,    13,
-      57,    59,    14,    55,    42,    43,    44,    45,    46,    47,
-      48,    49,    50,    51,    60,    61,    62,    14,    59,     9,
-      41,    62,    59,    61
+      57,    59,    14,    55,    41,    42,    43,    44,    45,    46,
+      47,    48,    49,    50,    60,    61,    62,    14,    59,     9,
+      51,    62,    59,    61
 };
 
 /* YYR1[RULE-NUM] -- Symbol kind of the left-hand side of rule RULE-NUM.  */
@@ -711,6 +723,7 @@ static const yytype_int8 yyr1[] =
        0,    52,    53,    53,    53,    54,    54,    55,    55,    56,
       56,    56,    56,    56,    57,    57,    57,    58,    58,    58,
       58,    59,    59,    59,    59,    59,    59,    59,    59,    59,
+      59,    59,    59,    59,    59,    59,    59,    59,    59,    59,
       59,    59,    59,    59,    59,    59,    59,    59,    59,    59,
       59,    59,    59,    59,    59,    59,    59,    60,    60,    60,
       61,    61,    62,    62,    62,    62,    62,    62,    62,    62,
@@ -722,6 +735,7 @@ static const yytype_int8 yyr2[] =
 {
        0,     2,     3,     2,     0,     3,     1,     2,     1,     2,
        2,     2,     4,     1,     3,     3,     1,     2,     4,     3,
+       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
        1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
        1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
        1,     1,     1,     1,     1,     1,     1,     1,     2,     3,
@@ -1190,109 +1204,109 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* line: line regex '\n'  */
-#line 23 "./src/parser.yy"
-                    { (*(yyvsp[-1].ru))->print(); printf("\n> "); for(auto& it:units){delete it; } units.clear(); }
-#line 1196 "./src/parser.cpp"
+#line 25 "./src/parser.yy"
+                    { (*(yyvsp[-1].ru))->print(); gtf.reset(new Transformer((*(yyvsp[-1].ru)).get())); printf("\n> ");  }
+#line 1210 "./src/parser.cpp"
     break;
 
   case 5: /* regex: regex '|' aexpr  */
-#line 30 "./src/parser.yy"
+#line 32 "./src/parser.yy"
                     { (yyval.ru) = (yyvsp[-2].ru); auto x = *(yyval.ru); auto por = dynamic_cast<OrUnit*>(x.get());
     if((*(yyvsp[0].ru))!=nullptr) por->add(*(yyvsp[0].ru)); }
-#line 1203 "./src/parser.cpp"
+#line 1217 "./src/parser.cpp"
     break;
 
   case 6: /* regex: aexpr  */
-#line 32 "./src/parser.yy"
+#line 34 "./src/parser.yy"
             { auto x = *(yyvsp[0].ru); units.push_back(new std::shared_ptr<RegUnit>(new OrUnit(1, x))); (yyval.ru) = units.back(); }
-#line 1209 "./src/parser.cpp"
+#line 1223 "./src/parser.cpp"
     break;
 
   case 7: /* aexpr: aexpr orexp  */
-#line 35 "./src/parser.yy"
+#line 38 "./src/parser.yy"
                 { (yyval.ru) = (yyvsp[-1].ru); auto x = *(yyval.ru); auto por = dynamic_cast<ConcatUnit*>(x.get());
     por->append(*(yyvsp[0].ru)); }
-#line 1216 "./src/parser.cpp"
+#line 1230 "./src/parser.cpp"
     break;
 
   case 8: /* aexpr: orexp  */
-#line 37 "./src/parser.yy"
+#line 40 "./src/parser.yy"
             { 
         units.push_back(new std::shared_ptr<RegUnit>(new ConcatUnit(*(yyvsp[0].ru)))); 
         (yyval.ru) = units.back(); }
-#line 1224 "./src/parser.cpp"
+#line 1238 "./src/parser.cpp"
     break;
 
   case 9: /* orexp: factor '+'  */
-#line 43 "./src/parser.yy"
+#line 46 "./src/parser.yy"
                { auto x1 = *(yyvsp[-1].ru); units.push_back(new std::shared_ptr<RegUnit>(new ClosureUnit(x1, 1))); 
     (yyval.ru) = units.back();
     }
-#line 1232 "./src/parser.cpp"
+#line 1246 "./src/parser.cpp"
     break;
 
   case 10: /* orexp: factor '*'  */
-#line 46 "./src/parser.yy"
+#line 49 "./src/parser.yy"
                  { auto x1 = *(yyvsp[-1].ru); units.push_back(new std::shared_ptr<RegUnit>(new ClosureUnit(x1, 0))); 
     (yyval.ru) = units.back();
     }
-#line 1240 "./src/parser.cpp"
+#line 1254 "./src/parser.cpp"
     break;
 
   case 11: /* orexp: factor '?'  */
-#line 49 "./src/parser.yy"
+#line 52 "./src/parser.yy"
                  { auto x1 = *(yyvsp[-1].ru); units.push_back(new std::shared_ptr<RegUnit>(new ClosureUnit(x1, 0, 1))); 
     (yyval.ru) = units.back();
     }
-#line 1248 "./src/parser.cpp"
+#line 1262 "./src/parser.cpp"
     break;
 
   case 12: /* orexp: factor '{' decimalarea '}'  */
-#line 52 "./src/parser.yy"
+#line 55 "./src/parser.yy"
                                  { 
     uint32_t from = (yyvsp[-1].number)>>32; 
     uint32_t to = (yyvsp[-1].number) & infinite; 
     auto x1 = *(yyvsp[-3].ru); units.push_back(new std::shared_ptr<RegUnit>(new ClosureUnit(x1, from, to)));
     (yyval.ru) = units.back();
     }
-#line 1259 "./src/parser.cpp"
-    break;
-
-  case 13: /* orexp: factor  */
-#line 58 "./src/parser.yy"
-             { 
-        (yyval.ru) = (yyvsp[0].ru);
-    }
-#line 1267 "./src/parser.cpp"
-    break;
-
-  case 14: /* factor: '(' regex ')'  */
-#line 64 "./src/parser.yy"
-                  { (yyval.ru) = (yyvsp[-1].ru); }
 #line 1273 "./src/parser.cpp"
     break;
 
+  case 13: /* orexp: factor  */
+#line 61 "./src/parser.yy"
+             { 
+        (yyval.ru) = (yyvsp[0].ru);
+    }
+#line 1281 "./src/parser.cpp"
+    break;
+
+  case 14: /* factor: '(' regex ')'  */
+#line 67 "./src/parser.yy"
+                  { (yyval.ru) = (yyvsp[-1].ru); }
+#line 1287 "./src/parser.cpp"
+    break;
+
   case 15: /* factor: '[' optional ']'  */
-#line 65 "./src/parser.yy"
+#line 68 "./src/parser.yy"
                        { (yyval.ru) = (yyvsp[-1].ru); }
-#line 1279 "./src/parser.cpp"
+#line 1293 "./src/parser.cpp"
     break;
 
   case 16: /* factor: atomic  */
-#line 66 "./src/parser.yy"
+#line 69 "./src/parser.yy"
              { (yyval.ru) = (yyvsp[0].ru); }
-#line 1285 "./src/parser.cpp"
+#line 1299 "./src/parser.cpp"
     break;
 
   case 17: /* optional: optional factor  */
-#line 70 "./src/parser.yy"
+#line 73 "./src/parser.yy"
                     { (yyval.ru) = (yyvsp[-1].ru); auto x = *(yyval.ru); auto por = dynamic_cast<OrUnit*>(x.get());
     por->add(*(yyvsp[0].ru)); }
-#line 1292 "./src/parser.cpp"
+#line 1306 "./src/parser.cpp"
     break;
 
   case 18: /* optional: optional atomic '-' atomic  */
-#line 72 "./src/parser.yy"
+#line 75 "./src/parser.yy"
                                  { auto x2 = dynamic_cast<SingleUnit*>((*(yyvsp[-2].ru)).get()); 
         auto x4 = dynamic_cast<SingleUnit*>((*(yyvsp[0].ru)).get());
         (yyval.ru) = (yyvsp[-3].ru); auto x = *(yyval.ru); auto por = dynamic_cast<OrUnit*>(x.get());
@@ -1305,11 +1319,11 @@ yyreduce:
         }
         por->add(*(yyvsp[0].ru));
      }
-#line 1309 "./src/parser.cpp"
+#line 1323 "./src/parser.cpp"
     break;
 
   case 19: /* optional: atomic '-' atomic  */
-#line 84 "./src/parser.yy"
+#line 87 "./src/parser.yy"
                         { auto x1 = *(yyvsp[-2].ru); 
         units.push_back(new std::shared_ptr<RegUnit>(new OrUnit(1, x1))); 
         (yyval.ru) = units.back();
@@ -1324,263 +1338,323 @@ yyreduce:
         }
         por->add(*(yyvsp[0].ru));
      }
-#line 1328 "./src/parser.cpp"
+#line 1342 "./src/parser.cpp"
     break;
 
   case 20: /* optional: factor  */
-#line 98 "./src/parser.yy"
+#line 101 "./src/parser.yy"
              { auto x = *(yyvsp[0].ru); units.push_back(new std::shared_ptr<RegUnit>(new OrUnit(1, x))); (yyval.ru) = units.back(); }
-#line 1334 "./src/parser.cpp"
+#line 1348 "./src/parser.cpp"
     break;
 
   case 21: /* atomic: 'a'  */
-#line 102 "./src/parser.yy"
+#line 105 "./src/parser.yy"
         { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('a'))); (yyval.ru) = units.back(); }
-#line 1340 "./src/parser.cpp"
+#line 1354 "./src/parser.cpp"
     break;
 
   case 22: /* atomic: 'b'  */
-#line 103 "./src/parser.yy"
+#line 106 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('b')));  (yyval.ru) = units.back(); }
-#line 1346 "./src/parser.cpp"
+#line 1360 "./src/parser.cpp"
     break;
 
   case 23: /* atomic: 'c'  */
-#line 104 "./src/parser.yy"
+#line 107 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('c')));  (yyval.ru) = units.back(); }
-#line 1352 "./src/parser.cpp"
+#line 1366 "./src/parser.cpp"
     break;
 
   case 24: /* atomic: 'd'  */
-#line 105 "./src/parser.yy"
+#line 108 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('d')));  (yyval.ru) = units.back(); }
-#line 1358 "./src/parser.cpp"
+#line 1372 "./src/parser.cpp"
     break;
 
   case 25: /* atomic: 'e'  */
-#line 106 "./src/parser.yy"
+#line 109 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('e')));  (yyval.ru) = units.back(); }
-#line 1364 "./src/parser.cpp"
+#line 1378 "./src/parser.cpp"
     break;
 
   case 26: /* atomic: 'f'  */
-#line 107 "./src/parser.yy"
+#line 110 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('f')));  (yyval.ru) = units.back(); }
-#line 1370 "./src/parser.cpp"
+#line 1384 "./src/parser.cpp"
     break;
 
   case 27: /* atomic: 'g'  */
-#line 108 "./src/parser.yy"
+#line 111 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('g')));  (yyval.ru) = units.back(); }
-#line 1376 "./src/parser.cpp"
+#line 1390 "./src/parser.cpp"
     break;
 
   case 28: /* atomic: 'h'  */
-#line 109 "./src/parser.yy"
+#line 112 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('h')));  (yyval.ru) = units.back(); }
-#line 1382 "./src/parser.cpp"
+#line 1396 "./src/parser.cpp"
     break;
 
   case 29: /* atomic: 'i'  */
-#line 110 "./src/parser.yy"
+#line 113 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('i')));  (yyval.ru) = units.back(); }
-#line 1388 "./src/parser.cpp"
+#line 1402 "./src/parser.cpp"
     break;
 
   case 30: /* atomic: 'j'  */
-#line 111 "./src/parser.yy"
+#line 114 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('j')));  (yyval.ru) = units.back(); }
-#line 1394 "./src/parser.cpp"
+#line 1408 "./src/parser.cpp"
     break;
 
   case 31: /* atomic: 'k'  */
-#line 112 "./src/parser.yy"
+#line 115 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('k')));  (yyval.ru) = units.back(); }
-#line 1400 "./src/parser.cpp"
+#line 1414 "./src/parser.cpp"
     break;
 
   case 32: /* atomic: 'l'  */
-#line 113 "./src/parser.yy"
+#line 116 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('l')));  (yyval.ru) = units.back(); }
-#line 1406 "./src/parser.cpp"
+#line 1420 "./src/parser.cpp"
     break;
 
   case 33: /* atomic: 'm'  */
-#line 114 "./src/parser.yy"
+#line 117 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('m')));  (yyval.ru) = units.back(); }
-#line 1412 "./src/parser.cpp"
+#line 1426 "./src/parser.cpp"
     break;
 
   case 34: /* atomic: 'n'  */
-#line 115 "./src/parser.yy"
+#line 118 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('n')));  (yyval.ru) = units.back(); }
-#line 1418 "./src/parser.cpp"
+#line 1432 "./src/parser.cpp"
     break;
 
   case 35: /* atomic: 'o'  */
-#line 116 "./src/parser.yy"
+#line 119 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('o')));  (yyval.ru) = units.back(); }
-#line 1424 "./src/parser.cpp"
+#line 1438 "./src/parser.cpp"
     break;
 
   case 36: /* atomic: 'p'  */
-#line 117 "./src/parser.yy"
+#line 120 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('p')));  (yyval.ru) = units.back(); }
-#line 1430 "./src/parser.cpp"
+#line 1444 "./src/parser.cpp"
     break;
 
   case 37: /* atomic: 'q'  */
-#line 118 "./src/parser.yy"
+#line 121 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('q')));  (yyval.ru) = units.back(); }
-#line 1436 "./src/parser.cpp"
+#line 1450 "./src/parser.cpp"
     break;
 
   case 38: /* atomic: 'r'  */
-#line 119 "./src/parser.yy"
+#line 122 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('r')));  (yyval.ru) = units.back(); }
-#line 1442 "./src/parser.cpp"
+#line 1456 "./src/parser.cpp"
     break;
 
   case 39: /* atomic: 's'  */
-#line 120 "./src/parser.yy"
+#line 123 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('s')));  (yyval.ru) = units.back(); }
-#line 1448 "./src/parser.cpp"
+#line 1462 "./src/parser.cpp"
     break;
 
   case 40: /* atomic: 't'  */
-#line 121 "./src/parser.yy"
+#line 124 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('t')));  (yyval.ru) = units.back(); }
-#line 1454 "./src/parser.cpp"
+#line 1468 "./src/parser.cpp"
     break;
 
   case 41: /* atomic: 'u'  */
-#line 122 "./src/parser.yy"
+#line 125 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('u')));  (yyval.ru) = units.back(); }
-#line 1460 "./src/parser.cpp"
+#line 1474 "./src/parser.cpp"
     break;
 
   case 42: /* atomic: 'v'  */
-#line 123 "./src/parser.yy"
+#line 126 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('v')));  (yyval.ru) = units.back(); }
-#line 1466 "./src/parser.cpp"
+#line 1480 "./src/parser.cpp"
     break;
 
   case 43: /* atomic: 'w'  */
-#line 124 "./src/parser.yy"
+#line 127 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('w')));  (yyval.ru) = units.back(); }
-#line 1472 "./src/parser.cpp"
+#line 1486 "./src/parser.cpp"
     break;
 
   case 44: /* atomic: 'x'  */
-#line 125 "./src/parser.yy"
+#line 128 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('x')));  (yyval.ru) = units.back(); }
-#line 1478 "./src/parser.cpp"
+#line 1492 "./src/parser.cpp"
     break;
 
   case 45: /* atomic: 'y'  */
-#line 126 "./src/parser.yy"
+#line 129 "./src/parser.yy"
           { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('y')));  (yyval.ru) = units.back(); }
-#line 1484 "./src/parser.cpp"
+#line 1498 "./src/parser.cpp"
     break;
 
   case 46: /* atomic: 'z'  */
-#line 127 "./src/parser.yy"
-          { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('z')));  (yyval.ru) = units.back(); }
-#line 1490 "./src/parser.cpp"
-    break;
-
-  case 47: /* decimalarea: decimal  */
 #line 130 "./src/parser.yy"
-            { (yyval.number) = (yyvsp[0].number)<<32; }
-#line 1496 "./src/parser.cpp"
+          { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('z')));  (yyval.ru) = units.back(); }
+#line 1504 "./src/parser.cpp"
     break;
 
-  case 48: /* decimalarea: decimal ','  */
+  case 47: /* atomic: '1'  */
 #line 131 "./src/parser.yy"
-                  { (yyval.number) = ((yyvsp[-1].number)<<32) | infinite; }
-#line 1502 "./src/parser.cpp"
+          { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('1')));  (yyval.ru) = units.back(); }
+#line 1510 "./src/parser.cpp"
     break;
 
-  case 49: /* decimalarea: decimal ',' decimal  */
+  case 48: /* atomic: '2'  */
 #line 132 "./src/parser.yy"
-                          { (yyval.number) = ((yyvsp[-2].number)<<32) + (yyvsp[0].number); }
-#line 1508 "./src/parser.cpp"
+          { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('2')));  (yyval.ru) = units.back(); }
+#line 1516 "./src/parser.cpp"
     break;
 
-  case 50: /* decimal: decimal inumber  */
+  case 49: /* atomic: '3'  */
+#line 133 "./src/parser.yy"
+          { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('3')));  (yyval.ru) = units.back(); }
+#line 1522 "./src/parser.cpp"
+    break;
+
+  case 50: /* atomic: '4'  */
+#line 134 "./src/parser.yy"
+          { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('4')));  (yyval.ru) = units.back(); }
+#line 1528 "./src/parser.cpp"
+    break;
+
+  case 51: /* atomic: '5'  */
 #line 135 "./src/parser.yy"
-                    {  (yyval.number) = (yyvsp[-1].number)*10 + (yyvsp[0].number); }
-#line 1514 "./src/parser.cpp"
+          { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('5')));  (yyval.ru) = units.back(); }
+#line 1534 "./src/parser.cpp"
     break;
 
-  case 51: /* decimal: inumber  */
+  case 52: /* atomic: '6'  */
 #line 136 "./src/parser.yy"
-              { (yyval.number) = (yyvsp[0].number); }
-#line 1520 "./src/parser.cpp"
+          { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('6')));  (yyval.ru) = units.back(); }
+#line 1540 "./src/parser.cpp"
     break;
 
-  case 52: /* inumber: '1'  */
+  case 53: /* atomic: '7'  */
+#line 137 "./src/parser.yy"
+          { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('7')));  (yyval.ru) = units.back(); }
+#line 1546 "./src/parser.cpp"
+    break;
+
+  case 54: /* atomic: '8'  */
+#line 138 "./src/parser.yy"
+          { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('8')));  (yyval.ru) = units.back(); }
+#line 1552 "./src/parser.cpp"
+    break;
+
+  case 55: /* atomic: '9'  */
 #line 139 "./src/parser.yy"
-        { (yyval.number) = 1; }
-#line 1526 "./src/parser.cpp"
+          { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('9')));  (yyval.ru) = units.back(); }
+#line 1558 "./src/parser.cpp"
     break;
 
-  case 53: /* inumber: '2'  */
+  case 56: /* atomic: '0'  */
 #line 140 "./src/parser.yy"
-          { (yyval.number) = 2; }
-#line 1532 "./src/parser.cpp"
+          { units.push_back(new std::shared_ptr<RegUnit>(new SingleUnit('0')));  (yyval.ru) = units.back(); }
+#line 1564 "./src/parser.cpp"
     break;
 
-  case 54: /* inumber: '3'  */
-#line 141 "./src/parser.yy"
-          { (yyval.number) = 3; }
-#line 1538 "./src/parser.cpp"
-    break;
-
-  case 55: /* inumber: '4'  */
-#line 142 "./src/parser.yy"
-          { (yyval.number) = 4; }
-#line 1544 "./src/parser.cpp"
-    break;
-
-  case 56: /* inumber: '5'  */
+  case 57: /* decimalarea: decimal  */
 #line 143 "./src/parser.yy"
-          { (yyval.number) = 5; }
-#line 1550 "./src/parser.cpp"
+            { (yyval.number) = (yyvsp[0].number)<<32; }
+#line 1570 "./src/parser.cpp"
     break;
 
-  case 57: /* inumber: '6'  */
+  case 58: /* decimalarea: decimal ','  */
 #line 144 "./src/parser.yy"
-          { (yyval.number) = 6; }
-#line 1556 "./src/parser.cpp"
+                  { (yyval.number) = ((yyvsp[-1].number)<<32) | infinite; }
+#line 1576 "./src/parser.cpp"
     break;
 
-  case 58: /* inumber: '7'  */
+  case 59: /* decimalarea: decimal ',' decimal  */
 #line 145 "./src/parser.yy"
-          { (yyval.number) = 7; }
-#line 1562 "./src/parser.cpp"
+                          { (yyval.number) = ((yyvsp[-2].number)<<32) + (yyvsp[0].number); }
+#line 1582 "./src/parser.cpp"
     break;
 
-  case 59: /* inumber: '8'  */
-#line 146 "./src/parser.yy"
-          { (yyval.number) = 8; }
-#line 1568 "./src/parser.cpp"
-    break;
-
-  case 60: /* inumber: '9'  */
-#line 147 "./src/parser.yy"
-          { (yyval.number) = 9; }
-#line 1574 "./src/parser.cpp"
-    break;
-
-  case 61: /* inumber: '0'  */
+  case 60: /* decimal: decimal inumber  */
 #line 148 "./src/parser.yy"
+                    {  (yyval.number) = (yyvsp[-1].number)*10 + (yyvsp[0].number); }
+#line 1588 "./src/parser.cpp"
+    break;
+
+  case 61: /* decimal: inumber  */
+#line 149 "./src/parser.yy"
+              { (yyval.number) = (yyvsp[0].number); }
+#line 1594 "./src/parser.cpp"
+    break;
+
+  case 62: /* inumber: '1'  */
+#line 152 "./src/parser.yy"
+        { (yyval.number) = 1; }
+#line 1600 "./src/parser.cpp"
+    break;
+
+  case 63: /* inumber: '2'  */
+#line 153 "./src/parser.yy"
+          { (yyval.number) = 2; }
+#line 1606 "./src/parser.cpp"
+    break;
+
+  case 64: /* inumber: '3'  */
+#line 154 "./src/parser.yy"
+          { (yyval.number) = 3; }
+#line 1612 "./src/parser.cpp"
+    break;
+
+  case 65: /* inumber: '4'  */
+#line 155 "./src/parser.yy"
+          { (yyval.number) = 4; }
+#line 1618 "./src/parser.cpp"
+    break;
+
+  case 66: /* inumber: '5'  */
+#line 156 "./src/parser.yy"
+          { (yyval.number) = 5; }
+#line 1624 "./src/parser.cpp"
+    break;
+
+  case 67: /* inumber: '6'  */
+#line 157 "./src/parser.yy"
+          { (yyval.number) = 6; }
+#line 1630 "./src/parser.cpp"
+    break;
+
+  case 68: /* inumber: '7'  */
+#line 158 "./src/parser.yy"
+          { (yyval.number) = 7; }
+#line 1636 "./src/parser.cpp"
+    break;
+
+  case 69: /* inumber: '8'  */
+#line 159 "./src/parser.yy"
+          { (yyval.number) = 8; }
+#line 1642 "./src/parser.cpp"
+    break;
+
+  case 70: /* inumber: '9'  */
+#line 160 "./src/parser.yy"
+          { (yyval.number) = 9; }
+#line 1648 "./src/parser.cpp"
+    break;
+
+  case 71: /* inumber: '0'  */
+#line 161 "./src/parser.yy"
           { (yyval.number) = 0; }
-#line 1580 "./src/parser.cpp"
+#line 1654 "./src/parser.cpp"
     break;
 
 
-#line 1584 "./src/parser.cpp"
+#line 1658 "./src/parser.cpp"
 
       default: break;
     }
@@ -1773,12 +1847,14 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 149 "./src/parser.yy"
+#line 162 "./src/parser.yy"
 
 
 char yylex()
 {
-    return getchar();
+    char ch = getchar();
+    while(ch==' '|| ch=='\t') ch=getchar();
+    return ch;
 }
 void yyerror(char* msg)
 {
