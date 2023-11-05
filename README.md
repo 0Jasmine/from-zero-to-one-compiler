@@ -1,7 +1,14 @@
-# directory
+# Intro
+
+## directory
+
 ```
-├── arm-assembly
+.
 ├── intro-to-llvmir
+├── lexer
+│   ├── bin
+│   ├── src
+│   └── test
 ├── simple-syntax-analyse
 └── understand-elf
     ├── defN-rtl-process
@@ -15,10 +22,14 @@
     ├── pass-test
     ├── rtl-process
     └── tree-process
+        └── arm-assembly
 
-15 directories
+19 directories
+
 ```
 
-# about me
+## about me
 
+|||
+|-|-|
 |Jasmine Xie|[here](https://github.com/0jasmine)|
